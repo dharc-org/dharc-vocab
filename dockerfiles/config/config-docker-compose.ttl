@@ -1,0 +1,301 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wv: <http://vocab.org/waiver/terms/norms> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosmos: <http://purl.org/net/skosmos#> .
+@prefix isothes: <http://purl.org/iso25964/skos-thes#> .
+@prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix : <#> .
+
+# Skosmos main configuration
+
+:config a skosmos:Configuration ;
+    # SPARQL endpoint
+    # a local Fuseki server is usually on localhost:3030
+    skosmos:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    # sparql-query extension, or "Generic" for plain SPARQL 1.1
+    # set to "JenaText" instead if you use Fuseki with jena-text index
+    skosmos:sparqlDialect "JenaText" ;
+    # whether to enable collation in sparql queries
+    skosmos:sparqlCollationEnabled false ;
+    # HTTP client configuration
+    skosmos:sparqlTimeout 20 ;
+    skosmos:httpTimeout 5 ;
+    # customize the service name
+    skosmos:serviceName "/DH.arc Vocabularies"@en, "/DH.arc Vocabularies"@it ;
+    skosmos:serviceNameLong "/DH.arc Vocabularies"@en, "/DH.arc Vocabularies"@it ;
+    skosmos:serviceDescription "A repository of controlled vocabularies and ontologies created by the Digital Humanities Advanced Research Centre at the University of Bologna. All files can be browsed online and downloaded."@en ;
+    skosmos:aboutDescription "A repository of controlled vocabularies and ontologies created by the Digital Humanities Advanced Research Centre at the University of Bologna. All files can be browsed online and downloaded."@en ;
+    skosmos:feedbackDescription "Contact form for feedback about any of the controlled vocabularies available in the /DH.arc repository."@en ;
+    # interface languages available, and the corresponding system locales
+    skosmos:languages (
+        [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
+        [ rdfs:label "it" ; rdf:value "it_IT.utf8" ]
+    ) ;
+    # how many results (maximum) to load at a time on the search results page
+    skosmos:searchResultsSize 20 ;
+    # how many items (maximum) to retrieve in transitive property queries
+    skosmos:transitiveLimit 1000 ;
+    # whether or not to log caught exceptions
+    skosmos:logCaughtExceptions false ;
+    # set to TRUE to enable logging into browser console
+    skosmos:logBrowserConsole false ;
+    # set to a logfile path to enable logging into log file
+    # skosmos:logFileName "" ;
+    # a default location for Twig template rendering
+    skosmos:templateCache "/tmp/skosmos-template-cache" ;
+    # customize the css by adding your own stylesheet
+    #skosmos:customCss "resource/css/stylesheet.css" ;
+    # default email address where to send the feedback
+    skosmos:feedbackAddress "laurent.fintoni2@unibo.it" ;
+    # email address to set as the sender for feedback messages
+    skosmos:feedbackSender "laurent.fintoni2@unibo.it" ;
+    # email address to set as the envelope sender for feedback messages
+    skosmos:feedbackEnvelopeSender "laurent.fintoni2@unibo.it" ;
+    # whether to display the ui language selection as a dropdown (useful for cases where there are more than 3 languages) 
+    skosmos:uiLanguageDropdown false ;
+    # whether to enable the spam honey pot or not, enabled by default
+    skosmos:uiHoneypotEnabled true ;
+    # default time a user must wait before submitting a form
+    skosmos:uiHoneypotTime 5 ;
+    # plugins to activate for the whole installation (including all vocabularies)
+    skosmos:globalPlugins () ;
+    skosmos:baseHref "https://lab.dharc.unibo.it/skosmos/" .
+
+# Skosmos vocabularies (add new vocabularies here)
+
+:ktx a skosmos:Vocabulary, void:Dataset ;
+    dc:title "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
+    dc:description: "The KNOT Taxonomy is a knowledge organization system developed by the Digital Humanities Advanced Research Center at the University of Bologna as part of the KNOT pilot project. The purpose of this taxonomy is to provide a simple hierarchical classification and definitions for  different types of scholarly digital objects produced by humanities research, such as software, databases, digital platforms, and datasets. In the context of this taxonomy scholarly digital objects are understood as being either collections of structured information (such as datasets) or digital forms that enable interaction with information (software, visualization tools, etc.). The taxonomy is used in the KNOT catalogue and intended to help increase the visibility of the digital objects created by humanities research. Definitions are taken from trusted sources and intended to act as a starting point for classifying these objects within existing research structures."@en,
+    "La tassonomia KNOT è un sistema di organizzazione della conoscenza sviluppato dal Digital Humanities Advanced Research Center dell'Università di Bologna nell'ambito del progetto pilota KNOT. Lo scopo di questa tassonomia è quello di fornire una semplice classificazione gerarchica e definizioni per i diversi tipi di oggetti digitali accademici prodotti dalla ricerca umanistica, come software, database, piattaforme digitali e dataset. Nel contesto di questa tassonomia, per oggetti digitali accademici si intendono sia collezioni di informazioni strutturate (come i dataset) sia forme digitali che consentono l'interazione con le informazioni (software, strumenti di visualizzazione, ecc.). La tassonomia è utilizzata nel catalogo KNOT e mira ad aumentare la visibilità degli oggetti digitali creati dalla ricerca umanistica. Le definizioni sono tratte da fonti attendibili e mirano a fungere da punto di partenza per classificare questi oggetti all'interno delle strutture di ricerca esistenti."@it;
+    skosmos:shortName "KTX";
+    dc:subject :cat_knot ;
+    void:uriSpace "http://w3id.org/knot/taxonomy/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:defaultSidebarView 'hierarchy' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl> .
+
+:kth a skosmos:Vocabulary, void:Dataset ;
+    dc:title "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
+    dc:description "The KNOT Technology Thesaurus is a knowledge organization system developed by the Digital Humanities Advanced Research Center at the University of Bologna as part of the KNOT pilot project. The purpose of this thesaurus is to provide a hierarchical classification and definitions for a variety of technological concepts related to the research projects and scholarly digital objects catalogued by the KNOT project, such as the formal languages and information architecture used. The thesaurus is used in the KNOT catalogue and intended to help increase the visibility of the digital objects created by humanities research. Definitions are taken from trusted sources and the thesaurus is intended as a starting point to improve and spread authority control records for the technologies used in humanities research."@en, "Il Thesaurus tecnologico KNOT è un sistema di organizzazione della conoscenza sviluppato dal Digital Humanities Advanced Research Center dell'Università di Bologna nell'ambito del progetto pilota KNOT. Lo scopo di questo thesaurus è quello di fornire una classificazione gerarchica e delle definizioni per una serie di concetti tecnologici relativi ai progetti di ricerca e agli scholarly digital objects catalogati dal progetto KNOT, come i linguaggi formali e l'architettura dell'informazione utilizzati. Il thesaurus è utilizzato nel catalogo KNOT e ha lo scopo di aumentare la visibilità degli oggetti digitali creati dalla ricerca umanistica. Le definizioni sono tratte da fonti attendibili e il thesaurus è inteso come punto di partenza per migliorare e diffondere i record di controllo di autorità per le tecnologie utilizzate nella ricerca umanistica."@it;
+    skos:prefLabel "KNOT Technology Thesaurus"@en, "KNOT Thesaurus Tecnologico"@it;
+    skosmos:shortName "KTH";
+    dc:subject :cat_knot ;
+    void:uriSpace "http://w3id.org/knot/thesaurus/";
+    skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/kth.ttl> .
+
+:mtv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Controlled vocabulary of Aldo Moro's works types"@en, "Vocabolario controllato delle tipologie delle opere di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible document types of Aldo Moro's works."@en ;
+    skosmos:shortName "MTV";
+    dc:subject :cat_moro ;
+    void:uriSpace "https://www.w3id.org/moro/voc/types/";
+    skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:defaultLanguage "it";
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/types.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/types.ttl> .
+
+:mrv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Controlled vocabulary of Aldo Moro's roles"@en ,
+        "Vocabolario controllato dei ruoli di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible roles assumed by Aldo Moro during his lifetime."@en ;
+    skosmos:shortName "MRV";
+    dc:subject :cat_moro ;
+    void:uriSpace "https://www.w3id.org/moro/voc/roles/";
+    skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:defaultLanguage "it";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/roles.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/roles.ttl> .
+
+:msv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Controlled vocabulary of Aldo Moro's works subjects"@en,
+        "Vocabolario controllato delle tematiche delle opere di Aldo Moro"@it ;
+    dc:description "A SKOS controlled vocabulary of the possible subjects covered in Aldo Moro's works."@en ;
+    skosmos:shortName "MSV";
+    dc:subject :cat_moro ;
+    void:uriSpace "https://www.w3id.org/moro/voc/subjects/";
+    skosmos:language "en", "it";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:defaultLanguage "it";
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/sbrzt/moro/refs/heads/main/voc/subjects.ttl> .
+
+:fentry a skosmos:Vocabulary, void:Dataset ;
+    dc:title "F Entry (Scheda F) Ontology"@en, "Ontologia Scheda F"@it ;
+    dc:description "F Entry (Scheda F) Ontology"@en, "Ontologia Scheda F"@it ;
+    skosmos:shortName "FEO";
+    dc:subject :cat_ontos ;
+    void:uriSpace "http://www.essepuntato.it/2014/03/fentry/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl>;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl> .
+
+:odi a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
+    dc:description "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
+    skosmos:shortName "ODI";
+    dc:subject :cat_ontos ;
+    void:uriSpace "https://purl.org/ebr/odi#";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> .
+
+:hico a skosmos:Vocabulary, void:Dataset ;
+    dc:title "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
+    dc:description "The Historical Context Ontology (HiCO) is an OWL 2 DL ontology developed for representing the context of a claim."@en, "L'Ontologia per il Contesto Storico (HiCO) è una ontologia OWL 2 DL sviluppata per descrivere il contesto di una affermazione."@it;
+    skosmos:shortName "HiCO";
+    dc:subject :cat_ontos ;
+    void:uriSpace "http://purl.org/emmedi/hico/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> .
+
+:write a skosmos:Vocabulary, void:Dataset ;
+    dc:title "WRITE Ontology"@en, "Ontologia WRITE"@it;
+    dc:description "WRITE Ontology"@en, "Ontologia Scheda F"@it;
+    skosmos:shortName "write";
+    dc:subject :cat_write ;
+    void:uriSpace "https://w3id.org/write/ontology/#";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en" ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en] ;
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
+
+:wt a skosmos:Vocabulary, void:Dataset ;
+    dc:title "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
+    dc:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en, "Il Thesaurus WRITE è una risorsa  curata dedicata al patrimonio culturale cinese, con particolare attenzione alle arti contemporanee e alla calligrafia. Sviluppato da esperti del settore nell'ambito del progetto WenDAng, questo thesaurus fornisce un vocabolario strutturato che cattura il panorama in evoluzione della calligrafia cinese (contemporanea) e il suo ruolo nella ridefinizione dell'identità culturale. Concepito sia come strumento di ricerca per gli studiosi di WRITE sia come riferimento completo per un pubblico più ampio, il thesaurus categorizza i concetti chiave essenziali per comprendere le espressioni artistiche cinesi tradizionali e contemporanee. Offrendo definizioni e classificazioni precise, funge da ponte tra le tradizioni e le pratiche artistiche emergenti nella Cina contemporanea. Questo thesaurus è una risorsa preziosa per ricercatori, artisti e chiunque sia interessato all'interazione dinamica tra calligrafia cinese, patrimonio culturale e innovazione artistica contemporanea."@it ;
+    skos:prefLabel "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
+    skosmos:shortName "wt";
+    dc:subject :cat_write ;
+    void:uriSpace "http://w3id.org/write/thesaurus/";
+    skosmos:language "en", "zh", "zh-Latn", "it";
+    skosmos:hasMultiLingualProperty skos:altLabel ;
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl> .
+
+:etv a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Edition Types Vocabulary"@en, "Edition Types Vocabulary"@it;
+    dc:description: "The Edition Types Vocabulary is a knowledge organization system developed within the ATLAS project. Its purpose is to provide a structured and authoritative set of terms to describe various types of textual criticism products, specifically scholarly editions. The vocabulary encompasses a wide range of edition types—such as critical, diplomatic, genetic, and facsimile editions—offering standardized, stable labels and curated references to support the consistent classification and description of editorial practices in textual scholarship."@en,
+        "Edition Types Vocabulary è un sistema di organizzazione della conoscenza sviluppato nell’ambito del progetto ATLAS. Lo scopo del vocabolario è fornire un insieme strutturato e autorevole di termini per descrivere diverse tipologie di prodotti dell'ecdotica, in particolare le edizioni critiche. Il vocabolario comprende un’ampia gamma di tipologie editoriali—come le edizioni critiche, diplomatiche, genetiche e facsimilari—offrendo etichette standardizzate, stabili e riferimenti curati per supportare una classificazione e una descrizione coerente delle pratiche editoriali nel campo della filologia testuale."@it ;
+    skosmos:shortName "ETV";
+    dc:subject :cat_atlas ;
+    void:uriSpace "https://w3id.org/dh-atlas-vocabularies/etv/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en];
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:showTopConcepts false ;
+    skosmos:conceptSchemesInHierarchy false ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> .
+
+# Skosmos categories (add new categories here)
+
+:categories a skos:ConceptScheme;
+    skos:prefLabel "Browse semantic artefacts by project or type"@en, "Sfoglia gli artefatti semantici per progetto o tipo"@it .
+
+:cat_atlas a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "ATLAS"@en , "ATLAS"@it ;
+    dc:description "The ATLAS of Italian Digital Humanities."@en, "The ATLAS of Italian Digital Humanities."@it .
+
+:cat_knot a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "KNOT"@en , "KNOT"@it ;
+    dc:description "Rethinking Scholarly Digital Objects as Digital Cultural Heritage."@en, "Rethinking Scholarly Digital Objects as Digital Cultural Heritage."@it .
+
+:cat_moro a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "National Edition of Aldo Moro's Works"@it , "National Edition of Aldo Moro's Works"@en ;
+    dc:description "Critical edition of Aldo Moro's published and unpublished texts, with their historical introduction."@en, "Edizione critica dei testi editi e inediti, con una loro introduzione storica"@it .
+
+:cat_ontos a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "Ontologie"@it , "Ontologies"@en ;
+    dc:description "OWL formatted ontologies converted to SKOS for integration into the DH.arc Vocabularies repository."@en, "Ontologie formattate in OWL convertite in SKOS per l'integrazione nel repository DH.arc Vocabularies."@it .
+
+:cat_write a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "WRITE"@en , "WRITE"@it ;
+    dc:description "A major research initiative that explores how evolving forms of calligraphy in contemporary China are reshaping cultural identity."@en, "Un'iniziativa di ricerca che esplora come le forme evoluenti della calligrafia nella Cina contemporanea stiano ridefinendo l'identità culturale."@it . 
+
+# Additional properties
+
+dcat:downloadURL a rdf:Property ;
+    rdfs:label "download URL"@en, "URL di scarico"@it .

@@ -1,0 +1,902 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wt: <http://w3id.org/write/thesaurus/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+#################################################################
+#    WRITE thesaurus
+#################################################################
+
+<http://w3id.org/write/thesaurus/> a skos:ConceptScheme ;
+		skos:prefLabel "WRITE Thesaurus"@en ;
+		dcterms:creator "Katarina Lučić" ;
+		dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+		dcterms:description "The WRITE Thesaurus is a carefully curated resource dedicated to Chinese cultural heritage, with a particular focus on contemporary arts and calligraphy. Developed by domain experts as part of the WenDAng project, this thesaurus provides a structured vocabulary that captures the evolving landscape of Chinese (contemporary) calligraphy and its role in redefining cultural identity. Designed as both a research tool for WRITE scholars and a comprehensive reference for a wider audience, the thesaurus categorises key concepts essential to understanding traditional and contemporary Chinese artistic expressions. By offering precise definitions and classifications, it serves as a bridge between traditions and emerging artistic practices in contemporary China. This thesaurus is an invaluable resource for researchers, artists, and anyone interested in the dynamic interplay between Chinese calligraphy, cultural heritage, and contemporary artistic innovation."@en ;
+		dcterms:language "English"@en ;
+		foaf:homepage <https://wendang-project.github.io/documentation/> ;
+		dcterms:relation <https://writecalligraphyproject.eu/> ;
+		dcterms:subject "Chinese (contemporary) calligraphy"@en , "contemporary arts"@en ; 
+		dcterms:title "WRITE Thesaurus" ;
+		dcterms:created "2025-04-01"^^xsd:date ;
+		dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+		dcterms:rightsHolder <https://writecalligraphyproject.eu/> ;
+		owl:versionInfo "1.0" .
+
+#################################################################
+#    Chinese Visual Elements
+#################################################################
+
+wt:chivel a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta R. Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Chinese Visual Elements"@en ;
+			skos:definition "This group encompasses concepts that represent decorative patterns, art types, art forms, symbols, and artistic and decorative elements that are characteristics of the Chinese visual culture, and that can be an element of contemporary artworks."@en ;
+			skos:member wt:ink_wash_painting , wt:landscape_painting , wt:bamboo_painting , wt:birds_flowers_painting , wt:wrinkle_method , wt:three_distances , wt:cloud_mist , wt:four_noble_plants , wt:plum , wt:orchid , wt:bamboo , wt:chrysanthemum , wt:lotus_flower , wt:handscroll , wt:hanging_scroll , wt:seal , wt:decorative_cloud_motif , wt:vertical_waters_motif, wt:turbulent_ocean_waves_motif , wt:dragon , wt:ancient_chinese_ritual_bronzes , wt:taotie , wt:chinese_ceramics , wt:blue_white_porcelain , wt:green_celadon_vase , wt:jade , wt:taijitu , wt:buddhist_mantras , wt:incense .
+					
+
+wt:ink_wash_painting a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "ink wash painting"@en ;
+			skos:altLabel "shuimohua"@zh-Latn , "水墨画"@zh ;
+			skos:definition "A type of Chinese ink brush painting which uses washes of black ink in different concentrations."@en ;
+			skos:narrower wt:landscape_painting , wt:birds_flowers_painting , wt:bamboo_painting ;
+			skos:related wt:wrinkle_method ;
+			skos:relatedMatch <https://vocab.getty.edu/aat/300404637> ;
+			dcterms:source <https://en.wikipedia.org/wiki/Ink_wash_painting> .
+
+
+wt:landscape_painting a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "landscape painting"@en ;
+			skos:altLabel "shanshuihua"@zh-Latn , "山水画"@zh ;
+			skos:definition "Lit. 'painting of mounts and rivers', this is a style of traditional Chinese painting that involves or depicts scenery or natural landscapes, using brush and ink. Mountains, rivers and waterfalls are common subjects of this kind of painting."@en ;
+			skos:broader wt:ink_wash_painting ;
+			skos:related wt:cloud_mist , wt:wrinkle_method ;
+			skos:relatedMatch <https://chineseiconography.org/terms/CIT278433> ;
+			dcterms:source <https://en.wikipedia.org/wiki/Landscape_painting> .
+
+
+wt:bamboo_painting a skos:Concept ;
+    		skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bamboo painting"@en ;
+			skos:altLabel "zhuhua"@zh-Latn , "竹画"@zh ;
+			skos:definition "A recognised genre of East Asian painting that consists of a depiction of a bamboo stalk or group of stalks with leaves."@en ;
+			skos:broader wt:ink_wash_painting ;
+			skos:relatedMatch <https://chineseiconography.org/terms/CIT287580> ;
+			dcterms:source <https://en.wikipedia.org/wiki/Bamboo_painting> .
+
+
+wt:birds_flowers_painting a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "birds and flowers painting"@en ;
+			skos:altLabel "huaniaohua"@zh-Latn , "花鸟画"@zh ;
+			skos:definition "A type of Chinese painting style that incorporates a wide range of natural topics, including flowers, fish, birds, and insects. "@en ;
+			skos:broader wt:ink_wash_painting ;
+			skos:relatedMatch <https://chineseiconography.org/terms/CIT0284614> ;
+			dcterms:source <https://en.wikipedia.org/wiki/Bird-and-flower_painting> .
+
+
+wt:wrinkle_method a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "wrinkle method"@en ;
+			skos:altLabel "cunfa"@zh-Latn , "皴法"@zh ;
+			skos:definition "Method used in Chinese painting to give texture or surface to the pictorial elements by means of particular brushstrokes or dabs (cun)."@en ;
+			skos:related wt:ink_wash_painting , wt:landscape_painting ;
+			dcterms:source "Hui, Juan, and Jia, Xiaoqing. 2019. 'The Translation Strategies of “Wrinkle” in Chinese Landscape Painting', Sino-US English Teaching, 16, 4: 168-171." .
+
+wt:three_distances a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "three distances"@en ;
+			skos:altLabel "sanyuan"@zh-Latn , "三元"@zh ;
+			skos:definition "A set of principles required to organize a Chinese landscape painting. The three distances are “level distance” (pingyuan), “high distance” (gaoyuan) and “deep distance” (shenyuan)."@en ;
+			dcterms:source <https://afe.easia.columbia.edu/neh/course3/background2.html> , "Fahr-Becker (ed.). 2000. Arte dell’Estremo Oriente. Koln: Konemann, 152." .
+
+wt:cloud_mist a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "cloud and mist"@en ;
+			skos:altLabel "yunwu"@zh-Latn , "云雾"@zh ;
+			skos:definition "Cloud and mist are important elements of Chinese landscape painting rendered with brush shades on the white sheet."@en ;
+			skos:related wt:landscape_painting ;
+			skos:relatedMatch <https://chineseiconography.org/terms/CIT284042> , <https://chineseiconography.org/terms/CIT284646> ;
+			dcterms:source "Fahr-Becker (ed.). 2000. Arte dell’Estremo Oriente. Koln: Konemann, 151-152." .
+
+
+wt:four_noble_plants a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "four noble plants"@en ;
+			skos:altLabel "si junzi"@zh-Latn , " 四君子"@zh ;
+			skos:definition "Plum, orchid, bamboo, and chrysanthemum are also known as the “Four Gentlmen” or “Four Nobles Ones”, which is the Chinese term that matches the four plants with “junzi”, or “gentlemen” in Confucianism. They are common subjects in traditional ink and wash painting, belonging to the category of birds and flowers painting."@en ;
+			skos:narrower wt:plum , wt:orchid , wt:bamboo , wt:chrysanthemum ;
+			dcterms:source <http://www.chinaonlinemuseum.com/painting-four-gentlemen.php> .
+
+
+wt:plum a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "plum"@en ;
+			skos:altLabel "mei"@zh-Latn , "梅"@zh ;
+			skos:definition "One of the most beloved flowers in China, frequently depicted in Chinese painting and poetry; symbol of winter as well as a harbinger of spring, of resilience and perseverance in the face, and of adversity, inner beauty and humble display under adverse conditions. It is one of the “Four Noble Plants” (si junzi) and the “Three Friends of Winter” (suihansanyou)."@en ;
+			skos:broader wt:four_noble_plants ;
+			skos:exactMatch <https://chineseiconography.org/terms/CIT279231> ;
+			dcterms:source <http://www.chinaonlinemuseum.com/painting-plum-blossom.php> .
+
+
+wt:orchid a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "orchid"@en ;
+			skos:altLabel "lan"@zh-Latn , "兰"@zh ;
+			skos:definition "Symbol of spring, humility and nobility. It is one of the “Four Noble Plants” (si junzi)."@en ;
+			skos:broader wt:four_noble_plants ;
+			skos:exactMatch <https://chineseiconography.org/terms/CIT280897> ;
+			dcterms:source <http://www.chinaonlinemuseum.com/painting-orchid.php> .
+		
+
+wt:bamboo a skos:Concept ;
+          	skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bamboo"@en ;
+			skos:altLabel "zhu"@zh-Latn , "竹"@zh ;
+			skos:definition "Symbol of summer and of the true gentleman (junzi). It is associated with the human values of cultivation, integrity, tolerance and open-mindedness. It is one of the “Four Noble Plants” (si junzi) and the “Three Friends of Winter” (suihansanyou)."@en ;
+			skos:broader wt:four_noble_plants ;
+			skos:exactMatch <https://chineseiconography.org/terms/CIT280244> ;
+			dcterms:source <http://www.chinaonlinemuseum.com/painting-bamboo.php> .
+
+
+wt:chrysanthemum a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "chrysanthemum"@en ;
+				skos:altLabel "ju"@zh-Latn , "菊"@zh ;
+				skos:definition "Symbol of autumn and virtue to withstand all adversities. It is one of the “Four Noble Plants” (si junzi)."@en ;
+				skos:broader wt:four_noble_plants ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT280680> ;
+				dcterms:source <http://www.chinaonlinemuseum.com/painting-chrysanthemum.php> .
+
+
+wt:lotus_flower a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "lotus flower"@en ;
+				skos:altLabel "hehua"@zh-Latn , "荷花"@zh ;
+				skos:definition "Chinese symbol of purity and beauty emerging from muddy waters. In Buddhist art, lotus is the symbol of purity of the body, speech and mind, as floating above the murky waters of material attachment and physical desire; it is usually depicted in a stylised manner and used as the seat or base for a figure (the so-called “lotus throne”)."@en ;
+				skos:related wt:buddhism ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT280647> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Sacred_lotus_in_religious_art> .
+
+
+wt:handscroll a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "handscroll"@en ;
+				skos:altLabel "horizontal scroll"@en , "hengfu"@zh-Latn , "横幅"@zh , "手卷"@zh ;
+				skos:definition "Long, narrow, horizontal scroll format in East Asia used for calligraphy or paintings."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT286105> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Handscroll> .
+
+
+wt:hanging_scroll a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "hanging scroll"@en ;
+				skos:altLabel "vertical scroll"@en , "lizhou"@zh-Latn , "立轴"@zh , "挂轴"@zh ; 
+				skos:definition "Vertical hanging scroll format in East Asia used for calligraphy or paintings; also known as “hanging scroll”."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT286104> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Hanging_scroll> .
+
+
+wt:seal a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "seal"@en ;
+				skos:altLabel "yinzhang"@zh-Latn , "印章"@zh ;
+				skos:definition "Seal or stamp used to mark important documents, pieces of art, contracts, or any other item that requires a signature. Seals are typically carved into stone and dipped in either red ink or cinnabar paste."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT0291774> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Seals_in_the_Sinosphere> .
+
+
+wt:decorative_cloud_motif a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "decorative cloud motif"@en ;
+				skos:altLabel "auspicious clouds"@en , "yunwen"@zh-Latn , "xiangyun"@zh-Latn , "祥云"@zh , "云纹"@zh ;
+             	skos:definition "Traditional Chinese stylised clouds decorative pattern."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT0292555> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Xiangyun_(Auspicious_clouds)> .
+
+
+wt:vertical_waters_motif a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "vertical waters motif"@en ;
+				skos:altLabel "sea waves"@en , "lishui"@zh-Latn , "立水"@zh ;
+             	skos:definition "Traditional Chinese decorative stylized water decorative pattern composed of diagonal strips in five colors representing deep and standing water."@en ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT0292667> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Lishui_(sea-waves)> .
+
+
+wt:turbulent_ocean_waves_motif a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "turbulent ocean waves motif"@en ;
+				skos:altLabel "pingshui"@zh-Latn , "平水"@zh , "woshui"@zh-Latn , "卧水"@zh ;
+				skos:definition "Wave pattern shaped in concentric semicircle which run horizontally, particularly used in court clothing of the Qing dynasty."@en ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT0292667> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Lishui_(sea-waves)> .
+
+
+wt:dragon a skos:Concept ;
+          		skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "dragon"@en ;
+				skos:altLabel "long"@zh-Latn , "龙"@zh ;
+				skos:definition "Legendary creature that particularly controls water and weather, symbol of virility and strength, pertaining to the creative Yang principle; also symbol of the Emperor from the Han period."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT284420> ;
+				dcterms:source "Fahr-Becker (ed.). 2000. Arte dell’Estremo Oriente. Koln: Konemann, 719.".
+
+
+wt:ancient_chinese_ritual_bronzes a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "ancient Chinese ritual bronzes"@en ;
+				skos:altLabel "qingtongqi"@zh-Latn , "青铜器"@zh ;
+				skos:definition "Elaborately decorated bronze vessels made during the Chinese bronze age for ritual purposes."@en ;
+				skos:related wt:taotie ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT282742> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Chinese_ritual_bronzes> .
+
+
+wt:taotie a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "taotie"@en ;
+				skos:altLabel "taotie"@zh-Latn , "饕餮"@zh ;
+				skos:definition "Zoomorphic mask commonly found on ancient Chinese ritual bronzes; it is frontal, bilaterally symmetrical, with a pair of raised eyes and typically no lower jaw area."@en ;
+				skos:related wt:ancient_chinese_ritual_bronzes ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT0313367> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Taotie> , <https://www.treccani.it/enciclopedia/taotie_(Enciclopedia-dell%27-Arte-Antica)/> .
+
+
+wt:chinese_ceramics a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "Chinese ceramics"@en ;
+				skos:altLabel "zhongguo taoci"@zh-Latn, "中国陶瓷"@zh ;
+				skos:definition "One of the most significant forms of Chinese art and ceramics globally. They range from construction materials such as bricks and tiles, to hand-built pottery vessels fired in bonfires or kilns, to the sophisticated Chinese porcelain wares made for the imperial court and for export."@en ;
+				skos:narrower wt:blue_white_porcelain , wt:green_celadon_vase ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT0283302> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Chinese_ceramics> .
+
+
+wt:blue_white_porcelain a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "blue and white porcelain"@en ;
+				skos:altLabel "qinghuaci"@zh-Latn , "青花瓷"@zh ;
+				skos:definition "Ceramics decorated with cobalt blue pigment on a white body, usually applied with a brush under the glaze. Originally invented in China, they became one of the most well-known and enduring products in the history of Chinese porcelain."@en ;
+				skos:broader wt:chinese_ceramics ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT0283304> ;
+				dcterms:source <https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics> .
+
+
+wt:green_celadon_vase a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "green celadon vase"@en ;
+				skos:altLabel "huaping qingci"@zh-Latn , "花瓶青瓷"@zh ;
+				skos:definition "Famous type of green-glazed Chinese procelain traditionally made in Longquan."@en ;
+				skos:broader wt:chinese_ceramics ;
+				skos:broadMatch <https://chineseiconography.org/terms/CIT0283304> ;
+				dcterms:source <https://en.m.wikipedia.org/wiki/Chinese_ceramics> .
+
+
+wt:jade a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "jade"@en ;
+				skos:altLabel "yu shi"@zh-Latn , "yu"@zh-Latn , "玉"@zh , "玉石"@zh ;
+				skos:definition "Any of the carved-jade objects produced in China from the Neolithic Period onward; valued as gold in the West, it has always been a symbol of purity and indestructibility."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT287021> ;
+				dcterms:source <https://www.britannica.com/art/Chinese-jade> .
+
+
+wt:taijitu a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "taijitu"@en ;
+				skos:altLabel "taijitu"@zh-Latn , "太极图"@zh ;
+				skos:definition "Famous symbol of Chinese culture that represents the concept of yin and yang and the union of the two opposing principles."@en ;
+				skos:related wt:yin_yang , wt:tao ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT278271> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Taijitu> .
+
+
+wt:buddhist_mantras a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "buddhist mantras"@en ;
+				skos:definition "Sacred utterance, a numinous sound, a syllable, word or phoneme, or a group of words believed by Buddhist practitioners to have religious, magical or spiritual powers."@en ;
+				skos:related wt:buddhism ;
+				skos:relatedMatch <https://chineseiconography.org/terms/CIT286200> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Mantra> .
+
+
+wt:incense a skos:Concept ;
+				skos:inScheme wt:write_thesaurus ;
+				skos:prefLabel "incense"@en ;
+				skos:altLabel "xiang liao"@zh-Latn , "香料"@zh ;
+				skos:definition "Aromatic biotic material that releases fragrant smoke when burnt. In China it has been used in religious ceremonies, ancestor veneration, traditional Chinese medicine, and daily life for over two thousand years."@en ;
+				skos:exactMatch <https://chineseiconography.org/terms/CIT286095> ;
+				dcterms:source <https://en.wikipedia.org/wiki/Incense> .
+
+
+#################################################################
+#    Chinese Concepts
+#################################################################
+
+wt:chicos a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Chinese Concepts"@en ;
+			skos:definition "This group represents concept(s), believes and thoughts that characterise Chinese culture."@en ;
+			skos:member wt:tao , wt:yin_yang , wt:qi , wt:junzi , wt:three_perfections , wt:buddhism , wt:chan , wt:chinese_red , wt:demolition .
+
+
+wt:tao a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "tao"@en ;
+			skos:altLabel "dao"@en , "道"@zh ;
+			skos:definition "Basic concept of Chinese religious and philosophical thought, understood as an order that governs and regulates the course of things, elaborated differently depending on the philosophical schools (Taoism and Confucianism). In Confucianism, it indicates the principles and the complex of ritual, ceremonial and ethical norms that regulate human existence and norms that regulate the universe (which is expressed through qi “energy” and li “order”). In Taoism, it represents the cosmic and universal way, present in the spontaneous manifestations of the world and nature. giving rise to the One, it triggers a process of infinite multiplication which, passing through the two complementary polarities of yin and yang, constitutes the matrix and the source from which all things proceed and to which they return."@en ;
+			skos:related wt:qi , wt:yin_yang , wt:taijitu ;
+			dcterms:source <https://www.treccani.it/enciclopedia/tao_(Enciclopedia-Italiana)/> , <https://www.treccani.it/enciclopedia/dao_(Dizionario-di-filosofia)/> .
+
+
+wt:yin_yang a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "yin-yang"@en ;
+			skos:altLabel "阴阳"@zh ;
+			skos:definition "Chinese philosophic concept, describing an opposite but interconnected, self-perpetuating cycle. Yin and yang can be thought of as complementary and at the same time opposing forces that interact to form a dynamic system in which the whole is greater than the assembled parts and the parts are important for cohesion of the whole."@en ;
+			skos:related wt:taijitu , wt:tao ;
+			dcterms:source <https://en.wikipedia.org/wiki/Yin_and_yang> .
+
+
+wt:qi a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "qi"@en ;
+			skos:altLabel "气"@zh ;
+			skos:definition "This concept in Chinese philosophy, medicine and religion, is believed to be a vital force part of all living entities and that permeate the universe. Literally meaning 'vapor', 'air', or 'breath', the word qi is often translated as 'vital energy', 'vital force', 'material energy', or simply 'energy’."@en ;
+			skos:related wt:tao ;
+			dcterms:source <https://en.wikipedia.org/wiki/Qi> , <https://www.britannica.com/topic/qi-Chinese-philosophy> .
+
+
+wt:junzi a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "junzi"@en ;
+			skos:altLabel "gentleman"@en , "君子"@zh ;
+			skos:definition "This concept in Chinese philosophy, represents a person whose humane conduct makes him a moral exemplar. The term is often translated as 'gentleman', 'superior person', or 'noble man'. He has always represented the ideal for Chinese literati."@en ;
+			dcterms:source <https://en.wikipedia.org/wiki/Junzi> , <https://www.britannica.com/topic/junzi> .
+
+
+wt:three_perfections a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "three perfections"@en ;
+			skos:altLabel "sanjue"@zh-Latn , "三绝"@zh ;
+			skos:definition "This concept represents the three forms of art - poetry (shi 诗), calligraphy (shu 书) and painting (hua 画), that every educated official was expected to master in the China’s Empire; their integration is considered the apex of Chinese artistic expression."@en ;
+			dcterms:source "Sullivan, Michael. 1974. The Three Perfections: Chinese Painting, Poetry and Calligraphy. New York: George Braziller." .
+
+
+wt:buddhism a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "buddhism"@en ;
+			skos:altLabel "zongjiao"@zh-Latn , "宗教"@zh ;
+			skos:definition "Indian religion based on teachings attributed to the Buddha that was introduced in China during the Han dynasty (206 BCE-220 CE). It is now the largest officially recognised religion in China. "@en ;
+			skos:narrower wt:chan ;
+			skos:related wt:lotus_flower , wt:buddhist_mantras ;
+			dcterms:source <https://www.britannica.com/topic/Buddhism> .
+
+
+wt:chan a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "chan"@en ;
+			skos:altLabel "zen"@en , "禅"@zh ;
+			skos:definition "This concept represents an indigenous form of Chinese Buddhism that initially developed in the sixth century and subsequently spread to the rest of East Asia. It is characterised by novel use of language, development of new narrative forms, and valorisation of the direct and embodied realisation of Buddhist awakening. Chan inspired a monochromatic spiritual pictural trend practiced by the Chan monks, usually called “Chan painting”, characterised by lightning simplicity, dazzling execution, economy of strokes and strength of brushstrokes."@en ;
+			skos:broader wt:buddhism ;
+			dcterms:source <https://plato.stanford.edu/entries/buddhism-chan> , <https://en.wikipedia.org/wiki/Chan_Buddhism> .
+
+
+wt:chinese_red a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "chinese red"@en ;
+			skos:definition "This concept is a symbol of luck, celebration, vitality, and protection. Historically associated with prosperity and happiness, it is deeply embedded in traditional rituals and events, from weddings to New Year celebrations. Red also symbolises political power and nationalism, particularly since the 20th century, when it became an emblem of unity and revolution with the establishment of the People’s Republic of China. In art and design, Chinese red conveys warmth, energy, and a sense of continuity with the past, often incorporated to invoke a connection to cultural identity."@en ;
+			dcterms:source "Xu, Mengchen. 2024. 'Analysis of the Cultural Significance and Social Rationale of 'Red' in Chinese Culture.'' Lecture Notes in Education Psychology and Public Media 42 (1): 69–75. https://doi.org/10.54254/2753-7048/42/20240827" , "Baranovitch, Nimrod. 2003. China's New Voices: Popular Music, Ethnicity, Gender, and Politics, 1978–1997. University of California Press." , "Chang, Elizabeth Hope. 2009. China in the American Imagination: A Historical Study of Chinese Representations in Western Literature. University of Pennsylvania Press." .
+
+
+wt:demolition a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "demolition"@en ;
+			skos:altLabel "chai"@zh-Latn , "拆"@zh ;
+			skos:definition "This concept is grounded in the fight against gentrification through the replication of the Chai character. The Chai character has emerged as a potent symbol, frequently seen spray-painted on buildings marked for demolition as part of urban renewal projects. In China, gentrification typically involves rapid urban redevelopment, where older neighborhoods are transformed into modern commercial or residential spaces, often resulting in the displacement of long-term, lower-income residents."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " , "O'Donnell, Mary Ann, Wong Siu-yung, and Jonathan Bach, eds. 2017. Learning from Shenzhen: China’s Post-Mao Experiment from Special Zone to Model City. Chicago: University of Chicago Press." , "Wu, Fulong. 2015. Planning for Growth: Urban and Regional Planning in China. Abingdon: Routledge." .
+
+
+#################################################################
+#    Graffiti Genres
+#################################################################
+
+wt:gragen a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Graffiti Genres"@en ;
+            skos:definition "This group represents a classification system that analyses the diverse purposes and contexts of graffiti, highlighting its artistic, social, and subcultural dimensions."@en ;
+			skos:member wt:public_free_art , wt:public_social_political_art , wt:institution_commissioned_art , wt:private_commissioned_art , wt:art_for_festival , wt:memorial_art .
+
+
+wt:public_free_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "public free art"@en ;
+			skos:definition "A genre that embodies the core motivation behind graffiti writing, emphasizing the spontaneous and unrestricted expression of self-identity and artistic freedom in public spaces."@en ;
+			skos:narrower wt:public_social_political_art ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+
+wt:public_social_political_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "public social-political art"@en ;
+			skos:definition "A genre that includes artistic expressions created in public spaces that engage with social and political issues. It serves as a medium for commentary, critique, or activism, often addressing themes such as power structures, inequality, cultural identity, or resistance."@en ;
+			skos:broader wt:public_free_art ;
+			skos:narrower wt:memorial_art ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+
+wt:institution_commissioned_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "institution commissioned art"@en ;
+			skos:definition "A genre that includes graffiti created to enhance urban aesthetics, funded by government institutions. These works aim to contribute to city beautification projects."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+		
+			
+wt:private_commissioned_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "private commissioned art (commercial)"@en ;
+			skos:definition "A genre that refers to graffiti commissioned for commercial purposes, where the primary goal is business-oriented, such as advertising or brand promotion."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+
+wt:art_for_festival a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "art for festival"@en ;
+			skos:definition "Chinese graffiti in this category is produced specifically for festivals or graffiti events (e.g., Wall Lords), celebrating the occasion with unique artistic expressions."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+		
+				
+wt:memorial_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "memorial art"@en ;
+			skos:definition "A genre that encompasses graffiti created to commemorate significant events or individuals, serving as a memorial or tribute to a dramatic occurrence or person."@en ;
+			skos:broader wt:public_social_political_art ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+
+
+#################################################################
+#    Graffiti Styles
+#################################################################
+
+wt:grastyle a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Graffiti Styles"@en ;
+			skos:definition "This group refers to the distinct visual and aesthetic characteristics developed within graffiti culture, often shaped by regional influences, artistic movements, and individual writers. It encompasses a range of lettering and charactering techniques, compositions, and expressive forms."@en ;
+			skos:member wt:wildstyle , wt:3D_style , wt:bubble_style_softie , wt:blockbuster_large_scale , wt:tag , wt:throw_up , wt:puppet_style , wt:roller_style , wt:sticker, wt:stencil , wt:design_style , wt:high_tech_style , wt:hard_style , wt:digital_style , wt:anti_style , wt:gothic_calligraphy, wt:hollows_outline , wt:straight_block_letters .
+			
+wt:wildstyle a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "wildstyle"@en ;
+			skos:altLabel "kuangye fengge"@zh-Latn , "狂野风格"@zh ;
+			skos:definition "This style represents a complex composition of letters assembled to give a unique shape and dynamic to the piece. In this style, the letters are distorted and superimposed, and sometimes enriched with three-dimensional arrows, tribals, pikes, puppets and other decorative elements that give an idea of movement and confusion. This complicated construction of interlocking letters is considered one of the hardest styles to master and the lettering of the pieces done in wildstyle is often completely indecipherable to non-writers."@en ;
+			skos:narrower wt:hard_style ;
+			skos:exactMatch <https://vocabs.acdh.oeaw.ac.at/indigo/WildstyleWriting> , <https://vocab.getty.edu/aat/300410277> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+
+wt:3D_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "3D style"@en ;
+			skos:altLabel "litizi fengge"@zh-Latn , "立体字风格"@zh ;
+			skos:definition "Three-dimensional style of letters, used to add effect on basic letters (enhancing depth and allure in the piece), sometimes applied to wildstyle for an extra level of complexity. In graffiti writing, the most widely used technique for 3D is chiaroscuro. To implement it, the artist first chooses the direction or vanishing point, then, starting from the edges of the letters, draws same-length guidelines following that same direction. Subsequently, the artist connects these guidelines, drawing lines that run parallel to the letter lines, and finally the area is filled with colour. The effect could be achieved by shadowing the letters, but this procedure is far more complex."@en ;
+			skos:exactMatch <https://vocabs.acdh.oeaw.ac.at/indigo/3dGraffiti> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+wt:bubble_style_softie a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bubble style / softie"@en ;
+			skos:altLabel "paopaozi fengge"@zh-Latn, "泡泡字风格"@zh ;
+			skos:definition "Rounded, old school style lettering, still extensively used in throw-ups due to its quick execution. The letters recall soap bubbles and are painted with great precision. The outline is usually thick, with a white inline to enhance the depth of the lettering."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/bubbleStyleGraffiti> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:blockbuster_large_scale a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "blockbuster / large-scale piece"@en ;
+			skos:altLabel "jufuzuopin"@zh-Latn , "巨幅作品"@zh ;
+			skos:definition "A graffiti style characterised by the ease of execution. It is made of large, square, or rectangular block letters. It is two-toned: one colour for the fill-in (using temper, roller, or paintbrush) and one for the outline. Mainly invented to cover over other people and to paint whole trains easily, but they are effective on smaller walls for maximum coverage."@en ;
+			skos:related wt:straight_block_letters ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/blockbusterStyleGraffiti> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:tag a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "tag"@en ;
+			skos:altLabel "qianming tuya"@zh-Latn , "签名涂鸦"@zh ;
+			skos:definition "The most basic form of graffiti, a pseudonym of the writer created with spray cans or markers, the tag is the backbone of the writing phenomenon. The evolution of the tag represents the personal style of its author. All pieces, even the largest, most colourful and elaborate ones, remain signatures. In Chinese graffiti, a tag can also take the form of a chengyu (a four-character idiom), a poem, a seal, or a concept. This illustrates how the American tag concept has been reinterpreted by Chinese writers as a modern seal, aligning with the graffiti-logo trend, particularly among crews or writers with commercial objectives."@en ;
+			skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/indigo/tagsGraffiti> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:throw_up a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "throw-up"@en ;
+			skos:altLabel "kuaisu tuya"@zh-Latn , "快速涂鸦"@zh ;
+			skos:definition "The first evolution of the tag; a stylised drawing of one’s signature, quickly executed but on a large scale, with few colours that are usually sprayed roughly, even without fill-in. This technique is scorned because it is deemed unesthetic, but achieving a good throw-up, quickly and with a precise outline, is no easy task."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/throwUpsGraffiti> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:puppet_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "puppet style"@en ;
+			skos:altLabel "wan ou feng ge"@zh-Latn , "玩偶风格"@zh ;
+			skos:definition "A graffiti style characterized by the inclusion of figurative elements—such as animals, humans, or cartoon characters—used to inject humor or emphasis into a piece. These figures may appear alongside textual elements or even replace individual letters or components of a word. In Chinese graffiti, this style often involves the personification or zoomorphization of Chinese characters themselves. By transforming characters into animal-like or animated forms, artists engage with the pictographic roots of Chinese script and creatively integrate language into its visual context."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+wt:roller_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "roller style"@en ;
+			skos:altLabel "guntong fengge"@zh-Latn , "滚筒风格"@zh ;
+			skos:definition "Large-scale technique that utilizes paint rollers to cover extensive surfaces, often yielding bold, legible letters with a heavy and unrefined aesthetic. This approach contrasts with finer spray-can detailing, emphasizing impactful visibility and spatial dominance. Roller style is often adopted for its efficiency in covering large areas quickly, making it popular for high-impact urban installations and street art."@en ;
+			skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/indigo/rollUpsGraffiti> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:sticker a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "sticker"@en ;
+			skos:altLabel "tiezhi"@zh-Latn , "贴纸"@zh;
+			skos:definition "A form of tagging through computer-printed stickers that may contain only the writer’s signature and/or logo or be more elaborate, including small fonts and decorations. Sticker art is quick to execute, cheap, and easy to disseminate, and is considered a sub-category of graffiti art, although some writers believe that this type of art is only for those who are afraid of using markers or spray cans."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/stickersStreetArt> , <https://vocabs.acdh.oeaw.ac.at/indigo/stylesSticker> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:stencil a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "stencil"@en ;
+			skos:altLabel "mubanhua"@zh-Latn , "模版画"@zh ;
+			skos:definition "A widely used street art practice that allows shapes, symbols and letters to be reproduced in series by means of a stencil, cut in such a way as to form a physical negative of the image to be created."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/stencilsStreetArt> , <https://vocabs.acdh.oeaw.ac.at/indigo/paintStencilTechnique> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:design_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "design style"@en ;
+			skos:altLabel "sheji fengge tuya"@zh-Latn , "设计风格涂鸦"@zh ;
+			skos:definition "A graffiti approach that emphasizes refined composition, structured layouts, and polished aesthetics, often incorporating principles from graphic design, typography, and digital media. Unlike traditional wildstyle graffiti, which focuses on complex interwoven lettering, Design Style prioritizes clarity, symmetry, and balance, sometimes blending graffiti elements with commercial or editorial design influences. This style may feature clean lines, geometric arrangements, negative space utilization, and controlled color schemes, creating a visually cohesive and intentional appearance. While still rooted in street culture, Design Style graffiti often bridges the gap between urban art and contemporary design disciplines."@en ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:high_tech_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "high-tech style"@en ;
+			skos:altLabel "gao keji fengge tuya"@zh-Latn , "高科技风格涂鸦"@zh ;
+			skos:definition "This style is a graffiti aesthetic that incorporates futuristic, technological, and industrial design elements, often inspired by cyberpunk, digital interfaces, and mechanical structures. It features sharp geometric forms, metallic color schemes, neon highlights, and intricate, machine-like detailing. Artists employing this style may integrate elements resembling circuitry, robotic components, 3D illusions, and digital typography, creating a visually complex and futuristic aesthetic. High-tech Style Graffiti reflects themes of urban futurism, digital culture, and the fusion of technology with street art."@en ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:hard_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "hard style"@en ;
+			skos:altLabel "yingpai tuya"@zh-Latn , "硬派涂鸦"@zh ;
+			skos:definition "This style is a graffiti aesthetic characterised by highly structured, interlocked, fragmented, mechanical, angular, and often aggressive letterforms that emphasize visual intensity and complexity. This style is distinguished by its use of sharp edges, bold outlines, and high-contrast color schemes, frequently incorporating three-dimensional effects and intricate interlocking structures. Hard Style graffiti often aligns with wildstyle compositions, where readability is secondary to the expressive and technical aspects of lettering."@en ;
+			skos:broader wt:wildstyle ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+	
+wt:digital_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "digital style"@en ;
+			skos:altLabel "shuzi fengge tuya"@zh-Latn , "数字风格涂鸦"@zh ;
+			skos:definition "This style is a contemporary form of street art that merges traditional graffiti practices with digital technologies, resulting in a hybrid aesthetic that engages with both physical and virtual realms. This style often incorporates digital design tools, such as graphic design software, 3D modeling, and digital manipulation, to create or enhance graffiti works. The integration of digital elements, like pixelation, glitch art, or digital typography, reflects the influence of digital culture and media on urban visual expression."@en ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:anti_style a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "anti-style"@en ;
+			skos:altLabel "fan fengge tuya"@zh-Latn , "反风格涂鸦"@zh ;
+			skos:definition "Also known as trash style, toy style, outer style, ignorant style, contemporary style, or abstract style, is often associated with rebellious or raw artistic expressions. It emphasizes a rough, unpolished look and defies traditional aesthetics. When combined with Chinese script, this concept introduces a unique dynamic, blending the structured, historical significance of Chinese calligraphy with the chaotic, expressive nature of anti-style graffiti. In China, anti-style graffiti is often reflected through the “ignorant style,” where artists deliberately use irregular lines, uneven proportions, and rough brushwork."@en ;
+			skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/indigo/antiStyleGraffiti> ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:gothic_calligraphy a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "gothic calligraphy"@en ;
+			skos:altLabel "gete shufa"@zh-Latn , "哥特书法"@zh ;
+			skos:definition "Writing style/font that emerged in Western Europe during the Middle Ages, noted for its intricate, angular forms and dramatic flourishes. In Chinese graffiti, there is a contemporary trend known as Zhongwen gete shufa 中文哥特书法 (Modern Gothichinese Calligraffiti), which merges Gothic fonts with Chinese characters and calligraphy. This style combines the intricate, ornamental characteristics of Gothic script with the fluidity and cultural richness of Chinese writing."@en ;
+			dcterms:source "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." , "Drogin, Marc. 1990. Medieval Calligraphy: Its History and Technique. Dover Publications." .
+
+
+wt:hollows_outline a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "hollows / outline"@en ;
+			skos:altLabel "kongxinzi"@zh-Latn , "空心字"@zh ;
+			skos:definition "A graffiti style that is characterised by the inner part of the letters left unfilled or empty, with only the outline drawn."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/outlinesGraffiti> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+wt:straight_block_letters a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "straight / block letters"@en ;
+			skos:altLabel "zhiti zimu"@zh-Latn , "直体字母"@zh ;
+			skos:definition "Simple and legible style characterized by large, square, or rectangular block letters. This style is often used by beginners because of its clarity and ease of execution, and it serves as a foundation for more complex styles like wildstyle. Straight/block letters are typically uniform in size and structure, making them highly readable and ideal for messages meant to be quickly understood."@en ;
+			skos:related wt:blockbuster_large_scale ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/blocksGraffiti> ;
+			dcterms:source "Anssi, Arte. 2015. Forms of Rockin': Graffiti Letters and Popular Culture. Årsta: Dokument Press." , "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99: https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/" , "Bisceglia, Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+#################################################################
+#    Graffiti Types 
+#################################################################
+
+wt:gratype a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Graffiti Types"@en ;
+			skos:definition "This group classifies Chinese graffiti based on artistic, stylistic, sociological, and economic dimensions."@en ;
+			skos:member wt:tag_seal , wt:sticker_stencil_graffiti , wt:graffiti_panel_art , wt:aerosol_art , wt:mural , wt:writing , wt:chinese_emotional_graffiti .
+			
+
+wt:tag_seal a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "tag / seal"@en ;
+			skos:altLabel "tuya qianming yinzhang"@zh-Latn , "涂鸦签名印章"@zh ;
+			skos:definition "A distinct type of Chinese tag and a concept. As a graphic tag, the Tag/Seal uses the shape of a Chinese traditional seal, usually red and circular. As a concept, the Tag/Seal type illustrates how the American tag concept has been reinterpreted by Chinese writers as a modern seal, aligning with the graffiti-logo trend, especially among crews or writers with commercial objectives. In this context, a tag can also manifest as a chengyu (a four-character idiom), a poem, a seal, or a concept."@en ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+wt:sticker_stencil_graffiti a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "sticker / stencil graffiti"@en ;
+			skos:altLabel "tiezhi / mubanhua tuya"@zh-Latn , "贴纸/模版画"@zh ;
+			skos:definition "Popular Chinese street art practices that enable the reproduction of shapes, symbols, letters, or characters in series. Stencil graffiti involves cutting a design into a material to create a physical negative of the image, which is then transferred onto surfaces using spray paint or other mediums. Sticker art, on the other hand, typically utilizes computer-printed designs that may feature the artist's signature or logo or include more intricate elements such as small text and decorative motifs."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/stickersStreetArt> , <https://vocabs.acdh.oeaw.ac.at/indigo/stencilsStreetArt> ;
+			dcterms:source "Bisceglia, Marta R. 2024. «GLOSSARY», in Iezzi A. (edited by), Graffiti in China, 193-99. https://www.1088press.it/en/graffiti-in-china-enhanced-digital-edition/glossary/ " .
+
+wt:graffiti_panel_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "graffiti panel art"@en ;
+			skos:altLabel "tuya mianban yishu"@zh-Latn , "涂鸦面板艺术"@zh ;
+			skos:definition "A type of Chinese graffiti that uses panels as a support, especially used for commissioned and institutional works."@en ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." . 
+
+wt:aerosol_art a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "aerosol art"@en ;
+			skos:altLabel "qiwu yishu"@zh-Latn , "气雾艺术"@zh ;
+			skos:definition "A technique and a Chinese artistic movement that involves using colored spray cans on various urban surfaces to create works of art. It originated as one of the first evolutions of graffiti writing. Initially, aerosol art was intricately linked to graffiti as an artistic expression, employing spray cans as a painting technique often enhanced by airbrush applications. Aerosol Art encompasses not only writing but also the use of characters (puppets) and the application of more complex painting techniques using spray cans."@en ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+		
+wt:mural a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "mural"@en ;
+			skos:altLabel "bihua yishu"@zh-Latn , "壁画艺术"@zh ;
+			skos:definition "A large-scale artwork created directly on walls or ceilings, capable of transforming spaces and conveying social, political, or cultural messages. Chinese murals are typically larger, planned artworks that are often commissioned for public spaces or created with permission. They can encompass a wide range of themes and styles, incorporating detailed imagery, narratives, and artistic techniques."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/muralsStreetArt> , <https://vocabs.acdh.oeaw.ac.at/indigo_browse/en/page/muralsWriting> ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+wt:writing a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "writing"@en ;
+			skos:altLabel "tuya shuxie"@zh-Latn , "涂鸦书写"@zh ;
+			skos:definition "The act of creating one’s tag in public spaces using spray paint or markers. It entails a study of lettering (or “charactering”), namely the style of the letters or Chinese characters that make up both simple tags and pieces."@en ;
+			skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/indigo/writingGraffiti> ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna. " .
+
+wt:chinese_emotional_graffiti a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "Chinese emotional graffiti"@en ;
+			skos:altLabel "zhongwen qingxu tuya"@zh-Latn , "中文情绪涂鸦"@zh ;
+			skos:definition "A form of Chinese graffiti that emphasizes written text as its central element. The text may take the form of slogans, short stories, poetry, quotes, social and political commentary, personal reflections, or other types of written expression. “Chinese Emotional Graffiti” can be found on various surfaces, and it is often created using spray paint, markers, stencils, or similar tools. Its main characteristics are the absence of signatures or tags, a lack of aesthetic embellishments, limited color palettes, the use of non-simplified characters, a focus on negative themes, and reflections on the impact of COVID-19."@en ;
+			dcterms:source "Bisceglia Marta R. 2025. Graffiti and Chinese Calligraphy: Looking for Identity in Fusion. PhD thesis. Bologna: Alma Mater Studiorum – University of Bologna." .
+
+
+#################################################################
+#    Script Styles
+#################################################################
+
+wt:scryle a skos:Collection ;
+			dcterms:creator "Katarina Lučić" ;
+			dcterms:contributor "Adriana Iezzi" , "Marta Bisceglia" , "Daniele Caccin" , "Martina Merenda" ;
+			dcterms:created "2025-04-01"^^xsd:date ;
+			skos:prefLabel "Script Styles"@en ;
+			skos:definition "This group refers to distinct ways of writing characters or letters in a particular language, often influenced by historical, cultural, and functional factors. These styles define the structure, stroke order, and artistic expression of written symbols. In the context of Chinese calligraphy, script styles are categorized based on their evolution and aesthetic characteristics, ranging from highly formal and structured to free-flowing and expressive."@en ;
+			skos:member wt:oracle_bone_script , wt:stone_drum_inscriptions , wt:seal_script , wt:great_seal_script , wt:small_seal_script,  wt:bronze_script , wt:bird_insect_script , wt:clerical_script, wt:bafen_clerical_script , wt:regular_script , wt:running_script , wt:regular_running_script , wt:cursive_running_script , wt:cursive_script , wt:wild_cursive_script , wt:talismanic_script , wt:slender_gold_script , wt:lacquer_calligraphy , wt:chaos_script , wt:hard_tipped_calligraphy, wt:ugly_calligraphy .
+
+wt:oracle_bone_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "oracle bone script"@en ;
+			skos:altLabel "jiaguwen"@zh-Latn , "甲骨文"@zh ;
+			skos:definition "The oracle bone script is the earlest known and deciphered form of Chinese writing to date. This script was used during the latter half of the Shang dynasty (c. 1600–1046 BCE). Most of the oracle bones have been excavated from modern Anyang City in Henan Province, at Yinxu, the ruins of the last capital of the Shang dynasty. The script is carved on animal bones and turtle shells, primarily serving as record of royal divination practices."@en ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343583> ;
+			dcterms:source "Qiu, X. 2000. Chinese writing (G. L. Mattos & J. Norman, Trans.). Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." , "Li, X. 2003. Oracle bone script and its significance. Beijing: China Social Sciences Press." , "Li, Xueqin. 2007. 'The discovery and study of oracle bones.' Encyclopedia of Chinese History. https://www.encyclopediaofchinesehistory.com " .
+
+wt:stone_drum_inscriptions a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "stone drum inscriptions"@en ;
+			skos:altLabel "shiguwen"@zh-Latn , "石鼓文"@zh ;
+			skos:definition "A type of Great Seal Script from the late Spring and Autumn period (770-476 BCE) or early Warring States period (475-221 BCE). Discovered in Fengxiang, Shaanxi province during the early Tang dynasty (618-907), it was inscribed on ten ancient drum-like stones less that a meter high and with an average diameter of 60 cm; each of the drum-like stones carries a siyanshi 四言诗, a type of classical poetry with four characters to a line. Well-balanced structurally, the script represents a dignified, harmonious, solemn style typical of stone inscriptions of that period and a model of great seal script for calligraphers of later generations."@en ;
+			skos:broader wt:great_seal_script ;
+			dcterms:source "Ouyang, Zhongshi, and Wen F. Fong, eds. 2008. Chinese Calligraphy. New Heaven and London: Yale University Press" .
+
+wt:seal_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "seal script"@en ;
+			skos:altLabel "zhuanshu"@zh-Latn, "篆书"@zh ;
+			skos:definition "An ancient Chinese writing forms originated during the Zhou dynasty (c. 1046–256 BC), persisted during the Warring States period (c. 475 – 221 BC) and evolved during the Qin dynasty (221-206 BC). It is characterized by a strong pictographic nature."@en ;
+			skos:narrower wt:great_seal_script , wt:small_seal_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343588> ;
+			dcterms:source "Qiu, X. 2000. Chinese writing (G. L. Mattos & J. Norman, Trans.). Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." , "Boltz, W. G. 1994. The origin and early development of the Chinese writing system. New Haven, CT: American Oriental Society." .
+
+wt:great_seal_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "great seal script"@en ;
+			skos:altLabel "dazhuan"@zh-Latn , "大篆"@zh ;
+			skos:definition "This is a broad term used for early script forms, including bronze inscriptions (金文 jinwen) and even regional variations. It is less standardized, with more varied shapes and sizes of characters. Dazhuan exhibits a more archaic and pictographic appearance, with strokes that can be uneven and characters that often have a looser structure."@en ;
+			skos:broader wt:seal_script ;
+			skos:narrower wt:stone_drum_inscriptions , wt:bird_insect_script , wt:bronze_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343580> ;
+			dcterms:source "Qiu, X. 2000. Chinese writing (G. L. Mattos & J. Norman, Trans.). Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." , "Boltz, W. G. 1994. The origin and early development of the Chinese writing system. New Haven, CT: American Oriental Society." .
+
+wt:small_seal_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "small seal script"@en ;
+			skos:altLabel "xiaozhuan"@zh-Latn , "小篆"@zh ;
+			skos:definition "This script was standardized by Li Si 李斯 (280-208 BCE), the Prime Minister of Qin Shi Huang, the first emperor of the Qin dynasty (221–206 BCE). It evolved from the Great Seal Script (Dazhuan 大篆) and was designed to unify writing across the empire, becoming the official script of the time. Compared to Great Seal Script, it exhibits greater uniformity and regularity, characterized by more symmetrical characters and strokes refined into smooth, flowing curves. After the Qin dynasty, it was primarily used for ornamental purposes, and it remained the preferred script for seal carving (zhuanke 篆刻)."@en ;
+			skos:broader wt:seal_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343589> ;
+			dcterms:source "Qiu Xigui. 2000. Chinese Writing. Translated by Gilbert L. Mattos and Jerry Norman. Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." .
+
+wt:bronze_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bronze script"@en ;
+			skos:altLabel "jinwen"@zh-Latn , "金文"@zh ;
+			skos:definition "A script engraved in bronze vessels of the Shang and Zhou dynasties, particularly prominent during the Western Zhou period (11th century BCE to 771 BCE). Derived from Oracle Bone Script, it is characterized by highly pictorial characters, reflecting primitive and archaic aesthetic values."@en ;
+			skos:broader wt:great_seal_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343577> ;
+			dcterms:source "Qiu Xigui. 2000. Chinese Writing. Translated by Gilbert L. Mattos and Jerry Norman. Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." , "Shaughnessy, E. L. 1991. Sources of Western Zhou history: Inscribed bronze vessels. Berkeley: University of California Press." .
+
+wt:bird_insect_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bird and insect script"@en ;
+			skos:altLabel "niaochongshu"@zh-Latn , "鸟虫书"@zh , "bird-worm seal script"@en , "niaochongzhuan"@zh-Latn , "鸟虫篆"@zh , "bird-and-worm script"@en , "niaochongwen"@zh-Latn , "鸟虫文"@zh ;
+			skos:definition "This is a highly decorative variant of seal script. Dating back to the Spring and Autumn (770-476 BCE) and Warring States (475-221 BCE) periods, it was mainly cast or engraved on weapons. (zdic.net). It is characterized by intricate, intertwined strokes, that form characters with bird, fish, worm and insect-like elements added to the semantic element. It has two sub-styles: Bird Seal Script (niaozhuan 鸟篆), which incorporates bird-like heads and tails, and Worm Seal Script (chongzhuan 虫篆), characterized by winding, worm-like strokes. During the Qin (221–206 BCE) and Han (206 BCE–220 CE) dynasties, an ornamental writing style, also called niaochongshu 鸟虫书 or huaniaoshu (花鸟书), was used for writing on banners and credentials. This style features swift strokes adorned with birds, fish or other animals incorporated into the semantic elements of the characters."@en ;
+			skos:broader wt:great_seal_script ;
+			dcterms:source "Daniels, Benjamin. 2022. 'Bird Script' is not Bird Script. Bulletin de l'École française d'Extrême-Orient 108: 325-370" , "Ulrich, Theobald (2011) Writing styles of Chinese characters. ChinaKnowledge.de - An Encyclopaedia on Chinese History, Literature and Art. http://www.chinaknowledge.de/Literature/Script/hanzi-writingstyles.html " .
+
+
+wt:clerical_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "clerical script"@en ;
+			skos:altLabel "lishu"@zh-Latn , "隶书"@zh ;
+			skos:definition "This is a formal script that emerged during the Han dynasty (206 BCE–220 CE).  It is characterized by a more squared and flat appearance compared to earlier scripts. Its aesthetic features include wider characters and pronounce angularity, making it more legible and standardized than Seal Script. (Li 2009: 119-122). The script represents a transition from the more curved and complex Seal Script to a more efficient and simplified style suitable for bureaucratic use."@en ;
+			skos:narrower wt:bafen_clerical_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343578> ;
+			dcterms:source "Li, Wendan. 2009. Chinese Writing and Calligraphy. Honolulu: University of Hawai’i Press " .
+
+
+wt:bafen_clerical_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "bafen clerical script"@en ;
+			skos:altLabel "bafenshu"@zh-Latn, "八分书"@zh ;
+			skos:definition "This is a distinctive form of Clerical Script (lishu 隶书) that later evolved into the kaishu (Regular Script). This style is distinguished by the squarish appearance of its characters, wider horizontal strokes, , and a unique stroke style known as “silkworm head” (cantou 蚕头) and “wild goose tail” (yanwei 雁尾), where the beginning of a stroke appears rounded and thick like a silkworm's head, while the end flares out like a wild goose’s tail. The term bafen is also sometimes used as an alternative name for Clerical Script."@en ;
+			skos:broader wt:clerical_script ;
+			dcterms:source "Nakata, Y.1983. Chinese Calligraphy. New York: Weatherhill" , "Ulrich, Theobald. 2011. Writing styles of Chinese characters.  ChinaKnowledge.de - An Encyclopaedia on Chinese History, Literature and Art, 23 March. The Chinese Script (www.chinaknowledge.de)". 
+
+
+wt:regular_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "regular script"@en ;
+			skos:altLabel "kaishu"@zh-Latn , "楷书"@zh , "standard script"@en ;
+			skos:definition "This is a highly standardized script that developed during the late Eastern Han dynasty (25-220 CE) and matured during the Wei, Jin, and early Tang dynasties (Li 2009). It is characterized by its precise, structured, and easily readable form, with clearly defined strokes and well-balanced proportions. The brushwork in Regular Script emphasizes controlled strokes, each with a distinct beginning and ending. This script became the foundation for modern Chinese handwriting and printed text."@en ;
+			skos:narrower wt:slender_gold_script , wt:lacquer_calligraphy ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343590> ;
+			dcterms:source "Li, Wendan. 2009. Chinese Writing and Calligraphy. Honolulu: University of Hawai’i Press, 129-130." .
+
+
+wt:running_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "running script"@en ;
+			skos:altLabel "semi-cursive script"@en , "xingshu"@zh-Latn , "行书"@zh ;
+			skos:definition "This is a fluid and more informal script that emerged during the Wei-Jin dynasty (220-420 CE). It bridges the gap between the more formal Regular Script (kaishu) and the highly expressive Cursive Script (caoshu), enabling faster writing while still maintaining legibility. Characters in Running Script are often connected, and the strokes are more flowing and continuous, with fewer pauses compared to Regular Script. This gives the script a dynamic, lively appearance, making it both efficient and visually expressive."@en ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343585> ;
+			dcterms:source "Tseng, Yu-ho (Betty). 1993. A History of Chinese Calligraphy. Hong Kong: Chinese University Press." , " Ulrich, Theobald (2011) Writing styles of Chinese characters. ChinaKnowledge.de - An Encyclopaedia on Chinese History, Literature and Art, 23 March. The Chinese Script (www.chinaknowledge.de)" .
+
+
+wt:regular_running_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "regular-running script"@en ;
+			skos:altLabel "xingkai"@zh-Latn , "行楷"@zh , "running-standard script"@en ;
+			skos:definition "This is a transitional script between Regular Script (kaishu) and Running Script (xingshu). It maintains the structural clarity of regular script while incorporating the fluidity and speed of running script, making it both readable and efficient for writing."@en ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343587> ;
+			dcterms:source "Qiu, Xigui. 2000. Chinese Writing. Translated by Gilbert L. Mattos and Jerry Norman. Berkeley: Society for the Study of Early China and the Institute of East Asian Studies, University of California." .
+
+
+wt:cursive_running_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "cursive running script"@en ;
+			skos:altLabel "xingcao"@zh-Latn , "行草"@zh , "running-cursive script"@en ;
+			skos:definition "This is a transitional script blending caoshu (cursive script) and xingshu (running script). It is more fluid and abbreviated than xingshu but retains greater legibility than fully cursive script, balancing artistic expression with practicality."@en ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343586> ;
+			dcterms:source "Ledderose, Lothar. 2002. Chinese Calligraphy: Its Aesthetic Dimension and Practice. In The Spirit of the Brush: Chinese Calligraphy and Painting, edited by Peter Miller, 45–62. New York: Metropolitan Museum of Art." .
+
+
+wt:cursive_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "cursive script"@en ;
+			skos:altLabel "caoshu"@zh-Latn , "草书"@zh ;
+			skos:definition "This is the most freeform and abstract of the Chinese calligraphic styles. It is characterized by rapid, flowing lines, often omitting certain strokes or combining several into one line. This results in a highly expressive, yet less readable, form of writing. It is primarily used for artistic expression rather than formal communication."@en ;
+			skos:narrower wt:wild_cursive_script , wt:chaos_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343576> ;
+			dcterms:source "Li, Wendan. 2009. Chinese Writing and Calligraphy. Honolulu: University of Hawai’i Press, 152." .
+
+
+wt:wild_cursive_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "wild cursive script"@en ;
+			skos:altLabel "kuangcao"@zh-Latn , "狂草"@zh , "mad cursive"@en ;
+			skos:definition "This is an extremely and highly expressive form of cursive script pioneered by Zhang Xu during the Tang Dynasty. It features wild, unrestrained brushstrokes that push the limits of legibility, emphasizing the dynamic movement of the brush."@en ;
+			skos:broader wt:cursive_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300343591> ;
+			dcterms:source "Fong, Wen C., and James C. Y. Watt. 1996. Possessing the Past: Treasures from the National Palace Museum, Taipei. New York: The Metropolitan Museum of Art." .
+
+
+wt:talismanic_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "talismanic script"@en ;
+			skos:altLabel "fulu"@zh-Latn , "符箓/符录"@zh ;
+			skos:definition "Refers to a sacred and esoteric form of writing, primarily in Daoism, rooted in ancient shamanic traditions. It emerged during the Eastern Han dynasty (25-220 CE) and is used in rituals and spiritual practices to invoke spirits, protect against evil spirits, and heal illnesses. The script in talismans is typically characterized by intricate strokes, symbols, and diagrams, often incorporating a mixture of various scripts and graphs, including curvilinear strokes and visual motifs, to convey mystical power. Other possible terms for fulu include 'magic writing', 'magic script', 'magic figures', 'magic formulae', 'secret talismanic writing', and 'talismanic characters'."@en ;
+			dcterms:source "Huang, Shih-shan Susan. 2014. Picturing the True Form: Daoist Visual Culture in Traditional China. Cambridge: Harvard Asia Center." , "N.a. 2014. “Niaochongshu 符箓 (Talismanic Script)”. zdic.net.  https://www.zdic.net/hans/%E7%AC%A6%E7%AE%93. [Accessed Apr. 2025] " .
+
+
+wt:slender_gold_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "slender gold script"@en ;
+			skos:altLabel "shoujinti"@zh-Latn , "瘦金體"@zh ;
+			skos:definition "Refers to the script developed by the Northern Song dynasty emperor Huizong (徽宗, 1082-1135). Slender Gold Script is characterized by taut, angular lines which expand or contract depending on their place in a stroke. Highly controlled, it projects an air of studied elegance."@en ;
+			skos:broader wt:regular_script ;
+			skos:exactMatch <https://vocab.getty.edu/aat/300391270> ;
+			dcterms:source <http://vocab.getty.edu/page/aat/300391270> .
+
+
+wt:lacquer_calligraphy a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "lacquer calligraphy"@en ;
+			skos:altLabel "qishu"@zh-Latn , "漆书"@zh , "flat brush script"@en ;
+			skos:definition "Also known as Flat Brush Script, is a distinctive calligraphic style developed by Jin Nong (金農, 1687-1763) during the Qing dynasty (1644-1911). It is characterized by angular, square-shaped strokes, resembling characters painted with a flat-edged brush."@en ;
+			skos:broader wt:regular_script ;
+			dcterms:source "Ouyang, Zhongshi, and Wen F. Fong, eds. 2008. Chinese Calligraphy. New Heaven and London: Yale University Press, 353)." .
+
+
+wt:chaos_script a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "chaos script"@en ;
+			skos:altLabel "luanshu"@zh-Latn , "乱书"@zh , "chaotic-writing"@en , "messy calligraphy"@en , "entangled calligraphy"@en ;
+			skos:definition "This is an expressive and highly unconventional calligraphic style invented by Wang Dongling 王冬龄 (b. 1945). It is characterized by overlapping, intertwined, and barely intelligible characters, creating a dynamic and abstract composition. Strokes cross and merge unpredictably, prioritizing artistic expression, movement and spontaneity over readability."@en ;
+			skos:broader wt:cursive_script ;
+			dcterms:source "Vigneron, Frank. 2019. “From Antiquarianism to Chaos Script.” In 2019 Shu feishu: Hangzhou guoji xiandai shufa yishu jie lunwen 2019书·非书:杭州国际现代书法艺术节论文 (Writing Non-Writing: Hangzhou International Modern Calligraphy Festival 2019),’ edited by J. Xu and D.L. Wang, vol. 1, 118–131. Hangzhou: China Academy of Art Press." .
+
+
+wt:hard_tipped_calligraphy a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "hard-tipped calligraphy"@en ;
+			skos:altLabel "yingbi shufa"@zh-Latn , "硬笔书法"@zh ;
+			skos:definition "Refers to Chinese calligraphy written using hard-tipped writing tools such as ballpoint pens, fountain pens, fine-tipped markers, or mechanical pencils, as opposed to traditional brush calligraphy (maobi shufa 毛笔书法). It retains the structural principles of Chinese calligraphy but adapts to the rigid characteristics of modern writing instruments, often emphasizing precision, control, and uniform strokes."@en ;
+			dcterms:source <https://zh.wikipedia.org/zh-hans/%E7%A1%AC%E7%AD%86%E6%9B%B8%E6%B3%95> . 
+
+
+wt:ugly_calligraphy a skos:Concept ;
+			skos:inScheme wt:write_thesaurus ;
+			skos:prefLabel "ugly calligraphy"@en ;
+			skos:altLabel "choushu"@zh-Latn , "丑书"@zh ;
+			skos:definition "Refers to a contemporary calligraphic style that deliberately challenges traditional aesthetic norms by embracing rough, distorted, and exaggerated forms. It often features irregular stroke thickness, unconventional character structures, and an expressive, almost rebellious quality. Rather than adhering to classical notions of beauty, choushu explores raw emotion, spontaneity, and anti-traditional aesthetics, often overlapping with avant-garde art movements and ignorant style graffiti. Choushu  traces its origins to sushu 俗书 (popular or vernacular calligraphy) and defines calligraphic works that appear disharmonious, asymmetric, and inconsistent in form."@en ;
+			dcterms:source "Liu, Zongchao. 2016. “‘Choushu’ zhong de ‘Zhen’ he ‘Shan’ 丑书’中的‘真’与 ‘善’ (The ‘Real’ and the ‘Good’ in ‘Ugly Calligraphy’).” Renmin Taolun  36: 139." , "Vermeeren, Laura. 2020. Inquisitive Ink. A study of contemporary practice of calligraphy in China. M. Phil. Dissertation, University of Amsterdam, 137." . 
+
+
+
+
+

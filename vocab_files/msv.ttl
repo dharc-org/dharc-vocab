@@ -1,0 +1,140 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix msv: <https://www.w3id.org/moro/voc/subjects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+msv:subject02 a skos:Concept ;
+    skos:altLabel "Education"@en , "Istruzione"@it ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Culture"@en ,
+        "Cultura"@it ;
+    skos:closeMatch wd:Q11042 ,
+        wd:Q8434 ;
+    skos:definition "Una tematica documentale che rappresenta l'insieme delle cognizioni intellettuali che una persona ha acquisito attraverso lo studio e l'esperienza, rielaborandole peraltro con un personale e profondo ripensamento così da convertire le nozioni da semplice erudizione in elemento costitutivo della sua personalità morale, della sua spiritualità e del suo gusto estetico, e, in breve, nella consapevolezza di sé e del proprio mondo."@it .
+
+msv:subject03 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Law"@en,
+        "Diritto"@it ;
+    skos:closeMatch wd:Q7748 ;
+    skos:definition "Una tematica documentale che rappresenta il complesso di norme giuridiche, che comandano o vietano determinati comportamenti ai soggetti che ne sono destinatari, in senso soggettivo, la facoltà o pretesa, tutelata dalla legge, di un determinato comportamento attivo od omissivo da parte di altri, o la scienza che studia tali norme e facoltà, nel loro insieme e nei loro particolari raggruppamenti."@it .
+
+msv:subject04 a skos:Concept ;
+    skos:altLabel "Partito politico"@it ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Political party"@en,
+        "Partito"@it ;
+    skos:closeMatch wd:Q7278 ;
+    skos:definition "Una tematica documentale che rappresenta l'organizzazione che persegue l'obiettivo della gestione del potere politico mediante il processo di competizione elettorale ovvero – quando non entrano regole democratiche di competizione elettorale – attraverso la designazione diretta dei propri membri nei ruoli di governo."@it .
+
+msv:subject01 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Church"@en,
+        "Chiesa"@it ;
+    skos:related msv:subject07 ;
+    skos:closeMatch wd:Q9592 ;
+    skos:definition "Una tematica documentale che rappresenta la comunità dei fedeli e società organizzata che rappresenta la religione cattolico-cristiana."@it .
+
+msv:subject05 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Domestic policy"@en,
+        "Politica interna"@it ;
+    skos:related msv:subject09 ;
+    skos:closeMatch wd:Q1573035 ;
+    skos:definition "Una tematica documentale che rappresenta l'attività svolta per il governo di uno stato, il modo di governare, l'insieme dei provvedimenti con cui si cerca di raggiungere determinati fini, per ciò che riguarda i problemi di carattere interno."@it .
+
+msv:subject06 a skos:Concept ;
+    skos:altLabel "Politica estera"@it ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "International policy"@en,
+        "Politica internazionale"@it ;
+    skos:related msv:subject09 ;
+    skos:closeMatch wd:Q181648 ;
+    skos:definition "Una tematica documentale che rappresenta l'attività svolta per il governo di uno stato, il modo di governare, l'insieme dei provvedimenti con cui si cerca di raggiungere determinati fini, per ciò che riguarda le relazioni con altri stati."@it .
+
+msv:subject07 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Religion"@en,
+        "Religione"@it ;
+    skos:related msv:subject01 ;
+    skos:closeMatch wd:Q9174 ;
+    skos:definition "Una tematica documentale che rappresenta il complesso di credenze, sentimenti, riti che legano un individuo o un gruppo umano con ciò che esso ritiene sacro, in particolare con la divinità."@it .
+
+msv:subject10 a skos:Concept ;
+    skos:altLabel "Local life"@en ,
+        "Vita locale"@it ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Local community"@en ,
+        "Comunità locale"@it ;
+    skos:related msv:subject08 ;
+    skos:relatedMatch wd:Q177634 ;
+    skos:definition "Una tematica documentale che rappresenta l'organizzazione di una collettività sul piano locale, basata sulla comunione di vita sociale, comportamenti e interessi."@it .
+
+msv:subject08 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "Society"@en,
+        "Società"@it ;
+    skos:related msv:subject09,
+        msv:subject10 ;
+    skos:closeMatch wd:Q8425 ;
+    skos:definition "Una tematica documentale che rappresenta l'insieme di individui uniti da rapporti di varia natura e in cui si instaurano forme di cooperazione, collaborazione, divisione dei compiti, che assicurano la sopravvivenza e la riproduzione dell’insieme stesso e dei suoi membri."@it .
+
+msv:subject09 a skos:Concept ;
+    skos:broader msv:Subject ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:prefLabel "State"@en,
+        "Stato"@it ;
+    skos:related msv:subject05,
+        msv:subject06,
+        msv:subject08 ;
+    skos:closeMatch wd:Q7275 ;
+    skos:definition "Una tematica documentale che rappresenta l'ente dotato di potestà territoriale, che esercita tale potestà a titolo originario, in modo stabile ed effettivo e in piena indipendenza da altri enti."@it .
+
+msv:Subject a owl:Class ;
+    rdfs:label "Subject"@en,
+        "Tematica"@it ;
+    skos:altLabel "Topic"@en ,
+        "Tema"@it ;
+    skos:definition "A frequent theme that characterizes an author's work."@en , "L’insieme dei temi e motivi più frequenti, o caratterizzanti, in un dato autore, o anche in un’opera, in un complesso di opere"@it ;
+    skos:inScheme msv:subjectsVocabulary ;
+    skos:narrower msv:subject01 ,
+        msv:subject02 ,
+        msv:subject03 ,
+        msv:subject04 ,
+        msv:subject05 ,
+        msv:subject06 ,
+        msv:subject07 ,
+        msv:subject08 ,
+        msv:subject09 ,
+        msv:subject10 ;
+    skos:prefLabel "Subject"@en ,
+        "Tematica"@it ;
+    skos:scopeNote "Can be used as range of `dcterms:subject`."@en ;
+    skos:topConceptOf msv:subjectsVocabulary .
+
+msv:subjectsVocabulary a skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary of Aldo Moro's works subjects"@en,
+        "Vocabolario controllato delle tematiche delle opere di Aldo Moro"@it ;
+    dc:date "18-12-2020"^^xsd:dateTime ;
+    dcterms:title "Controlled vocabulary of Aldo Moro's works subjects"@en,
+        "Vocabolario controllato delle tematiche delle opere di Aldo Moro"@it ;
+    dc:creator "Francesca Tomasi", "Sebastian Barzaghi", "Francesco Paolucci", "Antonio Fracasso", "Marialaura Vignocchi" ;
+    dc:contributor "Comitato Scientifico dell'Edizione Nazionale delle Opere di Aldo Moro"@it ;
+    dc:rights "https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:identifier "msv" ;
+    skos:definition "A SKOS controlled vocabulary of the possible subjects covered in Aldo Moro's works."@en ;
+    skos:hasTopConcept msv:Subject ;
+    skos:scopeNote "https://www.w3id.org/moro/voc/subjects/ is the namespace of the vocabulary. Its preferred prefix is `msv`. The naming convention `{prefix}:{element}{number}` does not strictly convey meaning per se, but it has been followed to avoid excessively long URIs. In order to understand the meaning of any concept, please refer to its respective documentation properties, such as `skos:prefLabel`."@en .

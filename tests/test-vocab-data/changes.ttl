@@ -1,0 +1,38 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix changes: <http://www.skosmos.skos/changes/> .
+@prefix meta: <http://www.skosmos.skos/test-meta/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosmos: <http://www.skosmos.skos/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+changes:d1 a skos:Concept ;
+    dc:created "2000-01-03T12:46:39"^^xsd:dateTime ;
+    dc:modified "2021-01-03T12:46:30"^^xsd:dateTime ;
+    skos:prefLabel "A date"@en .
+
+changes:d2 a skos:Concept ;
+    dc:created "2010-02-12T15:26:39"^^xsd:dateTime ;
+    dc:modified "2021-01-03T12:46:31"^^xsd:dateTime ;
+    skos:prefLabel "Second date"@en .
+
+changes:d3 a skos:Concept ;
+    dc:created "2010-02-12T10:26:39"^^xsd:dateTime ;
+    dc:modified "2021-01-03T12:46:32"^^xsd:dateTime ;
+    skos:prefLabel "Hurr Durr"@en .
+
+changes:d4 a skos:Concept ;
+    owl:deprecated true ;
+    dc:isReplacedBy changes:d3 ;
+    dc:created "2011-12-12T09:26:39"^^xsd:dateTime ;
+    dc:modified "2021-01-03T12:46:33"^^xsd:dateTime ;
+    skos:prefLabel "Fourth date"@en .
+
+changes:d5 a skos:Concept ;
+    owl:deprecated true ;
+    dc:created "2012-12-12T09:26:39"^^xsd:dateTime ;
+    dc:modified "2021-02-04T12:46:33"^^xsd:dateTime ;
+    skos:prefLabel "No replacement"@en .
