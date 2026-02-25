@@ -1,0 +1,286 @@
+@prefix ktx: <http://w3id.org/knot/taxonomy/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://w3id.org/knot/taxonomy/> a skos:ConceptScheme;
+  dct:title "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
+  rdfs:label "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
+  skos:prefLabel "KNOT Taxonomy"@en, "KNOT Tassonomia"@it;
+  dct:description "The KNOT Taxonomy is a knowledge organization system developed by the Digital Humanities Advanced Research Center at the University of Bologna as part of the KNOT pilot project. The purpose of this taxonomy is to provide a simple hierarchical classification and definitions for  different types of scholarly digital objects produced by humanities research, such as software, databases, digital platforms, and datasets. In the context of this taxonomy scholarly digital objects are understood as being either collections of structured information (such as datasets) or digital forms that enable interaction with information (software, visualization tools, etc.). The taxonomy is used in the KNOT catalogue and intended to help increase the visibility of the digital objects created by humanities research. Definitions are taken from trusted sources and intended to act as a starting point for classifying these objects within existing research structures."@en,
+    "La tassonomia KNOT è un sistema di organizzazione della conoscenza sviluppato dal Digital Humanities Advanced Research Center dell'Università di Bologna nell'ambito del progetto pilota KNOT. Lo scopo di questa tassonomia è quello di fornire una semplice classificazione gerarchica e definizioni per i diversi tipi di oggetti digitali accademici prodotti dalla ricerca umanistica, come software, database, piattaforme digitali e dataset. Nel contesto di questa tassonomia, per oggetti digitali accademici si intendono sia collezioni di informazioni strutturate (come i dataset) sia forme digitali che consentono l'interazione con le informazioni (software, strumenti di visualizzazione, ecc.). La tassonomia è utilizzata nel catalogo KNOT e mira ad aumentare la visibilità degli oggetti digitali creati dalla ricerca umanistica. Le definizioni sono tratte da fonti attendibili e mirano a fungere da punto di partenza per classificare questi oggetti all'interno delle strutture di ricerca esistenti."@it;
+  dct:publisher "/DH.ARC - Digital Humanities Advanced Research Centre"@en, "Dipartimento di Filologia Classica e Italianistica - FICLIT"@it;
+  dct:creator "Laurent Fintoni, Francesca Tomasi, Marilena Daquino" ;
+  dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
+  dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
+  dct:issued "2023-06-15"^^xsd:date ;
+  dct:modified "2025-07-22"^^xsd:date ;
+  skos:hasTopConcept ktx:corpus, ktx:database, ktx:dataset, 
+    ktx:digital_archive, ktx:digital_catalogue, ktx:digital_edition,
+    ktx:digital_library, ktx:digital_platform, ktx:digital_repository,
+    ktx:knowledge_base, ktx:knowledge_graph, ktx:ontology, ktx:controlled_vocabulary,
+    ktx:software, ktx:endpoint ;
+  owl:imports <http://www.w3.org/2004/02/skos/core#> ;
+  foaf:homepage <https://icdp-digital-library.github.io/KNOT/> ;
+  owl:versionInfo "1.5" ;
+  skos:editorialNote "Fixed SKOS errors."@en .
+
+ktx:corpus a skos:Concept;
+  skos:definition "A corpus is a type of digital collection in the form of a structured set of text resources, and potential attached metadata, electronically stored and processed and intended for use in linguistic analysis."@en,
+    "Un corpus è un tipo di collezione digitale sotto forma di un insieme strutturato di risorse testuale e potenziali metadati allegati, archiviati ed elaborati elettronicamente e destinati all'uso nell'analisi linguistica."@it;
+  dct:source "“ACDH-CH/DARIAH Vocabularies: Dhataxonomy: Corpus.” n.d. Oeaw.ac.at. Accessed June 20, 2023. https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept39.01."@en;
+  skos:example "The corpus created as part of the ALCIDE (Analysis of Language and Content In a Digital Environment) project, https://github.com/StefanoMenini/De-Gasperi-s-Corpus."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept39.01>, <http://id.loc.gov/authorities/subjects/sh2006006393>, <http://www.wikidata.org/entity/Q461183>;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300311737>;
+  skos:related ktx:dataset;
+  skos:prefLabel "corpus"@en, "corpus"@it;
+  skos:altLabel "corpora"@en, "corpora"@it; 
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:database a skos:Concept;
+  skos:definition "A database models information into a structured set of data that is stored on a computer device in machine-readable form and accessible using dedicated software. In the context of this taxonomy a database may also refer to the data itself, as a collection of resources and their metadata (descriptive or other), and its organization, such as for example a database of textual inscriptions. A database may be accessible to users via a search interface on a website or in downloadable formats for local use."@en, "Un database (base di dati, banca dati) modella le informazioni in un insieme strutturato di dati che viene memorizzato su un dispositivo informatico in forma leggibile da macchine e accessibile utilizzando un software dedicato. Nell'ambito di questa tassonomia un database può anche riferirsi ai dati stessi, come una collezione di risorse e dei loro metadati (descrittivi o altro), e alla sua organizzazione, come ad esempio un database di iscrizioni testuali. Un database può essere accessibile agli utenti tramite un'interfaccia di ricerca su un sito Web o in formati scaricabili per uso locale."@it;
+  dct:source "“Art & Architecture Thesaurus Full Record Display (Getty Research).” n.d. Getty.edu. Accessed June 20, 2023. http://vocab.getty.edu/page/aat/300028543."@en;
+  skos:example "The Epigraphic Database Vernacular project from the University of Roma Sapienza, http://www.edvcorpus.com/wp/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://vocab.getty.edu/aat/300028543>, <http://id.loc.gov/authorities/subjects/sh86007767>, <http://www.wikidata.org/entity/Q8513>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Researchdatasetsanddatabases> ;
+  skos:related ktx:knowledge_base, ktx:knowledge_graph;
+  skos:altLabel "DB"@en, "databases"@en, "data bases"@en;
+  skos:prefLabel "database"@en, "banca dati"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/>;
+  skos:narrower ktx:image_database .
+
+ktx:image_database a skos:Concept;
+  skos:definition "A type of database where the primary data being collected, indexed, and made available to users are images."@en,
+    "Un tipo di database in cui i dati raccolti, indicizzati e resi disponibili agli utenti sono immagini."@it;
+  skos:example "The Medieval Kingdom of Sicily Image Database project from Duke University, https://kos.aahvs.duke.edu/."@en;
+  skos:broader ktx:database;
+  skos:closeMatch <http://vocab.getty.edu/aat/300237774>, <http://id.loc.gov/authorities/subjects/sh86007767>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Researchdatasetsanddatabases>;
+  skos:altLabel "image DB"@en, "image databases"@en;
+  skos:prefLabel "image database"@en, "banca dati di immagini"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:dataset a skos:Concept;
+  skos:definition "A dataset is a collection of information, which can be taken from one or multiple sources, electronically stored in machine-readable form and generally intended for a specific usage. The information in a dataset may originate from various sources (words, images, sound, data, etc.) and may be organized, encoded, and formatted in different ways depending on how the data was collected and its intended usage."@en,
+    "Un dataset è una raccolta di informazioni, che può provenire da una o più fonti, memorizzata elettronicamente in forma leggibile da macchine e generalmente destinata a un uso specifico. Le informazioni contenute in un dataset possono provenire da varie fonti (parole, immagini, suoni, dati, ecc.) e possono essere organizzate, codificate e formattate in modi diversi a seconda di come sono stati raccolti i dati e dell'uso che se ne intende fare."@it;
+  dct:source "“Definition of DATASET.” n.d. Merriam-webster.com. Accessed June 20, 2023. https://www.merriam-webster.com/dictionary/dataset. “Dataset.” n.d. Cambridge.org. Accessed June 20, 2023. https://dictionary.cambridge.org/dictionary/english/dataset. Albertoni, Riccardo. n.d. “Data Catalog Vocabulary (DCAT) - Version 2.” Www.w3.org. Accessed June 19, 2023. https://www.w3.org/TR/vocab-dcat-2/."@en;
+  skos:example "The Zeri Photo Archive RDF dataset created as part of the Zeri & LODE project at the University of Bologna, http://data.fondazionezeri.unibo.it/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2018002256>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/OutputTypes#Researchdatasetsanddatabases>;
+  skos:related ktx:corpus;
+  skos:altLabel "data set"@en, "datasets"@en;
+  skos:prefLabel "dataset"@en, "dataset"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_archive a skos:Concept;
+  skos:definition "A digital archive may refer to a collection of records originating from one person or organization and created in the course of their activity or to a collection of items from different entities and/or sources unified thematically (for example records relating to World War I). Furthermore, traditional analogue methods of ordering archives and presenting provenance (e.g. fonds) may not be applied to records in a digital archive which may instead be characterized by the need for specific, detailed organization and descriptive metadata to enable searching and retrieval. Despite this, the purpose of a digital archive remains the same as that of a traditional analogue archive: to preserve these records and make them available because of their perceived value to one or more communities. Records or items in a digital archive should include some sort of descriptive and/or organizational metadata which should be publicly available while the data (items or records being archived) may be accessible in a variety of ways including via a website interface (public or with permitted access) and direct download."@en, "Un archivio digitale può riferirsi a una raccolta di documenti provenienti da una persona o da un'organizzazione e creati nel corso della loro attività o a una raccolta di elementi provenienti da ente e/o fonti diverse e unificati tematicamente (ad esempio documenti relativi alla Prima Guerra Mondiale). Inoltre, i tradizionali metodi analogici di ordinamento degli archivi e di presentazione della provenienza (ad esempio, i fondi) non sono sempre applicati ai documenti di un archivio digitale, che possono invece essere caratterizzati dalla necessità di un'organizzazione specifica e dettagliata e di metadati descrittivi per consentire alla ricerca e il recupero. Nonostante ciò, lo scopo di un archivio digitale rimane lo stesso di un archivio analogico tradizionale: conservare questi documenti e renderli disponibili per il loro valore percepito da una o più comunità. I record o gli elementi di un archivio digitale dovrebbero includere una sorta di metadati descrittivi e/o organizzativi che dovrebbero essere disponibili al pubblico, mentre i dati (elementi o record archiviati) possono essere accessibili in vari modi, tra cui tramite un'interfaccia del sito web (pubblica o con accesso consentito) e il download diretto."@it;
+  dct:source "Valacchi, Federico. 2012. “Tra cartaceo e digitale: gestione e conservazione degli archivi degli enti pubblici”. “Soprintendenza archivistica e bibliografica della Lombardia.” n.d. Gov.it. Accessed June 20, 2023. https://sab-lom.cultura.gov.it/conoscere-archivi-e-biblioteche. “Linee Guida sulla formazione, Allegato 1. al documento, and Gestione e. Conservazione Dei informatici”. n.d. “Glossario Dei Termini e Degli Acronimi.” Gov.It. Accessed June 20, 2023. https://www.agid.gov.it/sites/default/files/repository_files/allegato_1_glossario_dei_termini_e_degli_acronimi.pdf."@it, "Morris, Sammie L. 2009. “An Introduction to Archives for Librarians.” https://docs.lib.purdue.edu/lib_research/103/."@en;
+  skos:example "The Archivio della Latinità Italiana del Medioevo project hosted by the University of Siena, http://alim.unisi.it/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch  <http://vocab.getty.edu/aat/300379430>;
+  skos:relatedMatch <http://id.loc.gov/authorities/subjects/sh85006913>;
+  skos:prefLabel "digital archive"@en, "archivio digitale"@it;
+  skos:altLabel "digital archives"@en, "archivi digitali"@it ; 
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_catalogue a skos:Concept;
+  skos:definition "A digital catalogue enables searching for, identifying, and locating specific instances of other resources based on a unifying theme (such as format or subject). The findable resources should be detailed with descriptive metadata and may be accessible directly from the catalog or from a third-party service or source. Searching functionality in a digital catalogue should include various parameters based on the type of resource being catalogued. A digital catalogue can also act as the interface to a census of resources for example to facilitate their visibility or accessibility."@en,
+    "Un catalogo digitale consente di cercare, identificare e localizzare istanze specifiche di altre risorse basate su un tema unificante (come il formato o il soggetto). Le risorse reperibili dovrebbero essere dettagliate con metadati descrittivi ed essere accessibili direttamente dal catalogo o da un servizio o una fonte esterna. La funzionalità di ricerca in un catalogo digitale dovrebbe includere vari parametri in base al tipo di risorsa catalogata. Un catalogo digitale può anche fungere da interfaccia per un censimento di risorse, ad esempio per facilitarne la visibilità o l'accessibilità."@it;
+  dct:source "“Catalogue.” n.d. Wikidata.org. Accessed June 20, 2023. https://www.wikidata.org/wiki/Q2352616. “Digital Catalogues Study.” 2019. Github.Io. November 6, 2019. https://digpublishing.github.io/catalogues-study/."@en ;
+  skos:example "The Catalogue of Digital Editions project led by Greta Franzini, https://dig-ed-cat.acdh.oeaw.ac.at/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300026614>, <http://id.loc.gov/authorities/subjects/sh85020898>;
+  skos:prefLabel "digital catalogue"@en, "catalogo digitale"@it;
+  skos:altLabel "digital catalogues"@en, "cataloghi digitali"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_edition a skos:Concept;
+  skos:definition "A digital edition is a scholarly edition guided by a digital paradigm in its theory, method and practice (Sahle, 2016). As with analogue scholarly editions it must offer access to multiple versions of a text but does so via the use of online interfaces. These interfaces in turn must include one or more services and tools for users to engage with the text and its evolution, such as for examples visualizing differences between versions or analyzing text using concordances and frequency indexes. Digital editions may offer the ability to download texts and related metadata or critical information in a variety of formats."@en,
+    "Un'edizione critica digitale è un'edizione critica guidata da un paradigma digitale nella sua teoria, metodo e pratica (Sahle, 2016). Come per le edizioni critiche analogiche, deve offrire l'accesso a più versioni di un testo, ma lo fa attraverso l'uso di interfacce online. Queste interfacce a loro volta devono includere uno o più servizi e strumenti che consentano agli utenti di interagire con il testo e la sua evoluzione, come ad esempio la visualizzazione delle differenze tra le versioni o l'analisi del testo utilizzando concordanze e indici di frequenza. Le edizioni digitali possono offrire la possibilità di scaricare testi e relativi metadati o informazioni critiche in una varietà di formati."@it;
+  dct:source "Sahle, Patrick. 2016. “2. What is a Scholarly Digital Edition?” http://books.openedition.org/obp/3397."@en;
+  skos:example "The Vercelli Book Digitale project by the University of Turin, http://vbd.humnet.unipi.it/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept42>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/OutputTypes#ScholarlyEdition>;
+  skos:altLabel "scholarly digital edition"@en, "digital editions"@en, "edizioni critiche digitali"@it;
+  skos:prefLabel "digital edition"@en, "edizione critica digitale"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/>;
+  skos:narrower ktx:semantic_digital_edition .
+
+ktx:semantic_digital_edition a skos:Concept;
+  skos:definition "A type of scholarly digital edition that employs and centers semantic web technologies (such as RDF) in its methods, for example by enabling a user to navigate its contents based on relationships between entities or concepts."@en,
+    "Un tipo di edizione critica digitale che impiega e centra le tecnologie del web semantico (come RDF) nei suoi metodi, ad esempio consentendo a un utente di navigare nei suoi contenuti in base a relazioni tra entità o concetti."@it;
+  skos:example "The Paolo Bufalini's Notebook project by the University of Bologna, http://projects.dharc.unibo.it/bufalini-notebook/."@en;
+  skos:broader ktx:digital_edition;
+  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept42>;
+  skos:altLabel "semantic digital editions"@en ;
+  skos:prefLabel "semantic digital edition"@en, "edizione critica digitale semantica"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_library a skos:Concept;
+  skos:definition "A digital library is a collection of resources, potentially available in a variety of formats, and their description, in the form of metadata, that enable one or more communities access in order to allow further research into the subject, educate, inform, or entertain. A digital library must make publicly accessible at least one of the metadata (descriptive and/or bibliographic information) and/or data (digital copy) of each of the resources it collects. It may also offer specific services and/or tools to users such as advanced search functionalities, downloads in multiple format, or data manipulation."@en,
+    "Una biblioteca digitale è una collezione di risorse, potenzialmente disponibili in una varietà di formati, e la loro descrizione, sotto forma di metadati, che consentono l'accesso a una o più comunità al fine di consentire ulteriori ricerche sull'argomento, educare, informare o intrattenere. Una biblioteca digitale deve rendere pubblicamente accessibile almeno uno dei metadati (informazioni descrittive e/o bibliografiche) e/o dei dati (copia digitale) di ciascuna delle risorse che raccoglie. Può anche offrire servizi e/o strumenti specifici agli utenti, come funzionalità di ricerca avanzate, download in più formati o manipolazione dei dati."@it;
+  dct:source "Mazzitelli, Gabriele. 2007. Che cos’è una biblioteca."@it, "Lynch, Clifford, and Hector Garcia-Molina. 1995. “Interoperability, Scaling, and the Digital Libraries Research Agenda.” Nitrd.gov. 1995. https://www.nitrd.gov/PUBS/iita-dlw/IITA_Digital_Libraries_Workshop.pdf. Graham, Wayne. 1998. “CLIR Issues Number 4.” CLIR. July 13, 1998. https://www.clir.org/1998/07/clir-issues-number-4/. Borgman, Christine L. 1999. “What are digital libraries? Competing visions.” Information Processing & Management, 35, 227-243. 1999. https://escholarship.org/uc/item/7c55m1xf. ALA Library. 2016. “LibGuides: Definition of a Library: General Definition.” https://libguides.ala.org/library-definition."@en, "“Soprintendenza archivistica e bibliografica della Lombardia.” n.d. Gov.it. Accessed June 20, 2023. https://sab-lom.cultura.gov.it/conoscere-archivi-e-biblioteche."@it;
+  skos:example "The Biblioteca Italiana project hosted by the University of Roma Sapienza, http://www.bibliotecaitaliana.it/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://vocab.getty.edu/aat/300391336>, <http://id.loc.gov/authorities/subjects/sh95008857>;
+  skos:prefLabel "digital library"@en, "biblioteca digitale"@it;
+  skos:altLabel "digital libraries"@en, "biblioteche digitali"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/>;
+  skos:narrower ktx:digital_collection .
+
+ktx:digital_collection a skos:Concept;
+  skos:definition "A digital collection is a collection of resources, with a unified format or available in a variety of formats, selected and organized for a specific purpose. A digital collection must also include descriptive and/or organizational metadata for the resources it contains and may be presented as part of a digital library or independently. Its metadata is assumed to be publicly available while the resources (data) may be accessible via a web interface and/or downloadable copies."@en,
+    "Una collezione digitale è un insieme di risorse, con un formato unificato o disponibili in una varietà di formati, selezionate e organizzate per uno scopo specifico. Una collezione digitale deve anche includere metadati descrittivi e/o organizzativi per le risorse che contiene e può essere presentata come parte di una biblioteca digitale o indipendentemente. Si presume che i suoi metadati siano pubblicamente disponibili mentre le risorse (dati) possono essere accessibili tramite un'interfaccia web e/o copie scaricabili."@it;
+  dct:source "“Reicat/Parte I/Capitolo 1/1.5/1.5.4.” n.d. Sbn.it. Accessed June 20, 2023. https://norme.iccu.sbn.it/index.php?title=Reicat/Parte_I/Capitolo_1/1.5/1.5.4#1.5.4.1."@it, "Glushko, Robert J. n.d. The Discipline of Organizing: 4th Professional Edition. University of California, Berkeley. Accessed June 20, 2023."@en;
+  skos:example "The collections within the ALIM project, http://alim.unisi.it/collection/collezione-asiatica/."@en;
+  skos:broader ktx:digital_library;
+  skos:relatedMatch <http://vocab.getty.edu/aat/300443858>;
+  skos:prefLabel "digital collection"@en, "collezione digitale"@it;
+  skos:altLabel "digital collections"@en, "collezioni digitali"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_platform a skos:Concept;
+  skos:definition "A digital platform is a type of online infrastructure that brings together data and metadata with services and/or tools to enable users to access and interact with the outcomes of academic research. A digital platform should offer at least one type of service or tool that can interact with the data and metadata in order to enable knowledge extraction or production (for example textual analysis or image manipulation). Other characteristics may include the ability for users to exchange information between themselves or with the platform. A digital platform may also include direct access to the data and metadata, in the form of one or more downloadable files, and enable the reuse of its services or tools, however neither are a requisite."@en,
+    "Una piattaforma digitale è un tipo di infrastruttura online che riunisce dati e metadati con servizi e/o strumenti per consentire agli utenti di accedere e interagire con i risultati della ricerca accademica. Una piattaforma digitale dovrebbe offrire almeno un tipo di servizio o strumento in grado di interagire con i dati e i metadati per consentire l'estrazione o la produzione di conoscenza (ad esempio l'analisi testuale o la manipolazione delle immagini). Altre caratteristiche possono includere la possibilità per gli utenti di scambiare informazioni tra loro o con la piattaforma. Una piattaforma digitale può anche includere l'accesso diretto ai dati e ai metadati, sotto forma di uno o più file scaricabili, e consentire il riutilizzo dei suoi servizi o strumenti, ma nessuno dei due è un requisito."@it;
+  dct:source "“Web Portal.” n.d. Wikidata.org. Accessed June 20, 2023. https://www.wikidata.org/wiki/Q186165. “Digital Platform.” n.d. Wikidata.org. Accessed June 20, 2023. https://www.wikidata.org/wiki/Q107490656. “Research Platforms | ARDC.” 2022. https://ardc.edu.au/resource/research-platforms/."@en;
+  skos:example "The Carte d'Autore project from the University of Florence, https://www.cartedautore.it/, and the ALCIDE (Analysis of Language and Content In a Digital Environment) project from DH@FBK, https://alcidedigitale.fbk.eu/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#ResearchTool>,
+    <http://id.loc.gov/authorities/subjects/sh99005116>;
+  skos:altLabel "web portal"@en, "digital platforms"@en, "piattaforme digitale"@it;
+  skos:prefLabel "digital platform"@en, "piattaforma digitale"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/>;
+  skos:narrower ktx:crowdsourcing_platform, ktx:multimedia_platform,
+    ktx:research_platform, ktx:storytelling_platform .
+
+ktx:crowdsourcing_platform a skos:Concept;
+  skos:definition "A type of digital platform that aims to grow its data, applications and/or services via user contributions. Therefore user contributions (whatever their form) are an essential service of this type of platform however platforms that offer user contributions among other services are not necessarily crowdsourcing platforms."@en,
+    "Una tipologia di piattaforma digitale che a scopo di fare crescere i propri dati, applicazioni e/o servizi attraverso i contributi degli utenti. Pertanto i contributi degli utenti (qualunque sia la loro forma) sono un servizio essenziale di questo tipo di piattaforma, tuttavia le piattaforme che offrono contributi degli utenti tra altri servizi non sono necessariamente piattaforme di crowdsourcing."@it;
+  skos:example "The project VinKo (Varietà in Contatto) from the Universities of Verona, Trento, and Bolzano, https://www.vinko.it/index.php."@en;
+  skos:broader ktx:digital_platform;
+  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept54>;
+  skos:prefLabel "crowdsourcing platform"@en, "piattaforma di crowdsourcing"@it;
+  skos:altLabel "crowdsourcing platforms"@en, "piattaforme di crowdsourcing"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:multimedia_platform a skos:Concept;
+  skos:definition "A type of digital platform focused on the use and editing of various media types to create new digital objects."@en,
+    "Una tipologia di piattaforma digitale caratterizzata dall'uso e l'editing di vari tipi di media per creare nuovi oggetti digitali."@it;
+  skos:example "The eTalks project from the Swiss Institute of Bioinformatics, https://etalk.vital-it.ch/."@en;
+  skos:broader ktx:digital_platform;
+  skos:prefLabel "multimedia platform"@en, "piattaforma di multimedia"@it;
+  skos:altLabel "multimedia platforms"@en, "piattaforme di multimedia"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:research_platform a skos:Concept;
+  skos:definition "A type of digital platform that draws together research data, models, analysis tools and workflows to support collaborative research across institutional and discipline boundaries."@en,
+    "Una tipologia di piattaforma digitale che riunisce dati di ricerca, modelli, strumenti di analisi e flussi di lavoro per supportare la ricerca collaborativa oltre i confini istituzionali e disciplinari."@it;
+  dct:source "“Research Platforms | ARDC.” 2022. https://ardc.edu.au/resource/research-platforms/.";
+  skos:example "The Sandrart.net project from the University of Frankfurt, http://www.sandrart.net/en/."@en;
+  skos:broader ktx:digital_platform;
+  skos:relatedMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#ResearchTool>;
+  skos:prefLabel "research platform"@en, "piattaforma di ricerca"@it;
+  skos:altLabel "research platforms"@en, "piattaforme di ricerca"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:storytelling_platform a skos:Concept;
+  skos:definition "A type of digital platform characterized by the use of storytelling as a means of expressing and making available the results of the research. Digital technologies and practices and various media formats are used to create an interface with which to guide the narrative and/or to allow users to create their own story from the data and tools. A storytelling platform must make use of at least one digital format and tool or service."@en,
+    "Una tipologia di piattaforma digitale caratterizzata dall'utilizzo dello storytelling come mezzo per esprimere e rendere disponibili i risultati della ricerca. Tecnologie e pratiche digitali e vari formati multimediali vengono utilizzati per creare un'interfaccia con cui guidare la narrazione e/o consentire agli utenti di creare la propria storia dai dati e dagli strumenti. Una piattaforma di storytelling deve utilizzare almeno un formato digitale e uno strumento o servizio."@it;
+  skos:example "The Memorie di Guerra project from the Universities of Pisa and Siena, http://www.memoriediguerra.it/site, and the Atlante Calvino project from the University of Geneve and the Polytechnic University of Milan, https://atlantecalvino.unige.ch/."@en;
+  skos:broader ktx:digital_platform;
+  skos:prefLabel "storytelling platform"@en, "piattaforma narrativa"@it;
+  skos:altLabel "storytelling platforms"@en, "piattaforme narrative"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:digital_repository a skos:Concept;
+  skos:definition "A digital repository is a type of service that enables the deposition and preservation of digital resources, in a variety of formats, and optionally their presentation. Digital repositories should both facilitate the activities of a community and respond to its needs and should offer durable and permanent solutions to preservation while making their content accessible. Resources in a repository should have descriptive metadata attached to them and be searchable as well as directly accessible via download links."@en,
+    "Un digital repository è un tipo di servizio che consente il deposito e la conservazione di risorse digitali, in una varietà di formati, e facoltativamente la loro presentazione. Digital repository dovrebbero sia facilitare le attività di una comunità sia rispondere alle sue esigenze e dovrebbero offrire soluzioni durevoli e permanenti per la conservazione, rendendo il loro contenuto accessibile. Le risorse in un repository dovrebbero avere metadati descrittivi allegati ed essere ricercabili e direttamente accessibili tramite collegamenti per il download."@it;
+  dct:source "Gibbons, Susan. 2009. “Chapter 2: Defining an Institutional Repository.” Library Technology Reports 40 (4): 6–10. https://journals.ala.org/index.php/ltr/article/view/4378"@en;
+  skos:example "The mappaopendata project from the University of Pisa, http://mappaproject.arch.unipi.it/mod/Index.php."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://vocab.getty.edu/aat/300419319>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept43>;
+  skos:altLabel "repo"@en, "digital repositories"@en;
+  skos:prefLabel "digital repository"@en, "digital repository"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:knowledge_base a skos:Concept;
+  skos:definition "A knowledge base is a store of knowledge that contains inference rules and information about human experience and expertise in a specific domain and intended for use by an information system. Within the context of this taxonomy, a knowledge base must include a formal structure and semantics."@en,
+    "Una knowledge base (base di conoscenza) è una riserva di conoscenza che contiene regole di inferenza e informazioni sull'esperienza e la competenza umana in un dominio specifico e destinata all'uso da parte di un sistema informativo. Nel contesto di questa tassonomia, una knowledge base deve includere una struttura formale e una semantica."@it;
+  dct:source "Cook, Merrill. 2020. “Knowledge Base.” Diffblog (blog). Diffbot. April 21, 2020. https://blog.diffbot.com/knowledge-graph-glossary/knowledge-base/. “Iso/Iec 2382:2015.” 2020. ISO. 2020. https://www.iso.org/standard/63598.html. Kejriwal, Mayank. 2019. “What Is a Knowledge Graph?” In Domain-Specific Knowledge Graph Construction, 1–7. Cham: Springer International Publishing."@en;
+  skos:example "The LiLa project from the University Cattolica Sacro Cuore, https://lila-erc.eu/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.04>;
+  skos:related ktx:database, ktx:knowledge_graph;
+  skos:altLabel "KB"@en, "knowledge bases"@en;
+  skos:prefLabel "knowledge base"@en, "knowledge base"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:knowledge_graph a skos:Concept;
+  skos:definition "A type of knowledge base centered around the relationship between entities. It uses a graph as its structure to represent knowledge as concepts and the relationships betwee n them (facts). It is generally understood and used within the context of the semantic web and is “intended to accumulate and convey knowledge of the real world.” (Hogan, Aidan et al. 2021) It should make use of a data model and/or ontology to allow both humans and machines to understand and reason about its contents."@en,
+    "Una tipologia di knowledge base incentrata sulla relazione tra entità. Utilizza un grafo come sua struttura per rappresentare la conoscenza come concetti e le relazioni tra di essi (fatti). È generalmente compreso e utilizzato nel contesto del web semantico ed è \"destinato ad accumulare e trasmettere la conoscenza del mondo reale.\" (Hogan, Aidan et al. 2021) Dovrebbe utilizzare un modello di dati e/o un'ontologia per consentire sia agli esseri umani che alle macchine di comprendere e ragionare sui suoi contenuti."@it;
+  dct:source "Cook, Merrill. 2020. “Knowledge Base.” Diffblog (blog). Diffbot. April 21, 2020. https://blog.diffbot.com/knowledge-graph-glossary/knowledge-base/. Ehrlinger, Lisa, and Wolfram Wöß. n.d. “Towards a Definition of Knowledge Graphs.” Ceur-ws.org. Accessed June 20, 2023. https://ceur-ws.org/Vol-1695/paper4.pdf. Hogan, Aidan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, José Emilio Labra Gayo, et al. 2020. “Knowledge Graphs.” ArXiv [Cs.AI]. http://arxiv.org/abs/2003.02320."@en;
+  skos:example "The knowledge graph produced as part of the mythLOD project from the University of Bologna, https://dharc-org.github.io/mythlod/static/mima.html."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:relatedMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.04>;
+  skos:related ktx:database, ktx:knowledge_base;
+  skos:altLabel "KG"@en, "knowledge graphs"@en;
+  skos:prefLabel "knowledge graph"@en, "knowledge graph"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:ontology a skos:Concept;
+  skos:definition "An ontology is intended in the computer and information science context of the term, as an information object or computational artifact that formally models the structure of a system in essence acting as a formal representation of a set of concepts and categories within a domain or subject area, their properties, and the relationships between them. It must be encoded using an ontology language, be machine-readable and be accessible and reusable."@en,
+    "Un'ontologia è intesa nel contesto delle scienze informatiche del termine, come un oggetto informativo o artefatto computazionale che modella formalmente la struttura di un sistema in sostanza agendo come rappresentazione formale di un insieme di concetti e categorie all'interno di un dominio o area tematica, le loro proprietà e le relazioni tra di esse. Deve essere codificato utilizzando un linguaggio ontologico, essere leggibile dalle macchine ed essere accessibile e riutilizzabile."@it;
+  dct:source "Guarino, Nicola, Daniel Oberle, and Steffen Staab. 2009. “What Is an Ontology?” In Handbook on Ontologies, 1–17. Berlin, Heidelberg: Springer Berlin Heidelberg."@en;
+  skos:example "The ArCo ontology produced by the University of Bologna, http://wit.istc.cnr.it/arco/index.php?lang=en."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.02>, <http://vocab.getty.edu/aat/300266741>,
+    <http://id.loc.gov/authorities/subjects/sh2005006014>;
+  skos:prefLabel "ontology"@en, "ontologia"@it;
+  skos:altLabel "ontologies"@en, "ontologie"@it;
+  skos:related ktx:controlled_vocabulary;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:controlled_vocabulary a skos:Concept;
+  skos:definition "A controlled vocabulary is an organized arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain. Common types of (structured) controlled vocabularies include thesauri, subject heading lists, taxonomies, controlled lists, and authority files."@en,
+    "Un vocabolario controllato è una disposizione organizzata di parole e frasi utilizzate per indicizzare i contenuti e/o per recuperarli attraverso la navigazione o la ricerca. In genere include termini preferiti e varianti e ha un ambito definito o descrive un dominio specifico. I tipi più comuni di vocabolari controllati (strutturati) includono thesauri, elenchi di voci di soggetto, tassonomie, elenchi controllati e file di autorità."@it;
+  dct:source "Harping, Patricia. 2010. Introduction to Controlled Vocabularies: Terminology for Art, Architecture and Other Cultural Works. Santa Monica, CA: Getty Research Institute."@en;
+  skos:example "The controlled vocabularies created for the Aldo Moro Digital Edition, https://aldomorodigitale.unibo.it/about/docs/results#codes-section."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://vocab.getty.edu/aat/300265266>, <https://vocabs.acdh.oeaw.ac.at/dhataxonomy/Concept40.03>, <http://id.loc.gov/authorities/subjects/sh85129426> ;
+  skos:prefLabel "controlled vocabulary"@en, "vocabolario controllato"@it;
+  skos:altLabel "controlled vocabularies"@en, "vocabolari controllati"@it;
+  skos:related ktx:ontology ;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:software a skos:Concept;
+  skos:definition "Software is a set of computer programs and their associated documentation and data that requires hardware, whether local or remote to the user, for usage. In the context of this taxonomy, software is assumed to be available for reuse in order to facilitate further research or knowledge production by different communities."@en,
+    "Il software è un insieme di programmi per computer e la documentazione e i dati associati che richiedono hardware, locale o remoto per l'utente, per l'utilizzo. Nel contesto di questa tassonomia, si presume che il software sia disponibile per il riutilizzo al fine di facilitare ulteriori ricerche o produzione di conoscenza da parte di diverse comunità."@it;
+  dct:source "“Iso/Iec 2382:2015.” 2020. ISO. 2020. https://www.iso.org/standard/63598.html."@en;
+  skos:example "The Bradypus software developed by the University of Rome Sapienza, https://bdus.cloud/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <https://cerif.eurocris.org/vocab/html/OutputTypes.html#Software>, <http://vocab.getty.edu/aat/300028566>, <http://id.loc.gov/authorities/subjects/sh85029534>;
+  skos:prefLabel "software"@en, "software"@it;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .
+
+ktx:endpoint a skos:Concept;
+  skos:definition "In computer networking an endpoint is a type of communication network node that acts as an interface exposed by a communicating party or by a communication channel. In the context of this taxonomy, endpoint refers primarily to the endpoints offered by web Application Programming Interfaces (APIs), specifying where resources lie that can be accessed by third party software, or those capable of receiving and processing SPARQL Protocol requests."@en,
+    "Nelle reti informatiche, un endpoint è un tipo di nodo della rete di comunicazione che funge da interfaccia esposta da una parte comunicante o da un canale di comunicazione. Nel contesto di questa tassonomia, l'endpoint si riferisce principalmente agli endpoint offerti dalle web Application Programming Interfaces (API), che specificano dove si trovano le risorse a cui possono accedere software di terze parti, o quelli in grado di ricevere ed elaborare le richieste del protocollo SPARQL."@it;
+  dct:source "Wikipedia contributors. 2023. “Web API.” Wikipedia, The Free Encyclopedia. December 8, 2023. https://en.wikipedia.org/w/index.php?title=Web_API&oldid=1188983708. Wikipedia contributors. 2024. “Communication Endpoint.” Wikipedia, The Free Encyclopedia. January 16, 2024. https://en.wikipedia.org/w/index.php?title=Communication_endpoint&oldid=1196087839."@en;
+  skos:example "The API offered by the FRED project, http://wit.istc.cnr.it/stlab-tools/fred_api/."@en;
+  skos:topConceptOf <http://w3id.org/knot/taxonomy/>;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh98004527>, <http://vocab.getty.edu/aat/300419453>;
+  skos:prefLabel "endpoint"@en, "endpoint"@it;
+  skos:altLabel "endpoints"@en ;
+  skos:inScheme <http://w3id.org/knot/taxonomy/> .

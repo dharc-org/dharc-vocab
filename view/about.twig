@@ -1,0 +1,25 @@
+{% extends "light.twig" %}
+{% block title %}{{ "About" | trans}} - {{ GlobalConfig.serviceName }}{% endblock %}
+{% block description %}{{ GlobalConfig.aboutDescription(request.lang) }}{% endblock %}
+{% block url %}{{ BaseHref }}{{ request.langurl }}{% endblock %}
+{% block sidebar %}{% endblock %}
+{% block headernav %}{% endblock %}
+{% block content %}
+<div class="feedback-logo">
+  <h1>{% trans "About" %}</h1>
+</div>
+<div id="about">
+  <div class="about-content">
+    {% include ['about.inc', 'about.inc.dist']  %}
+  </div>
+</div>
+<div class="about-extra-info">
+  <div class="credits">
+    <p>{% if GlobalConfig.serviceName != 'SERVICE_NAME' %}{{ GlobalConfig.serviceName }}{% else %}Skosmos{% endif %} {% trans "layout based on the original by Hahmo." %}</p>
+  </div>
+  <div class="version">
+    {% set version = request.version %}
+    <p>{% trans %}Skosmos version {{ version }}{% endtrans %}</p>
+  </div>
+</div>
+{% endblock %}

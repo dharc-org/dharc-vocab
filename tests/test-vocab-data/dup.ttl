@@ -1,0 +1,61 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dup: <http://www.skosmos.skos/dup/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosmos: <http://www.skosmos.skos/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dup:d1 a skos:Concept ;
+    skos:prefLabel "Identical label"@en .
+
+dup:d2 a skos:Concept ;
+    skos:prefLabel "Identical label"@en ;
+    skos:altLabel "Not so identical label"@en .
+
+dup:d3 a skos:Concept ;
+    skos:closeMatch dup:d1, dup:d2 ; 
+    skos:prefLabel "A label"@en .
+
+dup:d4 a skos:Concept ;
+    dup:prop1 "Identical property value"@en;
+    dup:prop2 "Identical property value"@en;
+    skos:prefLabel "A concept with a duplicate property"@en .
+
+dup:d5 a skos:Concept ;
+    dup:prop3 "Identical property value"@en;
+    dup:prop4 "Identical property value"@en;
+    dup:subprefLabel "Not a subproperty"@en;
+    skos:prefLabel "Not a subproperty"@en .
+
+dup:d6 a skos:Concept ;
+    skos:prefLabel "A label"@en ;
+    dup:subPrefLabel "A more accurate label"@en .
+
+dup:d7 a skos:Concept ;
+    dup:subPrefLabel "Identical preferred label and its subproperty"@en;
+    skos:prefLabel "Identical preferred label and its subproperty"@en .
+
+# in order for getLabel query to work, a type has to be declared
+# on the properties
+
+dup:prop1 a owl:DatatypeProperty ;
+  rdfs:label "Very nice property"@en .
+   
+dup:prop2 a owl:DatatypeProperty ;
+  rdfs:subPropertyOf dup:prop1 ;
+  rdfs:label "Nearly as nice subproperty"@en .
+
+dup:prop3 a owl:DatatypeProperty ;
+  rdfs:label "Nice-ish property"@en .
+   
+dup:prop4 a owl:DatatypeProperty ;
+  rdfs:label "Not at all a subproperty"@en .
+
+dup:subPrefLabel a owl:DatatypeProperty ;
+  rdfs:subPropertyOf skos:prefLabel ;
+  rdfs:label "Subproperty of skos:prefLabel"@en .

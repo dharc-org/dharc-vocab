@@ -1,0 +1,196 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix hico: <http://purl.org/emmedi/hico/> .
+
+<http://purl.org/emmedi/hico/> a skos:ConceptScheme, owl:Ontology ;
+    dc:title "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
+    skos:prefLabel "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
+    dc:contributor "Francesca Tomasi", "Silvio Peroni" ;
+    dc:creator "Marilena Daquino" ;
+    dct:created "2019-10-02"^^xsd:date ;
+    dct:issued "2020-03-31"^^xsd:date ;
+    dct:modified "2020-03-31"^^xsd:date ;
+    dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
+    dc:description """The Historical Context Ontology (HiCO) is an OWL 2 DL ontology developed for representing the context of a claim. In particular, it addresses features characterising hermeneutical activities performed by scholars while generating new information (i.e. an interpretation act). It allows to represent and reason on reliability of argumentations around attributions, by evaluating features such as motivations, types of cited sources or criteria, dates, relations with other claims (e.g. agreement/disagreement). Specifically, historical context regards events and situations that are part of the life-cycle of cultural heritage objects. For instance, "being created by somebody", or "being created at a certain time", are events related to an artefact that are claimed by an agent at a certain time, motivated with usage of primary sources, and recorded in a secondary source (e.g. a cataloguing record). HiCO extends the PROV Ontology with terms for describing aspects of the hermeneutical activity, and reuses existing ontologies, such as CiTO Ontology for linking attributions to related sources."""@en, """L'Ontologia per il Contesto Storico (HiCO) è una ontologia OWL 2 DL sviluppata per descrivere il contesto di una affermazione. In particolare, permette di descrivere aspetti inerenti il processo ermeneutico di studiosi che propongono asserzioni opinabili (i.e. un atto interpretativo). Il vocabolario consente di rappresentare le argomentazioni a supporto di un'attribuzione, considerando motivazioni, tipologie di fonti citate, date, relazioni con altre asserzioni (e.g. accordo/disaccordo). Più precisamente, il contesto storico si riferisce a tutte quelle informazioni, eventi e situazioni che ruotano attorno al ciclo di vita di oggetti culturali. Ad esempio, "essere creato da qualcuno", o "essere creato ad un certo punto nel tempo", sono asserzioni su eventi legati ad un artefatto proposti da un agente ad un certo punto nel tempo, motivate dall'utilizzo di fonti primarie, eventualmente registrate in fonti secondarie (e.g. una scheda catalografica). HiCO estende la PROV Ontology con nuovi termini per descrivere l'attività ermeneutica sulle fonti primarie e riusa ontologie esistenti come la CiTO Ontology per collegare attribuzioni presentate in fonti secondarie alle fonti primarie."""@it ;
+    dc:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
+    vann:preferredNamespacePrefix "hico" ;
+    vann:preferredNamespaceUri "https://w3id.org/hico/" ;
+    owl:versionIRI <http://purl.org/emmedi/hico/2020-03-31> ;
+    owl:imports skos:, cito:, frbr:, prov:, vann: ;
+    owl:versionInfo "2.0" ;
+    skos:hasTopConcept hico:InterpretationCriterion, hico:InterpretationType, hico:InterpretationAct;
+    foaf:homepage <https://github.com/marilenadaquino/hico> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/marilenadaquino/hico/refs/heads/master/current/hico.owl> .
+
+hico:InterpretationCriterion a owl:Class, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    skos:topConceptOf <http://purl.org/emmedi/hico/> ;
+    rdfs:label "Interpretation Criterion"@en, "Criterio Interpretativo"@it ;
+    skos:prefLabel "Interpretation Criterion"@en, "Criterio Interpretativo"@it ;
+    rdfs:comment "The criterion or type of source used by an agent to support an interpretation act, such as bibliography, verbal communication, etc. "@en, "Il criterio o tipo di fonte utilizzato da un agente per supportare un atto interpretativo, come riferimenti bibliografici, comunicazione orale, etc. "@it ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> .
+
+hico:InterpretationType a owl:Class, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    skos:topConceptOf <http://purl.org/emmedi/hico/> ;
+    rdfs:label "Interpretation Type"@en, "Tipo di Atto Interpretativo"@it ;
+    skos:prefLabel "Interpretation Type"@en, "Tipo di Atto Interpretativo"@it ;
+    rdfs:comment "An arbitrary definition of the interpretation act, such as artowork attribution or date attribution."@en, "Una definizione arbitraria dell'atto interpretativo, come l'attribuzione di un'opera o di una datazione."@it ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> .
+
+hico:InterpretationAct a owl:Class, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    skos:topConceptOf <http://purl.org/emmedi/hico/> ;
+    rdfs:label "Interpretation Act"@en, "Atto Interpretativo"@it ;
+    skos:prefLabel "Interpretation Act"@en, "Atto Interpretativo"@it ;
+    rdfs:comment "The hermeneutical activity performed by an agent in order to generate new information (e.g. an artwork attribution)."@en, "L'attività ermeneutica svolta da un agente per proporre un'asserzione (e.g. attribuzione di un'opera d'arte)."@it ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
+    skos:note "This class makes use of OWL hasValue restrictions which cannot be displayed correctly in SKOS. Please see the original OWL file to view these restrictions."@en, "Questa classe fa uso delle restrizioni di OWL hasValue che non possono essere visualizzate correttamente in SKOS. Per visualizzare queste restrizioni, consultare il file OWL originale."@it ;
+    rdfs:subClassOf prov:Activity .
+
+hico:hasInterpretationCriterion a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "has interpretation criterion"@en, "utilizza il criterio interpretativo"@it ;
+    skos:prefLabel "has interpretation criterion"@en, "utilizza il criterio interpretativo"@it ;
+    rdfs:comment "A property relating an interpretation act to a criterion or type of source used to support the claim."@en, "La relazione tra un atto interpretativo e il criterio o tipo di fonte utilizzata per supportare l'affermazione."@it ;
+    rdfs:domain hico:InterpretationAct ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
+    rdfs:range hico:InterpretationCriterion .
+
+hico:hasInterpretationType a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "has interpretation type"@en, "ha tipologia di atto interpretativo"@it ;
+    skos:prefLabel "has interpretation type"@en, "ha tipologia di atto interpretativo"@it ;
+    rdfs:comment "A property relating an interpretation act to an individual defining an arbitrary classification of the interpretation."@en, "La relazione tra l'atto interpretativo e una classificazione arbitraria della tipologia di interpretazione effettuata."@it ;
+    rdfs:domain hico:InterpretationAct ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
+    rdfs:range hico:InterpretationType .
+
+hico:isExtractedFrom a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "is extracted from"@en, "è estratto da"@it ;
+    skos:prefLabel "is extracted from"@en, "è estratto da"@it ;
+    rdfs:comment "A property relating an interpretation act to the source where from the claim has been extracted"@en, "La relazione tra l'atto interpretativo e la fonte (primaria o secondaria) da cui l'asserzione è estratta."@it ;
+    rdfs:domain hico:InterpretationAct ;
+    rdfs:isDefinedBy <http://purl.org/emmedi/hico/> ;
+    rdfs:subPropertyOf prov:wasInfluencedBy .
+
+cito:cites a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "cites"@en, "cita"@it ;
+    skos:prefLabel "cites"@en, "cita"@it ;
+    rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en, "La relazione tra l'entità citante e quella citata. La citazione può essere esplicita (e.g. nella sezione Bibliografia di un articolo scientifico), indiretta (e.g. citando un articolo degli stessi autori o sullo stesso argomento), or implicita (e.g. una parodia artistica o un plagio)."@it ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> .
+
+cito:agreesWith a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "agrees with"@en, "è in accordo con"@it ;
+    skos:prefLabel "agrees with"@en, "è in accordo con"@it ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
+    rdfs:subPropertyOf cito:cites .
+
+cito:citesAsEvidence a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "cites as evidence"@en, "cita come prova"@it ;
+    skos:prefLabel "cites as evidence"@en, "cita come prova"@it ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
+    rdfs:subPropertyOf cito:cites .
+
+cito:disagreesWith a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "disagrees with"@en, "è in disaccordo con"@it ;
+    skos:prefLabel "disagrees with"@en, "è in disaccordo con"@it ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
+    rdfs:subPropertyOf cito:cites .
+
+cito:refutes a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "refutes"@en, "confuta"@it  ;
+    skos:prefLabel "refutes"@en, "confuta"@it  ;
+    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
+    rdfs:subPropertyOf cito:cites .
+
+prov:startedAtTime a owl:DatatypeProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "started at time"@en, "inizia"@it ;
+    skos:prefLabel "started at time"@en, "inizia"@it ;
+    rdfs:comment "A property relating an interpretation act to the time that triggered the activity."@en, "La relazione tra l'atto interpretativo e il momento in cui l'attività inizia."@it ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
+    rdfs:range xsd:dateTime .
+
+frbr:Expression a owl:Class, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "Expression"@en, "Espressione"@it ;
+    skos:prefLabel "Expression"@en, "Espressione"@it ;
+    rdfs:isDefinedBy <http://purl.org/vocab/frbr/core> .
+
+prov:Activity a owl:Class, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "Activity"@en, "Attività"@it ;
+    skos:prefLabel "Activity"@en, "Attività"@it ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+prov:wasInfluencedBy a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "was influenced by"@en, "è influenzato da"@it ;
+    skos:prefLabel "was influenced by"@en, "è influenzato da"@it ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+prov:wasGeneratedBy a owl:ObjectProperty, skos:Concept ;
+    skos:inScheme <http://purl.org/emmedi/hico/> ;
+    rdfs:label "was generated by"@en, "è generato da"@it ;
+    skos:prefLabel "was generated by"@en, "è generato da"@it ;
+    rdfs:comment "A property relating statements to an interpretation act."@en, "La relazione tra un'affermazione e l'atto interpretativo."@it ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov> .
+
+#SKOSMOS specific classes and properties for display purposes 
+
+rdfs:domain a rdf:Property ;
+	rdfs:label "domain"@en, "dominio"@it ;
+    skos:definition  "A domain of the subject property."@en, "Il dominio della proprietà."@it .
+
+rdfs:range a rdf:Property ;
+	rdfs:label "range"@en, "codominio"@it ;
+    skos:definition "A range of the subject property."@en, "Il codominio della proprietà."@it.
+
+rdfs:isDefinedBy a rdf:Property ;
+	rdfs:label "isDefinedBy"@en, "eDefinitoDa"@it ;
+	skos:definition "The defininition of the subject resource."@en, "La fonte della definizione dell'entità."@it .
+
+rdfs:subClassOf a rdf:Property ;
+	rdfs:label "subClassOf"@en, "sottoclasseDi"@it ;
+    skos:definition "The subject is a subclass of a class."@en, "Il soggetto è una sottoclasse di una classe."@it .
+
+rdfs:subPropertyOf a rdf:Property ;
+	rdfs:label "subPropertyOf"@en, "sottoproprietaDi"@it ;
+	rdfs:comment "The subject is a subproperty of a property."@en, "Il soggetto è una sottoproprietà di una proprietà"@it .
+
+rdfs:comment a rdf:Property ;
+	rdfs:label "comment"@en, "commento"@it ;
+	rdfs:comment "A description of the subject resource."@en, "Una descrizione della risorsa oggetto."@it .
+
+dcat:downloadURL a rdf:Property ;
+    rdfs:label "download URL"@en, "URL di scarico"@it .
+
+owl:Class a rdfs:Class ;
+     rdfs:label "Class"@en, "Classe"@it . 
+
+owl:ObjectProperty a rdfs:Class ;
+     rdfs:label "ObjectProperty"@en, "Proprieta di oggeto"@it . 
+
+owl:DatatypeProperty a rdfs:Class ;
+     rdfs:label "DatatypeProperty"@en, "Proprieta datatype"@it . 
+
+owl:inverseOf a rdf:Property ;
+     rdfs:label "inverseOf"@en, "inverso di"@it . 

@@ -1,0 +1,345 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mrv: <https://www.w3id.org/moro/voc/roles/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+mrv:role01 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Diocesan delegate of Catholic Youth's Aspirants"@en,
+        "Delegato Diocesano Aspiranti della Gioventù Cattolica"@it ;
+    skos:relatedMatch wd:Q994779 ;
+    skos:definition "Il ruolo ricoperto da un rappresentante della Gioventù Cattolica (poi rinominata in Azione Cattolica Italiana), un'associazione cattolica laica finalizzata alla collaborazione con le gerarchie ecclesiastiche della Chiesa cattolica."@it .
+
+mrv:role02 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "University student"@en,
+        "Studente universitario"@it ;
+    skos:closeMatch wd:Q318247 ;
+    skos:relatedMatch wd:Q48282 ;
+    skos:definition "Il ruolo ricoperto da una persona che segue con regolarità un corso di studî universitarî."@it .
+
+mrv:role03 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of FUCI"@en,
+        "Membro della FUCI"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro della Federazione Universitaria Cattolica Italiana (FUCI), una federazione di gruppi di studentesse e studenti universitari cattolici."@it .
+
+mrv:role04 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "President of FUCI club in Bari"@en,
+        "Presidente del circolo di Bari della FUCI"@it ;
+    skos:relatedMatch wd:Q1255921 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività del circolo di Bari appartenente alla Federazione Universitaria Cattolica Italiana (FUCI), una federazione di gruppi di studentesse e studenti universitari cattolici."@it .
+
+mrv:role05 a skos:Concept ;
+    skos:altLabel "Assistente di diritto e procedura penale"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Assistant professor of law and criminal procedure"@en,
+        "Assistente volontario alla cattedra di diritto e procedura penale"@it ;
+    skos:relatedMatch wd:Q121594 ;
+    skos:closeMatch wd:Q5669847 ;
+    skos:definition "Il ruolo ricoperto da un membro del personale universitario senza retribuzione e con compiti di coadiuvazione dell’attività didattica della cattedra di diritto e procedura penale."@it .
+
+mrv:role06 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "National president of FUCI"@en,
+        "Presidente nazionale della FUCI"@it ;
+    skos:relatedMatch wd:Q1255921 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività della Federazione Universitaria Cattolica Italiana (FUCI), una federazione di gruppi di studentesse e studenti universitari cattolici."@it .
+
+mrv:role07 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Professor of Philosophy of Law"@en,
+        "Professore di Filosofia del Diritto"@it ;
+    skos:relatedMatch wd:Q1622272 ;
+    skos:closeMatch wd:Q26973007 ;
+    skos:definition "Il ruolo ricoperto da un professore universitario di filosofia del diritto."@it .
+
+mrv:role08 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the Movement of the Graduates of Catholic Action"@en,
+        "Membro del Movimento Laureati dell'Azione Cattolica"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro del Movimento Laureati dell'Azione Cattolica (più tardi succeduta dal Movimento ecclesiale di impegno culturale)."@it .
+
+mrv:role09 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the press office of Badoglio's government"@en,
+        "Membro dell'ufficio stampa del governo Badoglio"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro dell'ufficio stampa del governo Badoglio."@it .
+
+mrv:role10 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Journalist and political commentator"@en,
+        "Giornalista e commentatore politico"@it ;
+    skos:closeMatch wd:Q15973695 , wd:Q11499163 ;
+    skos:definition "Il ruolo ricoperto da un professionista dell'informazione, specializzato in inchieste volte a commentare questioni di natura politica."@it .
+
+mrv:role11 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "President of the provisional Coordinating Committee for the southern FUCI"@en,
+        "Presidente del Comitato direttivo provvisorio per la FUCI meridionale"@it ;
+    skos:relatedMatch wd:Q1255921 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività del Comitato direttivo provvisorio per la Federazione Universitaria Cattolica Italiana (FUCI), una federazione di gruppi di studentesse e studenti universitari cattolici."@it .
+
+mrv:role12 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "General Secretary of the Graduates of the Catholic Youth Movement"@en,
+        "Segretario Centrale del Movimento Laureati dell'Azione Cattolica"@it ;
+    skos:relatedMatch wd:Q6501749 ;
+    skos:definition "Il ruolo ricoperto da un funzionario con compiti di coordinamento e assistenza all'interno del Movimento Laureati dell'Azione Cattolica (più tardi succeduta dal Movimento ecclesiale di impegno culturale)."@it .
+
+mrv:role13 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Director of \"Studium\""@en ,
+        "Direttore di \"Studium\""@it ;
+    skos:relatedMatch wd:Q1162163 , wd:Q1607826 ;
+    skos:definition "Il ruolo ricoperto dal direttore di Studium, un periodico bimestrale di ispirazione cattolica pubblicato a Roma."@it .
+
+mrv:role14 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the Constituent Assembly"@en ,
+        "Membro dell'Assemblea Costituente"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro di un'assemblea eletta a suffragio ampio o universale, ed incaricata di redigere una Costituzione."@it .
+
+mrv:role15 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Vice president of the Christian Democracy at the Constituent Assembly"@en ,
+        "Vicepresidente del gruppo democristiano alla Costituente"@it ;
+    skos:relatedMatch wd:Q42178 ;
+    skos:definition "Il ruolo ricoperto dal vicepresidente dell gruppo rappresentante la Democrazia Cristiana presso l'Assemblea Costituente."@it .
+
+mrv:role16 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the Chamber of Deputies"@en ,
+        "Membro della Camera dei Deputati"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro della Camera dei Deputati, una delle due assemblee legislative o camere, insieme al Senato della Repubblica, che costituiscono il Parlamento italiano."@it .
+
+mrv:role17 a skos:Concept ;
+    skos:altLabel "Sottosegretario al ministero degli Affari Esteri"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Undersecretary of the Ministry of Foreign Affairs"@en ,
+        "Sottosegretario al ministero degli Affari Esteri con delega per l'Emigrazione"@it ;
+    skos:relatedMatch wd:Q766504 ;
+    skos:definition "Il ruolo ricoperto dal sottosegretario al ministero degli Affari Esteri con delega per l'Emigrazione."@it .
+
+mrv:role18 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the Union of Catholic Jurists"@en ,
+        "Membro dell'Unione Giuristi Cattolici"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro dell'Unione Giuristi Cattolici, un'associazione con lo scopo di contribuire all'attuazione dei principi dell'etica cristiana nell'attività legislativa, giudiziaria ed amministrativa."@it .
+
+mrv:role19 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of Democratic Initiative"@en ,
+        "Membro di Iniziativa Democratica"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro di Iniziativa Democratica, una delle principali correnti strutturate all'interno della Democrazia Cristiana."@it .
+
+mrv:role20 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Professor of criminal law"@en,
+        "Professore di diritto penale"@it ;
+    skos:relatedMatch wd:Q1622272 ;
+    skos:closeMatch wd:Q63677188 ;
+    skos:definition "Il ruolo ricoperto da un professore universitario di diritto penale."@it .
+
+mrv:role21 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Professor of law and criminal procedure"@en,
+        "Professore di diritto e procedura penale"@it ;
+    skos:relatedMatch wd:Q1622272 ;
+    skos:closeMatch wd:Q63677188 ;
+    skos:definition "Il ruolo ricoperto da un professore universitario di diritto e procedura penale."@it .
+
+mrv:role22 a skos:Concept ;
+    skos:altLabel "Componente della Commissione Speciale per l'esame dei provvedimenti relativi alla Corte Costituzionale"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Member of the Parliamentary Committee"@en,
+        "Membro della Commissione parlamentare di esame del disegno di legge relativo alla costituzione e al funzionamento della Corte Costituzionale"@it ;
+    skos:relatedMatch wd:Q9200127 ;
+    skos:definition "Il ruolo ricoperto da un membro della Commissione parlamentare di esame del disegno di legge relativo alla costituzione e al funzionamento della Corte Costituzionale."@it .
+
+mrv:role23 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Leader of the Christian Democracy at the Chamber of Deputies"@en,
+        "Presidente del gruppo DC alla Camera"@it ;
+    skos:closeMatch wd:Q928764 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività del gruppo di Democrazia Cristiana presso la Camera dei Deputati."@it .
+
+mrv:role24 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Minister of Grace and Justice"@en,
+        "Ministro di Grazia e Giustizia"@it ;
+    skos:closeMatch wd:Q17763739 ;
+    skos:definition "Il ruolo ricoperto dal membro del Governo preposto all'organizzazione dell'amministrazione giudiziaria civile, penale e minorile, dei magistrati e di quella penitenziaria."@it .
+
+mrv:role25 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "National Councillor of the Christian Democracy"@en,
+        "Consigliere nazionale della DC"@it ;
+    skos:relatedMatch wd:Q708492 ;
+    skos:definition "Il ruolo ricoperto da un consigliere nazionale della Democrazia Cristiana."@it .
+
+mrv:role26 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Minister of Public Education"@en,
+        "Ministro della Pubblica Istruzione"@it ;
+    skos:closeMatch wd:Q4018482 ;
+    skos:definition "Il ruolo ricoperto dal membro del Governo preposto all'amministrazione del sistema scolastico nazionale."@it .
+
+mrv:role27 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Political secretary of the Christian Democracy"@en,
+        "Segretario politico della DC"@it ;
+    skos:relatedMatch wd:Q80687 ;
+    skos:closeMatch wd:Q108060339 ;
+    skos:definition "Il ruolo ricoperto dal segretario politico della Democrazia Cristiana."@it .
+
+mrv:role28 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Prime Minister"@en,
+        "Presidente del Consiglio"@it ;
+    skos:closeMatch wd:Q796897 ;
+    skos:definition "Il ruolo ricoperto dal capo del governo della Repubblica Italiana."@it .
+
+mrv:role29 a skos:Concept ;
+    skos:altLabel "Ministro degli Esteri pro tempore"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Acting Minister of Foreign Affairs"@en,
+        "Titolare ad interim del ministero degli Esteri"@it ;
+    skos:relatedMatch wd:Q7330070 ;
+    skos:definition "Il ruolo ricoperto dal membro del Governo preposto a rappresentare il proprio Stato e a firmare accordi vincolanti sul piano del diritto internazionale."@it .
+
+mrv:role30 a skos:Concept ;
+    skos:altLabel "Ministro degli Affari Esteri"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "Minister of Foreign Affairs"@en,
+        "Ministro degli Esteri"@it ;
+    skos:closeMatch wd:Q27991492 ;
+    skos:definition "Il ruolo ricoperto dal membro del Governo preposto a rappresentare il proprio Stato e a firmare accordi vincolanti sul piano del diritto internazionale."@it .
+
+mrv:role31 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "President of the Foreign Affairs Committee of the Chamber of Deputies"@en,
+        "Presidente della Commissione Affari Esteri della Camera"@it ;
+    skos:relatedMatch wd:Q1255921 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività della Commissione Affari Esteri della Camera dei Deputati."@it .
+
+mrv:role32 a skos:Concept ;
+    skos:altLabel "Presidente della Comunità Europea"@it ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "President of the European Commission"@en,
+        "Presidente di turno della Comunità Europea"@it ;
+    skos:relatedMatch wd:Q30461 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività della Comunità Europea (ora assorbita dall'Unione Europea)."@it .
+
+mrv:role33 a skos:Concept ;
+    skos:broader mrv:Role ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:prefLabel "President of the National Council of the Christian Democracy"@en,
+        "Presidente del Consiglio Nazionale della DC"@it ;
+    skos:relatedMatch wd:Q30461 ;
+    skos:definition "Il ruolo ricoperto dal coordinatore delle attività del Consiglio Nazionale della Democrazia Cristiana."@it .
+
+mrv:Role a owl:Class ;
+    rdfs:label "Role"@en ,
+        "Ruolo"@it ;
+    rdfs:subClassOf pro:Role ;
+    skos:definition "A role assumed by Aldo Moro during his lifetime."@en ;
+    skos:inScheme mrv:rolesVocabulary ;
+    skos:narrower mrv:role01 ,
+        mrv:role02 ,
+        mrv:role03 ,
+        mrv:role04 ,
+        mrv:role05 ,
+        mrv:role06 ,
+        mrv:role07 ,
+        mrv:role08 ,
+        mrv:role09 ,
+        mrv:role10 ,
+        mrv:role11 ,
+        mrv:role12 ,
+        mrv:role13 ,
+        mrv:role14 ,
+        mrv:role15 ,
+        mrv:role16 ,
+        mrv:role17 ,
+        mrv:role18 ,
+        mrv:role19 ,
+        mrv:role20 ,
+        mrv:role21 ,
+        mrv:role22 ,
+        mrv:role23 ,
+        mrv:role24 ,
+        mrv:role25 ,
+        mrv:role26 ,
+        mrv:role27 ,
+        mrv:role28 ,
+        mrv:role29 ,
+        mrv:role30 ,
+        mrv:role31 ,
+        mrv:role32 ,
+        mrv:role33 ;
+    skos:prefLabel "Role"@en ,
+        "Ruolo"@it ;
+    skos:scopeNote "Since it is a subclass of `pro:Role`, it is possible to define the temporal and contextual extents associated to `mrv:Role`. Please refer to PRO documentation (https://sparontologies.github.io/pro/current/pro.html) for more information."@en ;
+    skos:topConceptOf mrv:rolesVocabulary .
+
+mrv:rolesVocabulary a skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary of Aldo Moro's roles"@en ,
+        "Vocabolario controllato dei ruoli di Aldo Moro"@it ;
+    dcterms:title "Controlled vocabulary of Aldo Moro's roles"@en ,
+        "Vocabolario controllato dei ruoli di Aldo Moro"@it ;
+    dc:date "18-12-2020"^^xsd:dateTime ;
+    dc:creator "Francesca Tomasi" , "Sebastian Barzaghi" , "Francesco Paolucci" , "Antonio Fracasso" , "Marialaura Vignocchi" ;
+    dc:contributor "Comitato Scientifico dell'Edizione Nazionale delle Opere di Aldo Moro"@it ;
+    dc:rights "https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:identifier "mrv" ;
+    skos:definition "A SKOS controlled vocabulary of the possible roles assumed by Aldo Moro during his lifetime."@en ;
+    skos:hasTopConcept mrv:Role ;
+    skos:scopeNote "https://www.w3id.org/moro/voc/roles/ is the namespace of the vocabulary. Its preferred prefix is `mrv`. The naming convention `{prefix}:{element}{number}` does not strictly convey meaning per se, but it has been followed to avoid excessively long URIs. In order to understand the meaning of any concept, please refer to its respective documentation properties, such as `skos:prefLabel`. The vocabulary imports the Publication Roles Ontology (PRO, http://purl.org/spar/pro), in order to take advantage of its classes and properties, by aligning the class `mrv:Role` as a subclass of `pro:Role`."@en .
+
+

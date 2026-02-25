@@ -1,0 +1,21 @@
+{% extends "light.twig" %}
+
+{% block title %}{{ "Feedback"|trans }} - {{GlobalConfig.serviceName}}{% endblock %}
+{% block description %}{{ GlobalConfig.feedbackDescription(request.lang) }}{% endblock %}
+{% block url %}{{ BaseHref }}{{ request.langurl }}{% endblock %}
+{% block sidebar %}{% endblock %}
+{% block headernav %}{% endblock %}
+{% block content %}
+<div class="feedback-logo">
+  <h1>{% trans "Feedback" %}</h1>
+</div>
+<div class="container feedback-box">
+  {% if request.lang == 'it' %}
+  <h1>Benvenuto!</h1>
+  <p>Questo sito web fornisce accesso a versioni interoperabili di vocabolari e ontologie controllate create dal Digital Humanities Advanced Research Centre, presso l'Università di Bologna, basate sul modello di dati SKOS. Tutti i file possono essere consultati (preferibilmente da desktop) e scaricati in formati RDF.</p>
+  {% elseif request.lang == 'en' %}
+  <h1>Welcome to /DH.arc Vocabularies!</h1>
+  <p>This website provides access to interoperable versions of controlled vocabularies and ontologies created by the Digital Humanities Advanced Research Centre at the University of Bologna, based on the SKOS data model. All files can be browsed (desktop preferred) and downloaded in RDF formats.</p>
+  {% endif %}
+</div>
+{% endblock %}
