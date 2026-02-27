@@ -4,7 +4,13 @@ This website provides access to interoperable versions of controlled vocabularie
 
 The website uses [Skosmos](http://skosmos.org), a web based open source ontology browser developed and released by the team at the National Library of Finland, which uses SKOS as the underlying data model. 
 
-## Reporting issues
+## Contributing
+
+Please see the contributing tab/md file for details of how to contribute and requirements for artefact inclusion. 
+
+## Reporting issues & Contact
 
 If you have found a bug or issues with the vocabularies and ontologies please create a new issue:
 [Report an issue](https://github.com/laurentfintoni/dharc-skosmos/issues)
+
+For any queries about the repository please contact [Laurent Fintoni](https://github.com/laurentfintoni). 
