@@ -264,7 +264,7 @@
     dc:title "AMS SKOS Collections"@en, "AMS SKOS Collections"@it ;
     skosmos:shortName "AMS";
     dc:subject :cat_ams ;
-    void:uriSpace "http://w3id.org/AMSHistorica/";
+    void:uriSpace "http://w3id.org/amshistorica/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en";
     skosmos:fullAlphabeticalIndex false ;
