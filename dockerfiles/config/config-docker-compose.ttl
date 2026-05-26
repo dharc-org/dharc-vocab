@@ -260,10 +260,32 @@
     void:dataDump <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> ;
     skosmos:sparqlGraph <https://raw.githubusercontent.com/dh-atlas/Edition-Types-Vocabulary/refs/heads/main/1.0/ETV.ttl> .
 
+:ams a skosmos:Vocabulary, void:Dataset;
+    dc:title "AMS SKOS Collections"@en, "AMS SKOS Collections"@it ;
+    skosmos:shortName "AMS";
+    dc:subject :cat_ams ;
+    void:uriSpace "http://w3id.org/AMSHistorica/";
+    skosmos:language "en", "it";
+    skosmos:defaultLanguage "en";
+    skosmos:fullAlphabeticalIndex false ;
+    skosmos:showTopConcepts true ;
+    skosmos:conceptSchemesInHierarchy true ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:defaultSidebarView 'groups' ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:dataDump <https://raw.githubusercontent.com/annapasetto0/AMSHistorica/refs/heads/main/AMS_SKOS.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/annapasetto0/AMSHistorica/refs/heads/main/AMS_SKOS.ttl> .
+
 # Skosmos categories (add new categories here)
 
 :categories a skos:ConceptScheme;
     skos:prefLabel "Browse semantic artefacts by project or type"@en, "Sfoglia gli artefatti semantici per progetto o tipo"@it .
+
+:cat_ams a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "AMS Historica"@en , "AMS Historica"@it ;
+    dc:description "Semantic Artefacts for AMS Historica collections."@en, "Artefatti semantici per le collezioni di AMS Historica."@it .
 
 :cat_atlas a skos:Concept ;
     skos:topConceptOf :categories ;

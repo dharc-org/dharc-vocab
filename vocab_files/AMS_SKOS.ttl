@@ -1,0 +1,2249 @@
+@prefix schema: <http://schema.org/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xls2rdf: <https://xls2rdf.sparna.fr/vocabulary#> .
+@prefix ams: <http://w3id.org/AMSHistorica/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://w3id.org/AMSHistorica/> a skos:ConceptScheme;
+  dct:title "AMS Historica Thesaurus"@it, "AMS Historica Thesaurus"@en;
+  dct:description "Thesaurus interdisciplinare e multilingue (italiano e inglese) sviluppato nell’ambito del progetto AMS Historica per l’organizzazione, la descrizione e l’indicizzazione semantica delle collezioni digitali conservate nella piattaforma. Le collezioni sono organizzate secondo i Settori Scientifico-Disciplinari (SSD), al fine di facilitare la navigazione, l’esplorazione e il recupero delle risorse in relazione ai diversi ambiti della ricerca scientifica e culturale."@it, "Multilingual interdisciplinary thesaurus (Italian and English) developed within the AMS Historica project for the organization, description, and semantic indexing of the digital collections preserved in the platform. The collections are organized according to the Italian Academic Disciplines (Settori Scientifico-Disciplinari, SSDs) in order to facilitate navigation, exploration, and retrieval of resources across different scientific and cultural research domains."@en;
+  dct:creator "Anna Pasetto";
+  dcterms:contributor "Laurent Fintoni, Francesca Tomasi" ;
+  dct:license <https://creativecommons.org/licenses/by-sa/4.0/>;
+  dct:language "English"@en, "Italian"@en, "Italiano"@it, "Inglese"@it ;
+  dct:issued "2026-05-25"^^xsd:date ;
+  dct:modified "2026-05-25"^^xsd:date ;
+  foaf:homepage <https://github.com/annapasetto0/AMSHistorica> ;
+
+
+  skos:hasTopConcept ams:frutta, ams:dicotiledoni, ams:monocotiledoni, ams:epitaph,
+    ams:unclear, ams:iscrizioni_onorarie, ams:alphabet, ams:royal_letter, ams:road_signpost,
+    ams:iscrizioni_religiose, ams:iscrizioni_normative, ams:cataloghi, ams:iscrizioni_identificative,
+    ams:anemoi, ams:aphrodite, ams:apollo, ams:ares, ams:artemis, ams:asklepios, ams:athena,
+    ams:charites, ams:curete, ams:demeter, ams:dionysos, ams:dioscuri, ams:eumenis, ams:eunomia,
+    ams:enyalios, ams:hades, ams:hekate, ams:helios, ams:heracles, ams:hermes, ams:heroes,
+    ams:hestia, ams:hymenaios, ams:horai, ams:hygieia, ams:persephone, ams:mousae, ams:nika,
+    ams:nymphae, ams:ouranides, ams:panakeia, ams:serapis, ams:thanatos, ams:tritopatores,
+    ams:tyche, ams:zeus, ams:arsinoe_II, ams:arsinoe_III, ams:berenice_I, ams:berenice_II,
+    ams:ptolemy_I, ams:ptolemy_III, ams:ptolemy_IV, ams:ptolemy_V, ams:ptolemy_VIII, ams:ptolemy_IX,
+    ams:cleopatra_I, ams:cleopatra_III, ams:cleopatra_VIII, ams:cleopatra_di_macedonia,
+    ams:magas, ams:olympias, ams:notiziari, ams:intrattenimento, ams:politica, ams:sport,
+    ams:interviste, ams:cronache_giornalistiche, ams:ufo, ams:censura, ams:pubblicita,
+    ams:emittenti_radiotelevisive, ams:romeo_carlo, ams:tortora_enzo, ams:pannella_marco,
+    ams:plastino_michele, ams:piombi_daniele, ams:zevi_bruno, ams:andenna_ettore, ams:grauso_nicola,
+    ams:moreno_manuela, ams:afta_epizootica, ams:agraria, ams:bestiame, ams:cani, ams:carrozze_a_cavalli,
+    ams:disinfestazione, ams:fiere_agricole, ams:macelli, ams:mascalcia, ams:medici, ams:medicina_legale,
+    ams:pascoli, ams:pastorizia, ams:pelli, ams:pollame, ams:rabbia, ams:salasso, ams:transumanza,
+    ams:veterinaria, ams:bovidi, ams:coltelli, ams:funi, ams:strade, ams:tasse, ams:universita,
+    ams:sonetti, ams:ducato_di_venezia, ams:granducato_di_toscana, ams:impero_austriaco,
+    ams:regno_di_italia, ams:regno_di_sardegna, ams:stato_pontificio .
+
+
+ams:SSD_07D a skos:Collection;
+  skos:prefLabel "07/D - Patologia vegetale e entomologia"@it, "07/D - Plant pathology and entomology"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-07-D>;
+  dct:description "Il macrosettore concorsuale 07/D raggruppa le attività di ricerca e didattica relative alla diagnosi, epidemiologia e controllo delle malattie vegetali, all'identificazione degli agenti patogeni e alla gestione integrata dei parassiti animali in ambito agrario e forestale."@it,
+    "Macro-sector 07/D grouping research and teaching activities related to the diagnosis, epidemiology and control of plant diseases, the identification of pathogenic agents, and the integrated management of animal pests in agricultural and forest contexts."@en;
+  skos:member ams:patologiaVegetale;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:patologiaVegetale a skos:Collection;
+  skos:prefLabel "Patologia vegetale"@it, "Plant pathology"@en;
+  dct:description "La collezione \"Patologia vegetale: Malattie degli ortofrutticoli dopo la raccolta\" comprende materiale fotografico di numerosi campioni di frutta e ortaggi affetti da alterazioni microbiologiche e fisiologiche successive alla raccolta, durante la conservazione e la commercializzazione. I campioni sono stati raccolti e fotografati tra il 1970 e il 1990 nell'ambito delle attività di ricerca e sperimentazione del CRIOF, Centro per la conservazione e trasformazione dei prodotti ortofrutticoli dell'Università di Bologna."@it,
+    "The collection \"Plant Pathology: Post-Harvest Diseases of Fruit and Vegetables\" consists of photographic material from numerous samples of fruit and vegetables affected by microbiological and physiological alterations after harvest, during storage, and commercialization. The samples were collected and photographed between 1970 and 1990 as part of the research and experimentation activities of CRIOF, the Center for the Conservation and Processing of Fruit and Vegetable Products at the University of Bologna."@en;
+  skos:member ams:mela, ams:pera, ams:arancia, ams:patata, ams:melone, ams:cipolla,
+    ams:actinidia, ams:kaki, ams:melanzana, ams:nettarina, ams:pomodoro, ams:susina, ams:lattuga,
+    ams:peperone, ams:pesca, ams:aglio, ams:fagiolino, ams:limone, ams:uva, ams:zucca,
+    ams:albicocca, ams:carciofo, ams:carota, ams:ciliegia, ams:banana, ams:fico, ams:gladiolo,
+    ams:melagrana, ams:zucchino, ams:ananas, ams:mela_cotogna, ams:frutta, ams:agrumi,
+    ams:solanacee, ams:dicotiledoni, ams:allium, ams:cucurbita_pepo, ams:monocotiledoni;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:mela a skos:Concept;
+  skos:prefLabel "Mele"@it, "Apples"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=22316>;
+  skos:broader ams:frutta;
+  skos:related ams:mela_cotogna, ams:pera, ams:melone, ams:kaki, ams:susina, ams:pesca,
+    ams:uva, ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266417>, <https://www.wikidata.org/wiki/Q89>;
+  dct:description "Frutto del melo"@it, "Fruit of the apple tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pera a skos:Concept;
+  skos:prefLabel "Pere"@it, "Pears"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=14168>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:kaki, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435353>, <https://www.wikidata.org/wiki/Q13099586>;
+  dct:description "Frutto del pero"@it, "Fruit of the pear tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:arancia a skos:Concept;
+  skos:prefLabel "Arance"@it, "Oranges"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=40298>;
+  skos:broader ams:agrumi;
+  skos:related ams:limone;
+  skos:altLabel "Aranci"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266271>;
+  dct:description "Frutto dell’arancio"@it, "Fruit of the orange tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:patata a skos:Concept;
+  skos:prefLabel "Patate"@it, "Potatoes"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=36123>;
+  skos:broader ams:solanacee;
+  skos:related ams:melanzana, ams:peperone, ams:pomodoro;
+  skos:altLabel "Solanum tuberosum"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435305>, <http://id.loc.gov/authorities/subjects/sh85105652>;
+  dct:description "Tubero commestibile della pianta Solanum tuberosum"@it, "Edible tuber of the plant Solanum tuberosum"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:melone a skos:Concept;
+  skos:prefLabel "Meloni"@it, "Melon"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62712>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Poponi"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266444>, <http://id.loc.gov/authorities/subjects/sh85083446>;
+  dct:description "Frutto della pianta Cucumis melo"@it, "Fruit of the plant Cucumis melo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:cipolla a skos:Concept;
+  skos:prefLabel "Cipolle"@it, "Onions"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=65765>;
+  skos:broader ams:allium;
+  skos:related ams:aglio;
+  skos:altLabel "Allium cepa"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85094798>, <https://www.wikidata.org/wiki/Q23485>;
+  dct:description "Bulbo commestibile della pianta Allium cepa"@it, "Edible bulb of the plant Allium cepa"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:actinidia a skos:Concept;
+  skos:prefLabel "Actinidia"@it, "Actinidia"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62484>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:lattuga, ams:fagiolino, ams:carciofo;
+  skos:altLabel "Attinidia"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85000702>, <https://www.wikidata.org/wiki/Q164898>;
+  dct:description "Pianta rampicante del genere Actinidia, coltivata per i suoi frutti"@it,
+    "Climbing plant of the genus Actinidia, cultivated for its fruits"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:kaki a skos:Concept;
+  skos:prefLabel "Cachi"@it, "Kaki persimmon"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62608>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:susina, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Diosperi"@it, "Kaki"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85071315>;
+  dct:description "Frutto del diospero"@it, "Fruit of the persimmon tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:melanzana a skos:Concept;
+  skos:prefLabel "Melanzane"@it, "Eggplant"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=53625>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:peperone, ams:pomodoro;
+  skos:altLabel "Solanum melongena"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300311491>, <http://id.loc.gov/authorities/subjects/sh85041224>;
+  dct:description "Frutto commestibile della pianta Solanum melongena"@it, "Edible fruit of the plant Solanum melongena"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:nettarina a skos:Concept;
+  skos:prefLabel "Pesche nettarine"@it, "Nectarine"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=72767>;
+  skos:broader ams:pesca;
+  skos:altLabel "Nettarine"@it, "Noci pesche"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85090580>;
+  dct:description "Varietà di pesca a buccia liscia"@it, "Smooth‑skinned variety of peach"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pomodoro a skos:Concept;
+  skos:prefLabel "Pomodori"@it, "Tomato"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=26289>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:melanzana, ams:peperone;
+  skos:altLabel "Solanum lycopersicum"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266435>, <http://id.loc.gov/authorities/subjects/sh85135924>;
+  dct:description "Frutto della pianta Solanum lycopersicum"@it, "Fruit of the plant Solanum lycopersicum"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:susina a skos:Concept;
+  skos:prefLabel "Susine"@it, "Plums"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=63064>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:pesca, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266438>, <https://www.wikidata.org/wiki/Q12372598>;
+  dct:description "Frutto del susino"@it, "Fruit of the plum tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:lattuga a skos:Concept;
+  skos:prefLabel "Lattuga"@it, "Lettuce"@en;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:fagiolino, ams:carciofo;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85076251>, <https://www.wikidata.org/wiki/Q83193>;
+  dct:description "Pianta erbacea coltivata per le foglie commestibili"@it, "Herbaceous plant cultivated for its edible leaves"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:peperone a skos:Concept;
+  skos:prefLabel "Peperoni"@it, "Sweet peppers"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=24151>;
+  skos:broader ams:solanacee;
+  skos:related ams:patata, ams:melanzana, ams:pomodoro;
+  skos:altLabel "Capsicum annuum"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85131181>, <https://www.wikidata.org/wiki/Q1548030>;
+  dct:description "Frutto della pianta Capsicum annuum"@it, "Fruit of the plant Capsicum annuum"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pesca a skos:Concept;
+  skos:prefLabel "Pesche"@it, "Peaches"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=45933>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:uva, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266272>, <https://www.wikidata.org/wiki/Q13202263>;
+  dct:description "Frutto del pesco"@it, "Fruit of the peach tree"@en;
+  skos:narrower ams:nettarina;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:aglio a skos:Concept;
+  skos:prefLabel "Aglio"@it, "Garlic"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=21839>;
+  skos:broader ams:allium;
+  skos:related ams:cipolla;
+  skos:altLabel "Aglio bianco"@it, "Aglio comune"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300380519>, <http://id.loc.gov/authorities/subjects/sh85053172>,
+    <https://www.wikidata.org/wiki/Q21546392>;
+  dct:description "Bulbo della pianta Allium sativum"@it, "Bulb of the plant Allium sativum"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:fagiolino a skos:Concept;
+  skos:prefLabel "Fagiolini"@it, "Green bean"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=66278>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:carciofo;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh97004773>, <https://www.wikidata.org/wiki/Q2987371>;
+  dct:description "Baccello immaturo della pianta Phaseolus vulgari"@it, "Immature pod of the plant Phaseolus vulgaris"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:limone a skos:Concept;
+  skos:prefLabel "Limoni"@it, "Lemons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=44102>;
+  skos:broader ams:agrumi;
+  skos:related ams:arancia;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266423>, <http://id.loc.gov/authorities/subjects/sh85075957>,
+    <https://www.wikidata.org/wiki/Q1093742>;
+  dct:description "Frutto del limone"@it, "Fruit of the lemon tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:uva a skos:Concept;
+  skos:prefLabel "Uva da tavola"@it, "Grape"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37338>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:albicocca,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Uva da mensa"@it, "Uva da pasto"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300379338>, <https://www.wikidata.org/wiki/Q10978>;
+  dct:description "Frutto della vite"@it, "Fruit of the grapevine"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:zucca a skos:Concept;
+  skos:prefLabel "Zucche"@it, "Pumpkins"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=72444>;
+  skos:broader ams:cucurbita_pepo;
+  skos:related ams:zucchino;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300435293>, <https://www.wikidata.org/wiki/Q165308>;
+  dct:description "Frutto di specie del genere Cucurbita"@it, "Fruit of species of the genus Cucurbita"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:albicocca a skos:Concept;
+  skos:prefLabel "Albicocche"@it, "Apricots"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=63044>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300375305>, <https://www.wikidata.org/wiki/Q3733836>;
+  dct:description "Frutto dell’albicocco"@it, "Fruit of the apricot tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:carciofo a skos:Concept;
+  skos:prefLabel "Carciofi"@it, "Artichoke"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20270>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:fagiolino;
+  skos:altLabel "Cynara cardunculus"@it, "Cynara scolymus"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85020244>, <https://www.wikidata.org/wiki/Q134609>;
+  dct:description "Infiorescenza commestibile della pianta Cynara cardunculus"@it, "Edible inflorescence of the plant Cynara cardunculus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:carota a skos:Concept;
+  skos:prefLabel "Carote"@it, "Carrots"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=40881>;
+  skos:broader ams:dicotiledoni;
+  skos:related ams:actinidia, ams:lattuga, ams:fagiolino, ams:carciofo;
+  skos:altLabel "Daucus carota"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85020481>, <https://www.wikidata.org/wiki/Q81>;
+  dct:description "Radice commestibile della pianta Daucus carota"@it, "Edible root of the plant Daucus carota"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:ciliegia a skos:Concept;
+  skos:prefLabel "Ciliegie"@it, "Cherries"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=62558>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Ciliege"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300440730>, <https://www.wikidata.org/wiki/Q196>;
+  dct:description "Frutto del ciliegio"@it, "Fruit of the cherry tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:banana a skos:Concept;
+  skos:prefLabel "Banane"@it, "Bananas"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37008>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266434>, <https://www.wikidata.org/wiki/Q503>;
+  dct:description "Frutto di specie del genere Musa"@it, "Fruit of species of the genus Musa"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:fico a skos:Concept;
+  skos:prefLabel "Fichi"@it, "Figs"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=23315>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:melagrana, ams:ananas, ams:mela_cotogna;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300448624>, <https://www.wikidata.org/wiki/Q2746643>;
+  dct:description "Frutto del fico"@it, "Fruit of the fig tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:gladiolo a skos:Concept;
+  skos:prefLabel "Gladioli"@it, "Gladiolus"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=71445>;
+  skos:broader ams:monocotiledoni;
+  skos:altLabel "Gladiolus"@it, "Gladiolo"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85055084>, <https://www.wikidata.org/wiki/Q156207>;
+  dct:description "Pianta ornamentale del genere Gladiolus"@it, "Ornamental plant of the genus Gladiolus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:melagrana a skos:Concept;
+  skos:prefLabel "Melagrane"@it, "Pomegranates"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=56748>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:ananas, ams:mela_cotogna;
+  skos:altLabel "Granate"@it, "Mele granate"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300379961>;
+  dct:description "Frutto del melograno"@it, "Fruit of the pomegranate tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:zucchino a skos:Concept;
+  skos:prefLabel "Zucchine"@it, "Zucchini"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=73103>;
+  skos:broader ams:cucurbita_pepo;
+  skos:related ams:zucca;
+  skos:altLabel "Zucchini"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300343543>, <http://id.loc.gov/authorities/subjects/sh85150038>,
+    <https://www.wikidata.org/wiki/Q7533>;
+  dct:description "Frutto immaturo di varietà di Cucurbita pepo"@it, "Immature fruit of varieties of Cucurbita pepo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:ananas a skos:Concept;
+  skos:prefLabel "Ananas"@it, "Pineapple"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=48321>;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:mela_cotogna;
+  skos:altLabel "Ananas sativus"@it, "Ananasso"@it;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300375583>, <http://id.loc.gov/authorities/subjects/sh88022547>,
+    <https://www.wikidata.org/wiki/Q147316>;
+  dct:description "Frutto della pianta Ananas"@it, "Fruit of the plant Ananas comosus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:mela_cotogna a skos:Concept;
+  skos:prefLabel "Mele Cotogne"@it, "Quinces"@en;
+  skos:broader ams:frutta;
+  skos:related ams:mela, ams:melone, ams:pera, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q2751465>;
+  dct:description "Frutto del cotogno"@it, "Fruit of the quince tree"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:frutta a skos:Concept;
+  skos:prefLabel "Frutta"@it, "Fruit"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=7517>;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300011868>, <http://id.loc.gov/authorities/subjects/sh85052105>,
+    <https://www.wikidata.org/wiki/Q3314483>;
+  skos:narrower ams:mela, ams:pera, ams:melone, ams:kaki, ams:susina, ams:pesca, ams:uva,
+    ams:albicocca, ams:ciliegia, ams:banana, ams:fico, ams:melagrana, ams:ananas, ams:mela_cotogna,
+    ams:agrumi;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:agrumi a skos:Concept;
+  skos:prefLabel "Agrumi"@it, "Citrus fruit"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=11712>;
+  skos:broader ams:frutta;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300266420>, <http://id.loc.gov/authorities/subjects/sh85026231>,
+    <https://www.wikidata.org/wiki/Q81513>;
+  skos:narrower ams:arancia, ams:limone;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:solanacee a skos:Concept;
+  skos:prefLabel "Solanacee"@it, "Solanaceae"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20759>;
+  skos:broader ams:dicotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85124477>, <https://www.wikidata.org/wiki/Q134172>;
+  dct:description "Famiglia di piante angiosperme dicotiledoni che comprende specie erbacee, arbustive o arboree, molte delle quali di interesse alimentare o ornamentale, come patata, pomodoro e peperone."@it,
+    "A family of dicotyledonous angiosperms including herbaceous, shrubby, or arboreal species, many of which are important as food or ornamental plants, such as potato, tomato, and pepper."@en;
+  skos:narrower ams:patata, ams:melanzana, ams:pomodoro, ams:peperone;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:dicotiledoni a skos:Concept;
+  skos:prefLabel "Dicotiledoni"@it, "Dicotyledons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=1034>;
+  skos:altLabel "Dicotyledoneae"@it, "Dicotyledones"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85037685>, <https://www.wikidata.org/wiki/Q1307404>;
+  dct:description "Gruppo di angiosperme caratterizzate dalla presenza di due cotiledoni nel seme e da una struttura fogliare e vascolare tipicamente reticolata."@it,
+    "A group of angiosperms distinguished by seeds with two cotyledons and by typically net‑veined leaves and differentiated vascular structures."@en;
+  skos:narrower ams:actinidia, ams:lattuga, ams:fagiolino, ams:carciofo, ams:carota,
+    ams:solanacee, ams:cucurbita_pepo;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:allium a skos:Concept;
+  skos:prefLabel "Allium"@it, "Allium"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=58673>;
+  skos:broader ams:monocotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85003696>, <https://www.wikidata.org/wiki/Q49391>;
+  dct:description "Genere di piante monocotiledoni che comprende specie aromatiche bulbose, tra cui aglio, cipolla, porro ed erba cipollina, diffuse in molte regioni temperate."@it,
+    "A genus of monocotyledonous bulbous plants that includes aromatic species such as garlic, onion, leek, and chives, widespread in many temperate regions."@en;
+  skos:narrower ams:cipolla, ams:aglio;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:cucurbita_pepo a skos:Concept;
+  skos:prefLabel "Cucurbita pepo"@it, "Cucurbita pepo"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=73104>;
+  skos:broader ams:dicotiledoni;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85034678>, <https://www.wikidata.org/wiki/Q7229863>;
+  dct:description "Specie erbacea annuale della famiglia delle Cucurbitacee, coltivata per frutti e semi commestibili; comprende numerose varietà di zucchine e zucche."@it,
+    "An annual herbaceous species of the Cucurbitaceae family, cultivated for its edible fruits and seeds; it includes many varieties of squashes and zucchinis."@en;
+  skos:narrower ams:zucca, ams:zucchino;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:monocotiledoni a skos:Concept;
+  skos:prefLabel "Monocotiledoni"@it, "Monocotyledons"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=3156>;
+  skos:altLabel "Liliopsida"@it, "Monocotili"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85086900>, <https://www.wikidata.org/wiki/Q78961>;
+  dct:description "Gruppo di angiosperme caratterizzate da un singolo cotiledone nel seme, foglie a nervature parallele e fasci vascolari distribuiti irregolarmente nel fusto."@it,
+    "A group of angiosperms characterized by a single cotyledon in the seed, parallel‑veined leaves, and vascular bundles scattered throughout the stem."@en;
+  skos:narrower ams:gladiolo, ams:allium;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:SSD_10D a skos:Collection;
+  skos:prefLabel "10/D - Scienze dell'antichità"@it, "10/D - Sciences of antiquity"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-D>;
+  dct:description "Il macrosettore concorsuale 10/D raggruppa le attività di ricerca e di didattica relative allo studio delle civiltà antiche, comprendendo la filologia, la linguistica, la letteratura, la storia, l’archeologia e le culture del mondo greco, latino e del Vicino Oriente antico. Il settore include l’analisi, l’interpretazione e la trasmissione dei testi antichi, lo studio delle testimonianze materiali e dei contesti storici, nonché l’indagine sulle forme culturali, religiose, artistiche e sociali delle società antiche"@it,
+    "The macro-sector 10/D encompasses research and teaching activities related to the study of ancient civilizations, including the philology, linguistics, literature, history, archaeology, and cultures of the Greek, Latin, and ancient Near Eastern worlds. The sector covers the analysis, interpretation, and transmission of ancient texts, the study of material evidence and historical contexts, and the investigation of the cultural, religious, artistic, and social forms of ancient societies"@en;
+  skos:member ams:IGCyr, ams:mitologia_storia_antica;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:IGCyr a skos:Collection;
+  skos:prefLabel "Iscrizioni della Cirenaica greca"@it, "Inscriptions of Greek Cyrenaica"@en;
+  dct:description "Collezione di immagini che documenta la grande maggioranza delle iscrizioni della Cirenaica greca (VII–I sec. a.C.) e le iscrizioni in versi greci della Cirenaica greca e romana (VII sec. a.C.–VII sec. d.C.)"@it,
+    "A collection of images documenting the vast majority of inscriptions from Greek Cyrenaica (7th–1st century BC) and the Greek verse inscriptions from Greek and Roman Cyrenaica (7th century BC–7th century AD)"@en;
+  skos:member ams:epitaph, ams:dedication, ams:unclear, ams:accounts, ams:iscrizioni_onorarie,
+    ams:tithe, ams:list_of_names, ams:sacred_laws, ams:caption, ams:owner, ams:private_honors,
+    ams:trademark, ams:decree, ams:alphabet, ams:public_honors, ams:royal_letter, ams:acclamation,
+    ams:list_of_ephebes, ams:list_of_soldiers, ams:list_of_priests, ams:regulation, ams:road_signpost,
+    ams:defixio, ams:will, ams:tomb_protection, ams:iscrizioni_religiose, ams:iscrizioni_normative,
+    ams:cataloghi, ams:iscrizioni_identificative;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:epitaph a skos:Concept;
+  skos:prefLabel "Epitaffi"@it, "Epitaphs"@en;
+  skos:altLabel "Iscrizioni funebri"@it, "Funerary inscription"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=29468>, <http://vocab.getty.edu/page/aat/300028729>,
+    <https://www.eagle-network.eu/voc/typeins/lod/92.html>;
+  dct:description "Iscrizioni sepolcrali, spesso in forma di breve componimento in versi, che per lo più contengono le lodi del defunto"@it,
+    "Funerary inscriptions, often in the form of short verse compositions, which typically contain praises of the deceased."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:dedication a skos:Concept;
+  skos:prefLabel "Dediche votive"@it, "Dedication"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Dedication>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:tithe, ams:sacred_laws, ams:defixio;
+  skos:altLabel "Votive dedication"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300404460>, <https://www.wikidata.org/wiki/Q126733445>;
+  dct:description "Iscrizioni che dedicano un oggetto, una struttura o un’offerta a una divinità o entità religiosa"@it,
+    "Inscriptions dedicating an object, structure, or offering to a deity or religious entity."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:unclear a skos:Concept;
+  skos:prefLabel "Incerto"@it, "Unclear"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine>;
+  skos:altLabel "Uncertain"@en, "Unable to determine"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/144.html>;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:accounts a skos:Concept;
+  skos:prefLabel "Rendiconti"@it, "Accounts"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Accounts>;
+  skos:broader ams:cataloghi;
+  skos:related ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers, ams:list_of_priests;
+  skos:altLabel "Rendiconti amministrativi"@it, "Rendiconto"@it, "Accounts of the damiergoi"@en,
+    "Account"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=45368>, <http://vocab.getty.edu/page/aat/300145802>;
+  dct:description "Iscrizioni che registrano transazioni finanziarie, spese o bilanci, utilizzate per scopi amministrativi, finanziari o commerciali, fornendo una documentazione sistematica delle attività economiche in un determinato periodo."@it,
+    "Inscriptions recording financial transactions, expenditures, or balances, used for administrative, financial, or commercial purposes, providing a systematic record of financial activities over a specific period."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:iscrizioni_onorarie a skos:Concept;
+  skos:prefLabel "Iscrizioni onorarie"@it, "Honorary inscription"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Honorific>;
+  skos:altLabel "Dediche onorarie"@it, "Honorific inscription"@en, "Honorific"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/69.html>, <https://www.wikidata.org/wiki/Q125323109>;
+  dct:description """Testi che lodano o onorano individui, gruppi o entità per le loro imprese, contributi, servizi o status eccezionale.
+Questi testi esprimono spesso le ragioni dell’onorificenza, i meriti dell’individuo e la natura dell’onore conferito"""@it,
+    """Texts praising or honouring individuals, groups, or entities for their achievements, contributions, services or extraordinary status. Texts often express
+ the reasons for receiving the honours, the individual's achievements and the nature of the honour"""@en;
+  skos:narrower ams:private_honors, ams:public_honors, ams:acclamation;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:tithe a skos:Concept;
+  skos:prefLabel "Decima"@it, "Tithe"@en;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:sacred_laws, ams:defixio;
+  skos:altLabel "Tithing"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=37270>, <http://id.loc.gov/authorities/subjects/sh85135644>,
+    <https://www.wikidata.org/wiki/Q184664>;
+  dct:description "Imposta pari a un decimo del reddito o del prodotto, originariamente offerta come dono votivo o ringraziamento a una divinità; in molti contesti coincide funzionalmente con l’offerta votiva."@it,
+    "A levy corresponding to one‑tenth of revenue or produce, originally offered as a thank‑offering to a god; in many contexts functionally equivalent to a votive offering"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:list_of_names a skos:Concept;
+  skos:prefLabel "Lista di nomi"@it, "List of names"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Names>;
+  skos:broader ams:cataloghi;
+  skos:altLabel "Name list"@en, "Catalogue of names"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Names>, <https://www.wikidata.org/wiki/Q11884534>;
+  dct:description "Nomi multipli di individui, gruppi o entità, spesso in forma di elenco o enumerazione. Quando incisi su pietra, questi elenchi erano utilizzati per la registrazione pubblica e per il riconoscimento onorifico"@it,
+    "Multiple names of individuals, groups, or entities, often in the form of a list or enumeration. When engraved into stones, these lists were used for public record-keeping and honorific recognition"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:sacred_laws a skos:Concept;
+  skos:prefLabel "Legge sacra"@it, "Sacred laws"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Lex_sacra>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:tithe, ams:defixio;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300417712>, <https://www.wikidata.org/wiki/Q126733473>;
+  dct:description """Leggi o regolamenti religiosi dotati di autorità giuridica o vincolante all’interno di un contesto religioso, che definiscono le norme e i requisiti relativi ai culti civici e alle associazioni religiose volontarie.
+Queste leggi disciplinano vari aspetti delle pratiche cultuali, tra cui lo svolgimento dei rituali, i criteri di partecipazione, i doveri dei funzionari religiosi e l’imposizione di multe in caso di inadempienza"""@it,
+    """Religious laws or regulations with legal or binding authority within a religious context, detailing the religious regulations and requirements governing
+ civic cults and voluntary religious associations. These laws address various aspects of cultic practices, including the conduct of rituals, participation criteria, duties of religious officials, and the imposition of fines for non-compliance."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:caption a skos:Concept;
+  skos:prefLabel "Didascalie"@it, "Caption"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Label>;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:owner, ams:trademark;
+  skos:altLabel "Label"@en;
+  dct:description "Iscrizioni che forniscono descrizioni o informazioni identificative relative a oggetti, manufatti o immagini."@it,
+    "Inscriptions providing descriptions or identifying information for objects, artifacts, or images."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:owner a skos:Concept;
+  skos:prefLabel "Marchi di proprietà"@it, "Owner's mark"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Ownership>;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:caption, ams:trademark;
+  skos:altLabel "Owner inscription"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300028772>;
+  dct:description "Iscrizioni che indicano la proprietà o che riportano il nome dell’individuo, dell’ente o dell’istituzione responsabile"@it,
+    "Inscriptions marking ownership or bearing the name of an individual, entity, or institution in charge"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:private_honors a skos:Concept;
+  skos:prefLabel "Dediche onorarie private"@it, "Private honors"@en;
+  skos:exactMatch <https://www.eagle-network.eu/voc/typeins/lod/422.html>;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:public_honors, ams:acclamation;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Elogium>;
+  dct:description "Iscrizioni commemorative che lodano o celebrano le imprese, le virtù o le qualità di un individuo defunto o di un gruppo di persone, più spesso dei propri antenati"@it,
+    "Commemorative inscriptions praising or celebrating the accomplishments, virtues, or qualities of a deceased individual or group of people, most typically one's ancestors"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:trademark a skos:Concept;
+  skos:prefLabel "Marchi"@it, "Trademark"@en;
+  skos:broader ams:iscrizioni_identificative;
+  skos:related ams:caption, ams:owner;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Maker>, <http://vocab.getty.edu/page/aat/300028776>;
+  dct:description "Marchi o brevi testi che identificano il fabbricante o il produttore di un oggetto, spesso accompagnati da un simbolo"@it,
+    "Marks or short texts identifying the maker or manufacturer of an object, often accompanied by a symbol"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:decree a skos:Concept;
+  skos:prefLabel "Decreti"@it, "Decree"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Decree>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:regulation, ams:will, ams:tomb_protection;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=13396>, <http://vocab.getty.edu/page/aat/300026925>,
+    <https://www.wikidata.org/wiki/Q2571972>;
+  dct:description """Ordine, decisione o giudizio specifico emanato da un’autorità esecutiva, amministrativa o giudiziaria in risposta a una determinata questione o situazione.
+Pur potendo avere effetti giuridici e forza esecutiva, i decreti sono solitamente più mirati e circoscritti rispetto alle leggi, poiché affrontano casi o problemi individuali invece di stabilire principi generali o regolamenti applicabili a un ambito più ampio di circostanze."""@it,
+    """Specific order, decision, or judgment issued by an executive, administrative, or judicial authority in response to a particular matter or situation. While decrees may have legal
+ effects and enforceability, they are usually more focused and specific than laws, addressing individual cases or issues rather than establishing general principles or regulations applicable to a wider scope of circumstances."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:alphabet a skos:Concept;
+  skos:prefLabel "Alfabeto"@it, "Alphabet"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Abecedarium>;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=8566>;
+  dct:description """Iscrizione composta dalle lettere di un alfabeto, utilizzata come strumento per l’insegnamento o l’esercizio della scrittura. 
+L’abecedario epigrafico può trovarsi su diversi supporti, come tavolette di pietra, pareti, frammenti ceramici o altri materiali durevoli."""@it,
+    """Inscription that consists of the letters of an alphabet serving as a tool for teaching or practicing writing skills. The inscription abecedarium may be found on 
+various objects, such as stone tablets, walls, pot sherds, or other durable materials."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:public_honors a skos:Concept;
+  skos:prefLabel "Dediche onorarie pubbliche"@it, "Public honors"@en;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:private_honors, ams:acclamation;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/70.html>, <https://ontology.inscriptiones.org/type_of_inscription/Elogium>;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:royal_letter a skos:Concept;
+  skos:prefLabel "Lettere di sovrani"@it, "Royal letter"@en;
+  skos:altLabel "Letter from a sovereign"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q126733464>;
+  dct:description "Tipo di iscrizione"@it, "Type of inscription in epigraphy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:acclamation a skos:Concept;
+  skos:prefLabel "Acclamazioni"@it, "Acclamation"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Acclamation>;
+  skos:broader ams:iscrizioni_onorarie;
+  skos:related ams:private_honors, ams:public_honors;
+  dct:description """Iscrizioni che esprimono lode o ammirazione entusiastica, spesso in un contesto pubblico o cerimoniale.
+Le acclamazioni sono generalmente testi brevi che elogiano un individuo o una divinità, formulano auguri di bene e successo e possono includere elementi onorifici"""@it,
+    """Inscriptions expressing enthusiastic praise or admiration, often in a public or ceremonial context. Acclamations are often short texts praising either an individual or deity, wishing
+ well and success, and can include honorific aspects."""@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:list_of_ephebes a skos:Concept;
+  skos:prefLabel "Lista degli efebi"@it, "List of ephebes"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Ephebes>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_soldiers, ams:list_of_priests;
+  skos:altLabel "Ephebic list"@en;
+  skos:closeMatch <https://www.eagle-network.eu/voc/typeins/lod/419.html>;
+  dct:description "Elenchi di individui di sesso maschile che stanno svolgendo l’addestramento o la formazione militare (efebia) nell’antica Grecia"@it,
+    "Lists of male individuals undergoing military training or education (ephebia) in ancient Greece"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:list_of_soldiers a skos:Concept;
+  skos:prefLabel "Lista dei soldati"@it, "List of soldiers"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Military_personnel>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_priests;
+  skos:altLabel "Military personnel"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300027178>;
+  dct:description "Elenchi di individui che prestano servizio militare, con indicazione della loro posizione o grado, inclusi i veterani"@it,
+    "Lists of individuals serving in military, including their positions or ranks, including veterans."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:list_of_priests a skos:Concept;
+  skos:prefLabel "Lista dei sacerdoti"@it, "List of priests"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Priests>;
+  skos:broader ams:cataloghi;
+  skos:related ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers;
+  skos:altLabel "Catalogo di sacerdoti"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q126733466>;
+  dct:description "Elenchi di individui che ricoprono cariche o titoli religiosi o sacerdotali"@it,
+    "Lists of individuals holding religious or priestly offices or titles."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:regulation a skos:Concept;
+  skos:prefLabel "Regolamenti"@it, "Regulation"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Regulatory>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:will, ams:tomb_protection;
+  skos:altLabel "Regulatory"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300027842>;
+  dct:description "Testi relativi a regolamenti, norme o istruzioni che disciplinano il comportamento o la condotta"@it,
+    "Texts related to regulations, rules, or instructions governing behavior or conduct"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:road_signpost a skos:Concept;
+  skos:prefLabel "Segnali stradali"@it, "Road signpost"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Road_signpost>;
+  skos:altLabel "Segnaletica stradale"@it, "Street sign"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300003909>, <https://www.wikidata.org/wiki/Q22812402>;
+  dct:description "Iscrizioni che forniscono indicazioni direzionali o orientamento ai viaggiatori, spesso collocate presso incroci o bivi"@it,
+    "Inscriptions providing directional information or guidance to travelers, often found at intersections or crossroads"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:defixio a skos:Concept;
+  skos:prefLabel "Defissione"@it, "Defixio"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Defixio>;
+  skos:broader ams:iscrizioni_religiose;
+  skos:related ams:dedication, ams:tithe, ams:sacred_laws;
+  skos:altLabel "Maledizione"@it, "Curse tablet"@en;
+  skos:closeMatch <http://vocab.getty.edu/page/aat/300410443>, <https://www.wikidata.org/wiki/Q1430557>;
+  dct:description "Tavolette di maledizione o incantesimi vincolanti, destinati a causare danno ad altri o a ottenere vendetta. Queste tavolette, spesso trafitte da un chiodo e solitamente arrotolate, contengono maledizioni rivolte a persone o animali, scritte in grafia corsiva e accompagnate da segni magici. I testi, anonimi, non sono destinati al pubblico, ma alle divinità"@it,
+    "Curse tablets or binding spells, aimed at causing harm to others or seeking revenge. These tablets, often pierced with a nail and usually rolled up, contain curses of people or animals, written in cursive script and labelled with magical signs. The anonymous texts are not addressed to the public, but to deities"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:will a skos:Concept;
+  skos:prefLabel "Testamento"@it, "Will"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Testament>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:regulation, ams:tomb_protection;
+  skos:altLabel "Testament"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4636>, <http://vocab.getty.edu/page/aat/300027764>;
+  dct:description "Documenti legali che espongono le ultime volontà e disposizioni testamentarie di un individuo, delineando i desideri relativi alla distribuzione dei suoi beni e patrimoni dopo la morte."@it,
+    "Legal documents detailing the last will and testament of an individual, outlining a person's wishes regarding the distribution of their property and assets after their death"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:tomb_protection a skos:Concept;
+  skos:prefLabel "Protezione delle tombe"@it, "Tomb protection"@en;
+  skos:exactMatch <https://ontology.inscriptiones.org/type_of_inscription/Tomb_regulation>;
+  skos:broader ams:iscrizioni_normative;
+  skos:related ams:decree, ams:regulation, ams:will;
+  skos:altLabel "Tomb regulation"@en;
+  dct:description "“Regolamenti per la protezione delle tombe che prevedono misure o direttive volte a salvaguardare i luoghi di sepoltura da vandalismi, furti o altre forme di danneggiamento, spesso incisi come avvertimenti o proibizioni per preservare la sacralità dell’ultimo luogo di riposo del defunto"@it,
+    "Tomb protection regulations entail measures or directives aimed at safeguarding burial sites from vandalism, theft, or other forms of damage, often inscribed as warnings or prohibitions to preserve the sanctity of the deceased's final resting place"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:iscrizioni_religiose a skos:Concept;
+  skos:prefLabel "Iscrizioni religiose"@it, "Religious inscriptions"@en;
+  skos:altLabel "Religious text"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Religious>,
+    <http://vocab.getty.edu/page/aat/300220519>;
+  dct:description "Testi associati a pratiche, credenze, rituali o alla condotta delle istituzioni religiose"@it,
+    "Texts associated with religious practices, beliefs, rituals, or conduct of religious institutions"@en;
+  skos:narrower ams:dedication, ams:tithe, ams:sacred_laws, ams:defixio;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:iscrizioni_normative a skos:Concept;
+  skos:prefLabel "Iscrizioni normative"@it, "Regulatory inscriptions"@en;
+  skos:closeMatch <https://ontology.inscriptiones.org/type_of_inscription/Regulatory>;
+  dct:description "Le iscrizioni normative sono testi relativi a regolamenti, norme o istruzioni che disciplinano il comportamento o la condotta"@it,
+    "Texts related to regulations, rules, or instructions governing behavior or conduct"@en;
+  skos:narrower ams:decree, ams:regulation, ams:will, ams:tomb_protection;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:cataloghi a skos:Concept;
+  skos:prefLabel "Cataloghi"@it, "Record keeping"@en;
+  skos:altLabel "Liste"@it, "Collection"@en, "List"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=9107>, <https://ontology.inscriptiones.org/type_of_inscription/Record_keeping>,
+    <http://vocab.getty.edu/page/aat/300026059>;
+  dct:description "Testi relativi all’organizzazione e alla conservazione delle informazioni per scopi amministrativi e finanziari, spesso presentati sotto forma di catalogo, enumerazione o elenco di voci"@it,
+    "Texts related to organizing and storing information for administrative and financial purposes, often presenting information in the form of a catalog, enumeration, list of items"@en;
+  skos:narrower ams:accounts, ams:list_of_names, ams:list_of_ephebes, ams:list_of_soldiers,
+    ams:list_of_priests;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:iscrizioni_identificative a skos:Concept;
+  skos:prefLabel "Iscrizioni identificative"@it, "Identification inscriptions"@en;
+  skos:closeMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=11428>, <https://ontology.inscriptiones.org/type_of_inscription/Identification>;
+  dct:description "Testi che identificano le caratteristiche fisiche dell’oggetto iscritto e altre sue qualità, la sua origine, la sua classificazione e la sua appartenenza, oppure che forniscono informazioni sul committente, l’autore, il produttore o il proprietario"@it,
+    "Texts identifying the physical characteristics of the inscribed object and other qualities, its origin, its classification, and its belonging, or providing information about the commissioner, author, producer or owner"@en;
+  skos:narrower ams:caption, ams:owner, ams:trademark;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:mitologia_storia_antica a skos:Collection;
+  skos:prefLabel "Mitologia classica e storia antica"@it, "Classical Mythology and Ancient History"@en;
+  dct:description "Collezione dedicata alla mitologia classica e alla storia antica, comprendente divinità greche e romane, figure leggendarie ed eroi, insieme a personaggi storici del mondo antico"@it,
+    "Collection focused on classical mythology and ancient history, including Greek and Roman deities, legendary figures and heroes, as well as historical personalities of the ancient world"@en;
+  skos:member ams:anemoi, ams:aphrodite, ams:apollo, ams:apollo_apotropaios, ams:apollo_archegetes,
+    ams:apollo_korax, ams:apollo_mytriois, ams:apollo_nomios, ams:apollo_pythios, ams:apollo_soter,
+    ams:ares, ams:artemis, ams:artemis_agrotera, ams:artemis_katagogis, ams:asklepios,
+    ams:athena, ams:athena_apotropaios, ams:charites, ams:curete, ams:demeter, ams:dionysos,
+    ams:dioscuri, ams:eumenis, ams:eunomia, ams:enyalios, ams:hades, ams:hekate, ams:helios,
+    ams:heracles, ams:hermes, ams:hermes_dolios, ams:heroes, ams:hestia, ams:hymenaios,
+    ams:horai, ams:hygieia, ams:iatros, ams:karneios, ams:persephone, ams:mousae, ams:nika,
+    ams:nymphae, ams:ouranides, ams:panakeia, ams:serapis, ams:thanatos, ams:tritopatores,
+    ams:tyche, ams:zeus, ams:zeus_apotropaios, ams:zeus_lykaios, ams:zeus_soter, ams:zeus_melichios,
+    ams:arsinoe_II, ams:arsinoe_III, ams:berenice_I, ams:berenice_II, ams:ptolemy_I, ams:ptolemy_III,
+    ams:ptolemy_IV, ams:ptolemy_V, ams:ptolemy_VIII, ams:ptolemy_IX, ams:cleopatra_I,
+    ams:cleopatra_III, ams:cleopatra_VIII, ams:cleopatra_di_macedonia, ams:magas, ams:olympias;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:anemoi a skos:Concept;
+  skos:prefLabel "Anemoi"@it, "Anemoi"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q476682>;
+  dct:description "Antichi dei greci dei venti, che rappresentano ciascuno delle quattro direzioni cardinali, insieme a un certo numero di divinità minori dei venti. Associati alle stagioni e alle condizioni meteorologiche"@it,
+    "Ancient Greek wind gods, representing each of the four cardinal directions, along with a number of lesser wind gods. Associated with the seasons and weather conditions."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:aphrodite a skos:Concept;
+  skos:prefLabel "Afrodite"@it, "Aphrodite"@en;
+  skos:altLabel "Venere"@it, "Venus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q35500>, <https://iconclass.org/92C4>;
+  dct:description "Dea greca dell’amore, della bellezza, del piacere e della procreazione. La sua equivalente romana è la dea Venere. Afrodite è conosciuta anche come Citerèa (Signora di Citera) e Cipride (Signora di Cipro), dai due luoghi di culto — Citera e Cipro — che rivendicavano di essere il suo luogo di nascita"@it,
+    "Greek goddess of love, beauty, pleasure, and procreation. Her Roman equivalent is the goddess Venus. Aphrodite is also known as Cytherea (Lady of Cythera) and Cypris (Lady of Cyprus) after the two cult sites, Cythera and Cyprus, which claimed to be her place of birth."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:apollo a skos:Concept;
+  skos:prefLabel "Apollo"@it, "Apollo"@en;
+  skos:related ams:zeus, ams:asklepios, ams:artemis;
+  skos:altLabel "Dio Apollo"@it, "Phoebus"@en, "Phoibos"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q37340>, <https://iconclass.org/92B3>;
+  dct:description "Nella mitologia greco‑romana, una divinità dalle molteplici funzioni e significati, una delle più venerate e influenti tra tutte le divinità antiche greche e romane. Sebbene la sua natura originaria sia oscura, a partire da Omero fu il dio della distanza divina, colui che colpiva o minacciava da lontano; il dio che rendeva gli uomini consapevoli della propria colpa e li purificava; che presiedeva alla legge religiosa e alle costituzioni delle città; e che comunicava ai mortali, tramite profeti e oracoli, la conoscenza del futuro e la volontà di suo padre, Zeus (il Giove romano)"@it,
+    "In Greco-Roman mythology, a deity of manifold function and meaning, one of the most widely revered and influential of all the ancient Greek and Roman gods. Though his original nature is obscure, from the time of Homer onward he was the god of divine distance, who sent or threatened from afar; the god who made men aware of their own guilt and purified them of it; who presided over religious law and the constitutions of cities; and who communicated with mortals through prophets and oracles his knowledge of the future and the will of his father, Zeus (Roman Jupiter)."@en;
+  skos:narrower ams:apollo_apotropaios, ams:apollo_archegetes, ams:apollo_korax, ams:apollo_mytriois,
+    ams:apollo_nomios, ams:apollo_pythios, ams:apollo_soter, ams:karneios;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_apotropaios a skos:Concept;
+  skos:prefLabel "Apollo Apotropaios"@it, "Apollo Apotropaios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Divinità apotropaiche"@it, "Apotropaios"@it, "Apotropaei"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Apollo nella sua funzione protettivacontro il male"@it,
+    "Epiteth of Apollo in his protective function against evil"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_archegetes a skos:Concept;
+  skos:prefLabel "Apollo Archegetes"@it, "Apollo Archegetes"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Archagetes"@it, "Archagetes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q55414242>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_korax a skos:Concept;
+  skos:prefLabel "Apollo Korax"@it, "Apollo Korax"@en;
+  skos:broader ams:apollo;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_mytriois a skos:Concept;
+  skos:prefLabel "Apollo Myrtoios"@it, "Apollo Myrtoios"@en;
+  skos:broader ams:apollo;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_nomios a skos:Concept;
+  skos:prefLabel "Apollo Nomios"@it, "Apollo Nomios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Nomius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107247969>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_pythios a skos:Concept;
+  skos:prefLabel "Apollo Pythios"@it, "Apollo Pythios"@en;
+  skos:broader ams:apollo;
+  skos:altLabel "Pythios"@en, "Pythian Apollo"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107189402>;
+  dct:description "Epiteto di Apollo legato a Delphi"@it, "Epithet of Apollo connected with Delphi"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:apollo_soter a skos:Concept;
+  skos:prefLabel "Apollo Soter"@it, "Apollo Soter"@en;
+  skos:broader ams:apollo;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q2303797>;
+  dct:description "Epiteto di Apollo"@it, "Epiteth of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:ares a skos:Concept;
+  skos:prefLabel "Ares"@it, "Ares"@en;
+  skos:related ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40901>, <http://id.loc.gov/authorities/names/no2017035875>;
+  dct:description "Dio greco della guerra"@it, "Greek god of war and combat"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:artemis a skos:Concept;
+  skos:prefLabel "Artemide"@it, "Artemis"@en;
+  skos:related ams:zeus, ams:apollo;
+  skos:altLabel "Diana"@it, "Diana"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39503>, <https://iconclass.org/92C3>;
+  dct:description "Nella religione greca, dea degli animali selvatici, della caccia, della vegetazione, nonché della castità e del parto. Artemide era figlia di Zeus e di Latona e sorella gemella di Apollo"@it,
+    "In Greek religion, the goddess of wild animals, the hunt, and vegetation, and of chastity and childbirth. Artemis was the daughter of Zeus and Leto and the twin sister of Apollo"@en;
+  skos:narrower ams:artemis_agrotera, ams:artemis_katagogis;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:artemis_agrotera a skos:Concept;
+  skos:prefLabel "Artemis Agrotera"@it, "Artemis Agrotera"@en;
+  skos:broader ams:artemis;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1458788>;
+  dct:description "Epiteto di Artemide"@it, "Epiteth of Artemis"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:artemis_katagogis a skos:Concept;
+  skos:prefLabel "Artemis Katagogis"@it, "Artemis Katagogis"@en;
+  skos:broader ams:artemis;
+  dct:description "Epiteto di Artemide"@it, "Epiteth of Artemis"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:asklepios a skos:Concept;
+  skos:prefLabel "Asclepio"@it, "Asklepios"@en;
+  skos:related ams:apollo, ams:hygieia, ams:panakeia;
+  skos:altLabel "Esculapio"@it, "Asklepio"@it, "Asclepius"@en, "Aesculapius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q83223>, <http://id.loc.gov/authorities/names/no2015101384>,
+    <https://www.getty.edu/cona/CONAIconographyRecord.aspx?iconid=901000305>;
+  dct:description "Dio greco‑romano della medicina, figlio di Apollo (dio della guarigione, della verità e della profezia) e della principessa mortale Coronide. Il centauro Chirone gli insegnò l’arte della guarigione"@it,
+    "Greco-Roman god of medicine, son of Apollo (god of healing, truth, and prophecy) and the mortal princess Coronis. The Centaur Chiron taught him the art of healing"@en;
+  skos:narrower ams:iatros;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:athena a skos:Concept;
+  skos:prefLabel "Atena"@it, "Athena"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Athanaia"@it, "Athena"@it, "Athene"@en, "Pallas Athena"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q37122>, <http://id.loc.gov/authorities/names/no2015006898>;
+  dct:description "Protettrice delle città greche, patrona di Atene e di altre poleis, dea della guerra, dell’artigianato e della ragione pratica; identificata con la Minerva romana. Figlia di Zeus, generata senza madre, emerse già adulta dalla sua fronte"@it,
+    "Greek city protectress, patroness of Athens and other cities, goddess of war, handicraft, and practical reason; identified with the Roman Minerva. daughter of Zeus, produced without a mother, so that she emerged full-grown from his forehead"@en;
+  skos:narrower ams:athena_apotropaios;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:athena_apotropaios a skos:Concept;
+  skos:prefLabel "Atena Apotropaia"@it, "Athena Apotropaia"@en;
+  skos:broader ams:athena;
+  skos:altLabel "Divinità apotropaiche"@it, "Apotropaios"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Atena"@it, "Epiteth of Athena"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:charites a skos:Concept;
+  skos:prefLabel "Tre Grazie"@it, "Charites"@en;
+  skos:altLabel "Cariti"@it, "Grazie"@it, "Graces"@en, "Three Graces"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q184353>, <https://iconclass.org/92D3>;
+  dct:description "Dee greche della grazia e della bellezza"@it, "Greek goddesses of grace and beauty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:curete a skos:Concept;
+  skos:prefLabel "Cureti"@it, "Curete"@en;
+  skos:altLabel "Kouretes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q247617>, <https://iconclass.org/92L295>;
+  dct:description "Divinità della mitologia minoica e greca, servitori di Rea"@it, "Minor Minoan and Greek deities, servants of Rhea"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:demeter a skos:Concept;
+  skos:prefLabel "Demetra"@it, "Demeter"@en;
+  skos:related ams:persephone;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40730>, <https://iconclass.org/92M168>;
+  dct:description "Nella religione greca, figlia delle divinità Crono e Rea, sorella e consorte di Zeus (il re degli dèi) e dea dell’agricoltura"@it,
+    "In Greek religion, daughter of the deities Cronus and Rhea, sister and consort of Zeus (the king of the gods), and goddess of agriculture"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:dionysos a skos:Concept;
+  skos:prefLabel "Dioniso"@it, "Dionysos"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Dionisio"@it, "Bacco"@it, "Dionysus"@en, "Bacchus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41680>, <http://id.loc.gov/authorities/names/no2014014847>;
+  dct:description "Dio greco del vino, della vendemmia, dei teatri, della fertilità e dell'ubriachezza"@it,
+    "Greek god of wine, the grape harvest, the theatre, fertility, and ecstasy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:dioscuri a skos:Concept;
+  skos:prefLabel "Dioscuri"@it, "Dioscuri"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Castore e Polluce"@it, "Castor and Pollux"@en, "Diskouri brothers"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q190103>, <https://iconclass.org/94R>;
+  dct:description "Fratelli della mitologia greca"@it, "Greek mythical siblings"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:eumenis a skos:Concept;
+  skos:prefLabel "Eumenidi"@it, "Eumenides"@en;
+  skos:altLabel "Erinni"@it, "Furie"@it, "Erinyes"@en, "Erinnyes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q180262>, <http://id.loc.gov/authorities/subjects/sh87000688>;
+  dct:description "Personificazioni femminili della vendetta soprattutto nei confronti di chi colpisce la propria famiglia e i parenti. Nella mitologia romana si chiamavano Furie"@it,
+    "Female personifications of vengeance, especially directed against those who harm their own family or kin. In Roman mythology they were known as the Furies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:eunomia a skos:Concept;
+  skos:prefLabel "Eunomia"@it, "Eunomia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q920416>, <https://iconclass.org/92D221>;
+  dct:description "Dea greca dell’ordine, della buona condotta e dell’armonia sociale, personificazione del corretto funzionamento della comunità e delle norme civiche. Identificata con Eunomia, una delle Horai"@it,
+    "Greek goddess of order, good conduct, and social harmony, personifying the proper functioning of the community and its civic norms. Identified with Eunomia, one of the Horae"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:enyalios a skos:Concept;
+  skos:prefLabel "Enialio"@it, "Enyalius"@en;
+  skos:altLabel "Enyalios"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1345963>;
+  dct:description "Divinità della mitologia greca"@it, "Greek deity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hades a skos:Concept;
+  skos:prefLabel "Ade"@it, "Hades"@en;
+  skos:related ams:persephone, ams:thanatos;
+  skos:altLabel "Hades"@it, "Plutone"@it, "Pluton"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41410>, <http://id.loc.gov/authorities/names/no2014024174>;
+  dct:description "Dio greco dell'oltretomba"@it, "God of the underworld in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hekate a skos:Concept;
+  skos:prefLabel "Ecate"@it, "Hecate"@en;
+  skos:altLabel "Hekate"@it, "Hekate"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q131575>, <http://id.loc.gov/authorities/names/no2015131059>;
+  dct:description "Dea greca"@it, "Greek goddess"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:helios a skos:Concept;
+  skos:prefLabel "Helios"@it, "Helios"@en;
+  skos:altLabel "Elio"@it, "Elios"@it, "Helius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q134270>, <http://id.loc.gov/authorities/names/no2018059404>;
+  dct:description "Titano della mitologia greca, personificazione del Sole e custode del suo corso quotidiano attraverso il cielo"@it,
+    "Titan of Greek mythology, personification of the Sun and guardian of its daily course across the sky"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:heracles a skos:Concept;
+  skos:prefLabel "Eracle"@it, "Heracles"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Ercole"@it, "Herakles"@it, "Hercules"@en, "Alcides"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q122248>, <http://id.loc.gov/authorities/names/no2014084680>;
+  dct:description "Eroe e semidio della mitologia greca, figlio di Zeus e Alcmena, noto per la sua forza straordinaria e per le imprese"@it,
+    "Hero and demigod of Greek mythology, son of Zeus and Alcmene, renowned for his extraordinary strength and for the feats that made him one of the most famous figures in myth"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hermes a skos:Concept;
+  skos:prefLabel "Ermes"@it, "Hermes"@en;
+  skos:related ams:zeus;
+  skos:altLabel "Hermes"@it, "Erme"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41484>, <http://id.loc.gov/authorities/names/no2015131271>;
+  dct:description "Dio greco del commercio, dei viaggi, dei confini, dei ladri e dell’eloquenza; messaggero degli dèi e psicopompo, protettore della comunicazione e del movimento tra i mondi"@it,
+    "Greek god of commerce, travel, boundaries, thieves, and eloquence; messenger of the gods and psychopomp, protector of communication and movement between realms"@en;
+  skos:narrower ams:hermes_dolios;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hermes_dolios a skos:Concept;
+  skos:prefLabel "Dolius"@it, "Dolius"@en;
+  skos:broader ams:hermes;
+  skos:altLabel "Dolius"@it, "Dolius"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q117837153>;
+  dct:description "Epiteto di Ermes"@it, "Epiteth of Hermes"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:heroes a skos:Concept;
+  skos:prefLabel "Eroi"@it, "Heroes"@en;
+  skos:closeMatch <https://vocab.getty.edu/page/aat/300236801>;
+  dct:description "Uomini che, secondo l’opinione altrui, hanno compiuto atti o servizi eroici e sono considerati ideali o modelli di riferimento"@it,
+    "Men who in the opinion of others have performed heroic acts or services and are regarded as ideals or role models"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hestia a skos:Concept;
+  skos:prefLabel "Estia"@it, "Hestia"@en;
+  skos:altLabel "Hestia"@it, "Vesta"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q41419>, <http://id.loc.gov/authorities/names/no2016065482>;
+  dct:description "Dea greca del focolare, della casa e della famiglia, figlia di Crono e Rea; personificazione della stabilità domestica e custode del fuoco sacro della comunità"@it,
+    "Greek goddess of the hearth, home, and family, daughter of Cronus and Rhea; personification of domestic stability and guardian of the community’s sacred fire"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hymenaios a skos:Concept;
+  skos:prefLabel "Imene"@it, "Hymen"@en;
+  skos:altLabel "Hymen"@it, "Hymenoes"@it, "Hymenoes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q506770>, <https://iconclass.org/92D1913>;
+  dct:description "Divinità greca del matrimonio"@it, "Greek god of marriage ceremonies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:horai a skos:Concept;
+  skos:prefLabel "Ore"@it, "Horae"@en;
+  skos:altLabel "Hora"@it, "Hours"@en, "Horai"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q201411>, <https://iconclass.org/92D2>;
+  dct:description "Divinità delle stagioni e del tempo nella mitologia greca"@it, "Goddesses of the seasons and the natural portions of time in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:hygieia a skos:Concept;
+  skos:prefLabel "Igea"@it, "Hygieia"@en;
+  skos:related ams:asklepios;
+  skos:altLabel "Hygieia"@it, "Hygiea"@en, "Hygeia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q202257>, <http://id.loc.gov/authorities/names/no2013131873>;
+  dct:description "Dea della mitologia greca, personificazione della salute, dell’igiene e del benessere"@it,
+    "Goddess in Greek mythology, personification of health, hygiene, and well‑being"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:iatros a skos:Concept;
+  skos:prefLabel "Iatros"@it, "Iatros"@en;
+  skos:broader ams:asklepios;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q107349776>;
+  dct:description "Epiteto di Asclepio, dottore"@it, "Epithet of Asclepius, doctor"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:karneios a skos:Concept;
+  skos:prefLabel "Carneio"@it, "Karneios"@en;
+  skos:broader ams:apollo;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q671534>;
+  dct:description "Epiteto di Apollo"@it, "Epithet of Apollo"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:persephone a skos:Concept;
+  skos:prefLabel "Persefone"@it, "Persephone"@en;
+  skos:related ams:demeter, ams:zeus, ams:hades;
+  skos:altLabel "Kore"@it, "Persephone"@it, "Kore"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q45967>, <http://id.loc.gov/authorities/names/no2014090208>;
+  dct:description "Dea greca della primavera e del rinnovamento vegetale, nonché regina dell’oltretomba accanto ad Ade"@it,
+    "Greek goddess of spring and vegetal renewal, and queen of the underworld alongside Hades"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:mousae a skos:Concept;
+  skos:prefLabel "Muse"@it, "Muse"@en;
+  skos:altLabel "Muses"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q66016>, <https://thes.bncf.firenze.sbn.it/termine.php?id=24831>;
+  dct:description "Divinità femminili della mitologia greca, personificazioni dell’ispirazione nelle arti, nella letteratura e nelle scienze"@it,
+    "Female deities of Greek mythology, personifications of inspiration in literature, science, and the arts"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:nika a skos:Concept;
+  skos:prefLabel "Nike"@it, "Nike"@en;
+  skos:altLabel "Nice"@it, "Vittoria Alata"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q165023>, <http://id.loc.gov/authorities/names/no2019004704>;
+  dct:description "Dea greca della vittoria"@it, "Goddess of victory in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:nymphae a skos:Concept;
+  skos:prefLabel "Ninfa"@it, "Nymph"@en;
+  skos:altLabel "Ninfe"@it, "Nymphs"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q373916>, <http://id.loc.gov/authorities/subjects/sh99000113>,
+    <https://thes.bncf.firenze.sbn.it/termine.php?id=59233>;
+  dct:description "Divinità femminili della natura nella mitologia greca e romana, associate a luoghi specifici come boschi, sorgenti, montagne e corsi d’acqua"@it,
+    "Female nature deities in Greek and Roman mythology, linked to specific places such as woods, springs, mountains, and waterways"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ouranides a skos:Concept;
+  skos:prefLabel "Uranids"@it, "Uranids"@en;
+  skos:altLabel "Ouranides"@it, "Ouranides"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q12882383>;
+  dct:description "Personaggi della mitologia greca, figli di Urano e Gea"@it, "Greek mythology characters, children of Uranus and Gaia"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:panakeia a skos:Concept;
+  skos:prefLabel "Panacea"@it, "Panacea"@en;
+  skos:related ams:asklepios;
+  skos:altLabel "Panakeia"@it, "Panakeia"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q850227>;
+  dct:description "Dea greca della salute"@it, "Greek goddess of universal health"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:serapis a skos:Concept;
+  skos:prefLabel "Serapide"@it, "Serapis"@en;
+  skos:altLabel "Serapis"@it, "Sarapis"@it, "Sarapis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q214554>, <https://iconclass.org/96A32>;
+  dct:description "Divinità greco-egizia"@it, "Graeco-Egyptian god"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:thanatos a skos:Concept;
+  skos:prefLabel "Tanato"@it, "Thanatos"@en;
+  skos:related ams:hades;
+  skos:altLabel "Tanatos"@it, "Thanatos"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q199647>, <https://iconclass.org/92N53>,
+    <http://id.loc.gov/authorities/names/no2020015785>;
+  dct:description "Dio greco della morte"@it, "Personification of death in Greek mythology"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:tritopatores a skos:Concept;
+  skos:prefLabel "Tritopatri"@it, "Tritopatores"@en;
+  skos:altLabel "Tritopatores"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q4463223>, <http://id.loc.gov/authorities/subjects/sh85137939>;
+  dct:description "Antiche divinità ancestrali della religione greca considerate spiriti protettori delle generazioni passate e legate al culto degli antenati e alla continuità della stirpe"@it,
+    "Ancient ancestral deities in Greek religion, regarded as protective spirits of past generations and associated with ancestor worship and lineage continuity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:tyche a skos:Concept;
+  skos:prefLabel "Tiche"@it, "Tyche"@en;
+  skos:altLabel "Tyche"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q213440>, <http://id.loc.gov/authorities/names/n2014070345>;
+  dct:description "Dea e personificazione greca della fortuna"@it, "Greek goddess of fortune"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:zeus a skos:Concept;
+  skos:prefLabel "Zeus"@it, "Zeus"@en;
+  skos:related ams:athena, ams:apollo, ams:artemis, ams:ares, ams:hermes, ams:dionysos,
+    ams:persephone, ams:heracles, ams:dioscuri;
+  skos:altLabel "Giove"@it, "Jupiter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q34201>, <https://iconclass.org/92B1>;
+  dct:description "Dio greco del cielo e re di tutti gli dei"@it, "Greek god of the sky and king of the gods"@en;
+  skos:narrower ams:zeus_apotropaios, ams:zeus_lykaios, ams:zeus_soter, ams:zeus_melichios;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:zeus_apotropaios a skos:Concept;
+  skos:prefLabel "Zeus Apotropaio"@it, "Zeus Apotropaios"@en;
+  skos:broader ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q25338401>;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:zeus_lykaios a skos:Concept;
+  skos:prefLabel "Zeus Lykaios"@it, "Zeus Lykaios"@en;
+  skos:broader ams:zeus;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:zeus_soter a skos:Concept;
+  skos:prefLabel "Zeus Soter"@it, "Zeus Soter"@en;
+  skos:broader ams:zeus;
+  skos:altLabel "Soter"@it, "Soter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q99743298>;
+  dct:description "Epiteto di Zeus, salvatore"@it, "Epithet of Zeus, as savior"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:zeus_melichios a skos:Concept;
+  skos:prefLabel "Zeus Meilichios"@it, "Zeus Meilichios"@en;
+  skos:broader ams:zeus;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1637673>;
+  dct:description "Epiteto di Zeus"@it, "Epithet of Zeus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:arsinoe_II a skos:Concept;
+  skos:prefLabel "Arsinoe II"@it, "Arsinoe II"@en;
+  skos:exactMatch <http://viaf.org/viaf/1710161634372010850006>;
+  skos:related ams:ptolemy_I, ams:berenice_I;
+  skos:altLabel "Arsinoe Filadelfo"@it, "Arsinoe II Philadelph"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40234>, <http://id.loc.gov/authorities/names/no2010038087>,
+    <https://iconclass.org/98C(ARSINOE%20II)>;
+  dct:description "Figlia di Tolomeo I e Bernice I, sorella e moglie di Tolomeo II, è stata una regina egizia, sovrana in Macedonia, Tracia e Egitto"@it,
+    "Daughter of Ptolemy I and Bernice I, sister and wife of Ptolemy II, was the queen of Macedonia, Thrace and Egypt"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:arsinoe_III a skos:Concept;
+  skos:prefLabel "Arsinoe III"@it, "Arsinoe III"@en;
+  skos:exactMatch <http://viaf.org/viaf/86055773>;
+  skos:related ams:ptolemy_III, ams:berenice_II;
+  skos:altLabel "Arsinoe Filopatore"@it, "Arsinoe III Philopator"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40258>;
+  dct:description "Regina tolemaica, figlia di Tolomeo III e Berenice II, e moglie del fratello Tolomeo IV Filopatore; sovrana d’Egitto dal 220 al 204 a.C., fu una figura politicamente rilevante e la prima regina della dinastia a generare un figlio dal proprio fratello, consolidando così la legittimità dinastica"@it,
+    "Ptolemaic queen, daughter of Ptolemy III and Berenice II, and wife of her brother Ptolemy IV Philopator; she ruled Egypt from 220 to 204 BC and was a politically significant figure, becoming the first Ptolemaic queen to bear a child by her brother, thereby reinforcing dynastic legitimacy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:berenice_I a skos:Concept;
+  skos:prefLabel "Berenice I"@it, "Berenice I"@en;
+  skos:exactMatch <http://viaf.org/viaf/25413773>;
+  skos:related ams:ptolemy_I, ams:arsinoe_II;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39962>;
+  dct:description "Regina macedone e in seguito consorte di Tolomeo I Sotere, primo sovrano dell’Egitto tolemaico; Berenice I (ca. 340–279 a.C.) fu una figura di rilievo nella formazione della dinastia lagide e contribuì alla legittimazione del nuovo regno attraverso la sua posizione e le sue alleanze familiari"@it,
+    "Macedonian noblewoman and later consort of Ptolemy I Soter, the first ruler of Ptolemaic Egypt; Berenice I (c. 340–279 BCE) played a significant role in the early formation of the Lagid dynasty and helped consolidate the new kingdom’s legitimacy through her status and familial alliances"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:berenice_II a skos:Concept;
+  skos:prefLabel "Berenice II"@it, "Berenice II"@en;
+  skos:exactMatch <http://viaf.org/viaf/96149106265668492202>;
+  skos:related ams:arsinoe_III, ams:ptolemy_III;
+  skos:altLabel "Berenice II Euergetis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40010>, <http://id.loc.gov/authorities/names/n86123801>,
+    <https://iconclass.org/98C(BERENICE%20II)>;
+  dct:description "Regina regnante di Cirenaica dal 258 al 246 a.C. e, in seguito, regina d’Egitto come moglie di Tolomeo III, Berenice II Euergete fu una figura di primo piano della dinastia lagide. Figlia di Magas di Cirene e nota per il suo ruolo politico attivo, è talvolta considerata coreggente del marito e contribuì alla definizione dell’identità dinastica tolemaica"@it,
+    "Queen regnant of Cyrenaica from 258 to 246 BCE and later queen of Ptolemaic Egypt as the wife of Ptolemy III, Berenice II Euergetis was a prominent member of the Lagid dynasty. Daughter of Magas of Cyrene and known for her active political role, she is sometimes regarded as co‑regent of her husband and contributed significantly to the shaping of Ptolemaic dynastic identity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_I a skos:Concept;
+  skos:prefLabel "Tolomeo I"@it, "Ptolemy I"@en;
+  skos:exactMatch <http://viaf.org/viaf/21347488>;
+  skos:related ams:berenice_I, ams:arsinoe_II;
+  skos:altLabel "Tolomeo I Sotere"@it, "Tolomeo I d'Egitto"@it, "Ptolemy son of Lagus"@en,
+    "Ptolemy I Soter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q168261>, <http://id.loc.gov/authorities/names/n93023826>;
+  dct:description "Generale macedone e stretto collaboratore di Alessandro Magno, Tolomeo I Sotere fu il fondatore del Regno tolemaico d’Egitto. Divenuto re e faraone dal 305/304 al 282 a.C., consolidò il nuovo stato ellenistico con una politica stabile e con la creazione di Alessandria come centro culturale di primo piano. La sua dinastia governò l’Egitto fino al 30 a.C., facendo del paese uno dei principali fulcri della civiltà ellenistica"@it,
+    "A Macedonian general and close companion of Alexander the Great, Ptolemy I Soter founded the Ptolemaic Kingdom in Egypt. As king and pharaoh from 305/304 to 282 BCE, he established a stable Hellenistic state and developed Alexandria into a major center of Greek culture. His dynasty ruled Egypt until 30 BCE, making the kingdom one of the principal strongholds of Hellenistic civilization."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_III a skos:Concept;
+  skos:prefLabel "Tolomeo III"@it, "Ptolemy III"@en;
+  skos:exactMatch <http://viaf.org/viaf/294668087>;
+  skos:related ams:berenice_II, ams:ptolemy_IV, ams:arsinoe_III;
+  skos:altLabel "Tolomeo Evergete"@it, "Tolomeo III Evergete"@it, "Ptolemy III Euergetes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39602>;
+  dct:description "Faraone tolemaico, figlio di Tolomeo II e terzo sovrano della dinastia lagide, Tolomeo III Evergete regnò sull’Egitto dal 246 al 222 a.C"@it,
+    "Ptolemaic pharaoh, son of Ptolemy II and third ruler of the Lagid dynasty, Ptolemy III Euergetes reigned over Egypt from 246 to 222 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_IV a skos:Concept;
+  skos:prefLabel "Tolomeo IV"@it, "Ptolemy IV"@en;
+  skos:exactMatch <http://viaf.org/viaf/2154849>;
+  skos:related ams:ptolemy_III, ams:berenice_II, ams:arsinoe_II;
+  skos:altLabel "Tolomeo IV d'Egitto"@it, "Tolomeo IV Filopatore"@it, "Ptolemy IV Philopator"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39595>, <http://id.loc.gov/authorities/names/no2003046116>;
+  dct:description "Faraone tolemaico e quarto sovrano della dinastia lagide, Tolomeo IV Filopatore (244–204 a.C.) regnò sull’Egitto dal 222 a.C. fino alla morte"@it,
+    "Ptolemaic pharaoh and fourth ruler of the Lagid dynasty, Ptolemy IV Philopator (244–204 BCE) reigned over Egypt from 222 BCE until his death"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_V a skos:Concept;
+  skos:prefLabel "Tolomeo V"@it, "Ptolemy V"@en;
+  skos:exactMatch <http://viaf.org/viaf/66521839>;
+  skos:related ams:ptolemy_IV, ams:arsinoe_III, ams:cleopatra_I;
+  skos:altLabel "Tolomeo V Epifane"@it, "Tolomeo Epifane"@it, "Ptolemy Epiphanes"@en,
+    "Ptolemy V Epiphanes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39957>;
+  dct:description "Faraone tolemaico e quinto sovrano della dinastia lagide, Tolomeo V Epifane Eucaristo (210–180 a.C.) regnò sull’Egitto dal 204 a.C. fino alla morte. Salito al trono in età infantile, il suo regno fu segnato da crisi interne e pressioni esterne, ma anche da importanti atti di legittimazione regale, tra cui il celebre Decreto di Rosetta, che celebrava la sua incoronazione e il sostegno dei sacerdoti egiziani"@it,
+    "Ptolemaic pharaoh and fifth ruler of the Lagid dynasty, Ptolemy V Epiphanes Eucharistos (210–180 BCE) reigned over Egypt from 204 BCE until his death. Ascending the throne as a child, his reign was marked by internal turmoil and external pressures, yet also by key acts of royal legitimation, most notably the Rosetta Decree, which commemorated his coronation and the support of the Egyptian priesthood"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_VIII a skos:Concept;
+  skos:prefLabel "Tolomeo VIII"@it, "Ptolemy VIII"@en;
+  skos:exactMatch <http://viaf.org/viaf/155419788>;
+  skos:related ams:ptolemy_V, ams:cleopatra_I, ams:cleopatra_III, ams:ptolemy_IX;
+  skos:altLabel "Tolomeo Evergete Fiscone"@it, "Tolomeo VIII Evergete"@it, "Ptolemy VIII Physcon"@en,
+    "Ptolemy VIII Euergetes II"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3350>, <http://id.loc.gov/authorities/names/nb2007018630>;
+  dct:description "Tolomeo VIII Evergete II Trifone (ca. 184–116 a.C.), soprannominato Fiscone, fu re del Regno tolemaico e figlio minore di Tolomeo V ed Elena I. Il suo lungo e turbolento regno fu segnato da conflitti politici e militari con i fratelli Tolomeo VI e Cleopatra II, dando origine a una delle fasi più instabili della dinastia lagide"@it,
+    "Ptolemy VIII Euergetes II Tryphon (c. 184–116 BCE), nicknamed Physcon, was a king of the Ptolemaic Kingdom and the younger son of Ptolemy V and Cleopatra I. His long and turbulent reign was marked by intense political and military conflict with his siblings Ptolemy VI and Cleopatra II, resulting in one of the most unstable periods of the Lagid dynasty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ptolemy_IX a skos:Concept;
+  skos:prefLabel "Tolomeo IX"@it, "Ptolemy IX"@en;
+  skos:exactMatch <http://viaf.org/viaf/46669300>;
+  skos:related ams:ptolemy_VIII, ams:cleopatra_III;
+  skos:altLabel "Tolomeo Sotere Latiro"@it, "Tolomeo IX Sotere II"@it, "Ptolemy IX Lathyros"@en,
+    "Ptolemy VIII Soter II"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3340>, <http://id.loc.gov/authorities/names/nr97026533>;
+  dct:description "Tolomeo IX Sotere II, detto Latiro (ca. 142–81 a.C.), fu re d’Egitto in due distinti periodi. Figlio di Tolomeo VIII e Cleopatra III, regnò dapprima in coreggenza con la nonna Cleopatra II e la madre Cleopatra III (116–107 a.C.), e successivamente come sovrano indipendente dal 88 all’81 a.C."@it,
+    "Ptolemy IX Soter II, commonly known as Lathyros (c. 142–81 BCE), was twice king of Ptolemaic Egypt. Son of Ptolemy VIII and Cleopatra III, he first ruled jointly with his grandmother Cleopatra II and his mother Cleopatra III (116–107 BCE), and later reigned independently from 88 to 81 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:cleopatra_I a skos:Concept;
+  skos:prefLabel "Cleopatra I"@it, "Cleopatra I"@en;
+  skos:exactMatch <http://viaf.org/viaf/54146822248807381494>;
+  skos:related ams:ptolemy_V, ams:ptolemy_VIII;
+  skos:altLabel "Cleopatra I Syra"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40252>;
+  dct:description "Principessa dell’Impero seleucide e, dal 193 a.C., regina d’Egitto come moglie di Tolomeo V, Cleopatra I Sira (ca. 204–176 a.C.) esercitò un ruolo politico di primo piano. Alla morte del marito divenne reggente durante la minorità del figlio Tolomeo VI, governando il regno con autorevolezza e garantendo stabilità in una fase delicata della dinastia tolemaica"@it,
+    "A princess of the Seleucid Empire and, from 193 BCE, queen of Ptolemaic Egypt as the wife of Ptolemy V, Cleopatra I Syra (c. 204–176 BCE) played a significant political role. After her husband’s death, she served as regent during the minority of their son Ptolemy VI, governing with authority and ensuring stability during a critical phase of the Ptolemaic dynasty"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:cleopatra_III a skos:Concept;
+  skos:prefLabel "Cleopatra III"@it, "Cleopatra III"@en;
+  skos:exactMatch <http://viaf.org/viaf/816680>;
+  skos:related ams:ptolemy_VIII, ams:cleopatra_VIII;
+  skos:altLabel "Cleopatra III of Egypt"@en, "Cleopatra Euergetis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40003>;
+  dct:description "Cleopatra III (ca. 160–101 a.C.) fu regina d’Egitto e una delle figure politiche più influenti della tarda età tolemaica. Governò inizialmente in coreggenza con la madre Cleopatra II e il marito Tolomeo VIII (142–131 e 127–116 a.C.), e successivamente con i figli Tolomeo IX e Tolomeo X dal 116 al 101 a.C."@it,
+    "Cleopatra III (c. 160–101 BCE) was a queen of Egypt and one of the most influential political figures of the late Ptolemaic period. She first ruled jointly with her mother Cleopatra II and her husband Ptolemy VIII (142–131 and 127–116 BCE), and later with her sons Ptolemy IX and Ptolemy X from 116 to 101 BCE"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:cleopatra_VIII a skos:Concept;
+  skos:prefLabel "Cleopatra VIII"@it, "Cleopatra VIII"@en;
+  skos:exactMatch <http://viaf.org/viaf/221149196547474792518>;
+  skos:altLabel "Cleopatra Selene II"@it, "Cleopatra Selene II"@en, "Cleopatra VIII of Egypt"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40058>, <http://id.loc.gov/authorities/names/n85216104>;
+  dct:description "Cleopatra Selene II (ca. 40–5 a.C.), figlia della regina Cleopatra VII e del triumviro Marco Antonio, fu una principessa tolemaica e una delle ultime eredi della dinastia. Sorella gemella di Alessandro Elio, sposò Giuba II di Mauretania, divenendo regina di Mauretania e contribuendo alla diffusione dell’eredità culturale egizio‑ellenistica nel Mediterraneo occidentale"@it,
+    "Cleopatra Selene II (c. 40–5 BCE), daughter of Queen Cleopatra VII and the Roman triumvir Mark Antony, was a Ptolemaic princess and one of the last heirs of the dynasty. Twin sister of Alexander Helios, she married Juba II of Mauretania, becoming queen of Mauretania and playing a key role in transmitting the Egyptian‑Hellenistic cultural legacy to the western Mediterranean"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:cleopatra_di_macedonia a skos:Concept;
+  skos:prefLabel "Cleopatra di Macedonia"@it, "Cleopatra of Macedon"@en;
+  skos:exactMatch <http://viaf.org/viaf/47568026>;
+  skos:related ams:olympias;
+  skos:altLabel "Cleopatra of Macedonia"@en, "Cleopatra of Epirus"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q230258>;
+  dct:description "Cleopatra di Macedonia (ca. 355/354–308 a.C.), figlia di Filippo II di Macedonia e di Olimpiade d’Epiro, fu principessa macedone e unica sorella germana di Alessandro Magno. In seguito divenne regina e reggente d’Epiro, esercitando un ruolo politico significativo nelle dinamiche dinastiche del mondo ellenistico"@it,
+    "Cleopatra of Macedonia (c. 355/354–308 BCE), daughter of Philip II of Macedon and Olympias of Epirus, was a Macedonian princess and the only full sibling of Alexander the Great. She later became queen and regent of Epirus, playing an important political role within the dynastic landscape of the Hellenistic world"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:magas a skos:Concept;
+  skos:prefLabel "Magas"@it, "Magas of Cyrene"@en;
+  skos:related ams:berenice_I, ams:arsinoe_II, ams:berenice_II;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q878392>;
+  dct:description "Magas di Cirene (m. 250 a.C.) fu un sovrano macedone e re di Cirene dal 276 a.C. alla morte. Figlio di Berenice I e divenuto membro della dinastia tolemaica dopo il matrimonio della madre con Tolomeo I, esercitò dapprima il ruolo di governatore e poi quello di re, consolidando l’autonomia politica della Cirenaica nel quadro del mondo ellenistico"@it,
+    "Magas of Cyrene (d. 250 BCE) was a Macedonian ruler and king of Cyrene from 276 BCE until his death. The son of Berenice I and incorporated into the Ptolemaic dynasty after his mother’s marriage to Ptolemy I, he first served as governor and later as king, strengthening the political autonomy of Cyrenaica within the Hellenistic world"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:olympias a skos:Concept;
+  skos:prefLabel "Olimpiade d'Epiro"@it, "Olympias"@en;
+  skos:exactMatch <http://viaf.org/viaf/24149366313985602225>;
+  skos:related ams:cleopatra_di_macedonia;
+  skos:altLabel "Olimpia d'Epiro"@it, "Olimpias"@it, "Olympiada Anayka"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q223134>, <http://id.loc.gov/authorities/names/n83049452>,
+    <https://iconclass.org/98C(OLYMPIAS)>;
+  dct:description "Olimpiade (ca. 375–316 a.C.) fu una principessa molossa, figlia del re Neottolemo I d’Epiro e sorella di Alessandro I d’Epiro. Moglie di Filippo II di Macedonia e madre di Alessandro Magno, esercitò un’influenza decisiva sulla formazione del futuro conquistatore e assunse un ruolo politico di primo piano, divenendo di fatto la figura dominante in Macedonia durante le campagne del figlio"@it,
+    "Olympias (c. 375–316 BCE) was a Molossian princess, daughter of King Neoptolemus I of Epirus and sister of Alexander I of Epirus. As the wife of Philip II of Macedon and mother of Alexander the Great, she played a crucial role in her son’s upbringing and emerged as the de facto leader of Macedon during his campaigns, exerting significant political influence"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:SSD_10C a skos:Collection;
+  skos:prefLabel "10/C - Musica, teatro, cinema, televisione e media audiovisivi"@it,
+    "10/C - Cinema, music, performing arts, television and media studies"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-10-C>;
+  dct:description "Il macrosettore concorsuale 10/C identifica l'area accademica italiana dedicata allo studio teorico, storico e critico delle arti performative, musicali, cinematografiche e mediali"@it,
+    "The macro-sector 10/C covers the theoretical, historical and critical study of performing arts, music, film, television and new media in the Italian university system"@en;
+  skos:member ams:atlas;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:atlas a skos:Collection;
+  skos:prefLabel "ATLas. Atlante delle televisioni locali"@it, "ATLas. Atlas of Local Television Stations"@en;
+  dct:description "Il fondo presenta alcuni materiali relativi alle emittenti televisive Antenna 3 (Lombardia), Sardegna 1 (Sardegna), TeleRoma56 (Lazio), TeleSanterno (Emilia-Romagna), Videogruppo (Piemonte). In particolare, il fondo raccoglie segmenti tratti dalla programmazione dei canali, con fotografie, documenti, estratti audio di interviste e altre risorse, resi disponibili in formato digitale"@it,
+    "The collection includes materials related to the local television broadcasters Antenna 3 (Lombardy), Sardegna 1 (Sardinia), TeleRoma56 (Lazio), TeleSanterno (Emilia-Romagna), and Videogruppo (Piedmont). Specifically, it brings together segments drawn from the channels' programming, along with photographs, documents, audio excerpts of interviews and other resources, made available in digital format"@en;
+  skos:member ams:televisioni_private, ams:notiziari, ams:trasmissioni_televisive, ams:intrattenimento,
+    ams:politica, ams:sport, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:interviste, ams:televisioni_pubbliche, ams:emittenti_radiofoniche, ams:dibattiti_televisivi,
+    ams:informazione, ams:elezioni, ams:cronache_giornalistiche, ams:radio_private, ams:politica_interna,
+    ams:politica_internazionale, ams:giornali_radio, ams:partiti, ams:trasmissioni_radiofoniche_sportive,
+    ams:radio_pubbliche, ams:ufo, ams:censura, ams:ascolti_tv, ams:regia_televisiva, ams:televisioni,
+    ams:pubblicita, ams:emittenti_radiotelevisive, ams:romeo_carlo, ams:tortora_enzo,
+    ams:pannella_marco, ams:plastino_michele, ams:piombi_daniele, ams:zevi_bruno, ams:andenna_ettore,
+    ams:grauso_nicola, ams:moreno_manuela;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:televisioni_private a skos:Concept;
+  skos:prefLabel "Televisioni private"@it, "Private television broadcasters"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=16928>;
+  skos:broader ams:televisioni;
+  skos:related ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:televisioni_pubbliche, ams:dibattiti_televisivi, ams:ascolti_tv, ams:regia_televisiva;
+  skos:altLabel "Emittenti televisive libere"@it, "Emittenti televisive private"@it,
+    "Private media"@en;
+  dct:description "Servizio televisivo gestito da soggetti privati e finanziato principalmente tramite pubblicità o altre forme di ricavo commerciale"@it,
+    "Television service operated by private entities and funded primarily through advertising or other commercial revenue streams"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:notiziari a skos:Concept;
+  skos:prefLabel "Notiziari"@it, "News programs"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20043>;
+  skos:altLabel "News show"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1358344>, <http://id.loc.gov/authorities/subjects/sh85133518>;
+  dct:description "Programmi informativi che presentano notizie e aggiornamenti su eventi di attualità, spesso articolati in servizi, collegamenti e rubriche"@it,
+    "News programs that present current events and updates, typically structured through reports, live segments, and thematic sections"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:trasmissioni_televisive a skos:Concept;
+  skos:prefLabel "Trasmissioni televisive"@it, "Television broadcasts"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=3222>;
+  skos:broader ams:televisioni;
+  skos:related <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>, ams:televisioni_pubbliche,
+    ams:dibattiti_televisivi, ams:ascolti_tv, ams:regia_televisiva, ams:televisioni_private;
+  skos:altLabel "Programmi televisivi"@it, "Servizi televisivi"@it, "Television programs"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q15416>, <http://id.loc.gov/authorities/subjects/sh85133602>;
+  dct:description "Programmi e contenuti diffusi attraverso il mezzo televisivo, fruibili in tempo reale o registrati da un pubblico ampio e diversificato"@it,
+    "Programs and content delivered through the television medium, accessible live or recorded to broad and diverse audiences"@en;
+  skos:narrower ams:dibattiti_televisivi;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:intrattenimento a skos:Concept;
+  skos:prefLabel "Intrattenimento"@it, "Entertainment"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q173799>;
+  dct:description "Attività, contenuti o spettacoli destinati a divertire, coinvolgere o interessare il pubblico"@it,
+    "Activities, content, or performances designed to amuse, engage, or interest an audience"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:politica a skos:Concept;
+  skos:prefLabel "Politica"@it, "Politics"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4934>;
+  skos:related ams:partiti, ams:elezioni, ams:politica_interna, ams:politica_internazionale;
+  skos:altLabel "Attività politica"@it, "Vita politica"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q7163>, <http://id.loc.gov/authorities/subjects/sh85104466>;
+  dct:description "Insieme delle attività, dei processi e delle decisioni attraverso cui una comunità organizza il proprio governo e gestisce gli affari pubblici"@it,
+    "The set of activities, processes, and decisions through which a community organizes its governance and manages public affairs"@en;
+  skos:narrower ams:elezioni, ams:politica_interna, ams:politica_internazionale, ams:partiti;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:sport a skos:Concept;
+  skos:prefLabel "Sport"@it, "Sport"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=467>;
+  skos:related ams:trasmissioni_radiofoniche_sportive;
+  skos:altLabel "Attività sportiva"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q349>, <http://id.loc.gov/authorities/subjects/sh85126887>;
+  dct:description "Attività basate sull’allenamento e su regole stabilite da organizzazioni sportive internazionali, finalizzate allo sviluppo di capacità soprattutto fisiche, e l’insieme degli esercizi e delle manifestazioni, anche agonistiche, in cui esse si realizzano"@it,
+    "Activities based on training and on rules established by international sports organizations, aimed at developing primarily physical abilities, and the set of exercises and events, including competitive ones, through which they are carried out."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+<http://w3id.org/AMSHistorica/pubblicita_%20televisiva> a skos:Concept;
+  skos:prefLabel "Pubblicità televisiva"@it, "Television advertising"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=23885>;
+  skos:broader ams:pubblicita, ams:televisioni;
+  skos:related ams:trasmissioni_televisive, ams:televisioni_pubbliche, ams:dibattiti_televisivi,
+    ams:ascolti_tv, ams:regia_televisiva;
+  skos:altLabel "Trasmissioni televisive pubblicitarie"@it, "TV advertisement"@en, "television commercial"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q854995>, <http://id.loc.gov/authorities/subjects/sh85133481>,
+    <http://vocab.getty.edu/page/aat/300213187>;
+  dct:description "Breve spazio televisivo a pagamento, solitamente di natura commerciale, inserito all’interno della programmazione"@it,
+    "A paid, typically commercial, short segment within television programming"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:interviste a skos:Concept;
+  skos:prefLabel "Interviste"@it, "Interviews"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4438>;
+  skos:altLabel "Intervista giornalistica"@it, "Journalistic interview"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q4202018>, <http://id.loc.gov/authorities/subjects/sh85067568>;
+  dct:description "Sequenza strutturata di domande e risposte condotta da un giornalista"@it,
+    "A structured sequence of questions and answers led by a journalist"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:televisioni_pubbliche a skos:Concept;
+  skos:prefLabel "Televisioni pubbliche"@it, "Public television broadcasters"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=55014>;
+  skos:broader ams:televisioni;
+  skos:related ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:dibattiti_televisivi, ams:ascolti_tv, ams:regia_televisiva;
+  skos:altLabel "Emittenti televisive pubbliche"@it, "Televisioni di Stato"@it, "Public TV"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q116978815>;
+  dct:description "Servizio televisivo gestito da un ente pubblico, finanziato tramite fondi statali e/o canone, con finalità di interesse generale"@it,
+    "Television service operated by a public entity, funded through state resources and/or license fees, with a mandate to serve the public interest"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:emittenti_radiofoniche a skos:Concept;
+  skos:prefLabel "Emittenti radiofoniche"@it, "Radio broadcasters"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=53968>;
+  skos:broader ams:emittenti_radiotelevisive;
+  skos:altLabel "Canali radiofonici"@it, "Stazioni radiofoniche"@it, "Radio communication station"@en,
+    "Radio station"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q1474493>, <http://id.loc.gov/authorities/subjects/sh85110418>;
+  dct:description "Nelle telecomunicazioni, complessi di mezzi e personale impiegati per la trasmissione di contenuti sonori fruibili in tempo reale da un pubblico simultaneo"@it,
+    "In telecommunications, the systems of equipment and personnel used for transmitting sound content in real time to simultaneous audiences"@en;
+  skos:narrower ams:radio_private, ams:giornali_radio, ams:trasmissioni_radiofoniche_sportive,
+    ams:radio_pubbliche;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:dibattiti_televisivi a skos:Concept;
+  skos:prefLabel "Dibattiti televisivi"@it, "Television debates"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=6178>;
+  skos:broader ams:trasmissioni_televisive;
+  skos:related ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:televisioni_pubbliche, ams:ascolti_tv, ams:regia_televisiva;
+  skos:altLabel "Talk show"@it, "Television talk show"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh2006004518>;
+  dct:description "Trasmissioni televisive basate sulla conversazione, in cui noti personaggi vengono intervistati o più persone prendono parte a un dibattito, generalmente sotto la guida di un conduttore"@it,
+    "Television broadcasts based on conversation, in which well‑known figures are interviewed or multiple participants take part in a debate, generally under the guidance of a host"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:informazione a skos:Concept;
+  skos:prefLabel "Informazione"@it, "Information"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=7988>;
+  skos:broader ams:televisioni;
+  skos:related ams:cronache_giornalistiche;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q11028>;
+  dct:description "Atto dell'informare nel senso di dare o ricevere notizie che, attraverso appositi canali, accrescono e trasformano le conoscenze del destinatario"@it,
+    "The act of providing or receiving news that, through dedicated channels, increases or transforms the recipient’s knowledge"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:elezioni a skos:Concept;
+  skos:prefLabel "Elezioni"@it, "Elections"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=2551>;
+  skos:broader ams:politica;
+  skos:related ams:politica, ams:partiti, ams:politica_interna, ams:politica_internazionale;
+  skos:altLabel "Elezioni politiche"@it, "Political elections"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q40231>, <http://id.loc.gov/authorities/subjects/sh85041557>;
+  dct:description "L'attività e il mezzo attraverso cui vengono scelte le persone che devono rappresentare una collettività o ricoprire una carica in organi istituzionali, politici, amministrativi ecc."@it,
+    "The process and means through which individuals are selected to represent a community or to hold positions in institutional, political, or administrative bodies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:cronache_giornalistiche a skos:Concept;
+  skos:prefLabel "Cronache giornalistiche"@it, "News reports"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20256>;
+  skos:related ams:informazione;
+  skos:altLabel "Resoconti giornalistici"@it;
+  dct:description "Resoconti giornalistici o rubriche incentrati su argomenti circoscritti"@it,
+    "Journalistic reports or segments focused on specific, narrowly defined topics"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:radio_private a skos:Concept;
+  skos:prefLabel "Radio private"@it, "Private radio broadcasters"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=30544>;
+  skos:broader ams:emittenti_radiofoniche;
+  skos:related ams:trasmissioni_radiofoniche_sportive, ams:radio_pubbliche;
+  skos:altLabel "Emittenti radiofoniche private"@it, "Radio libere"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85110448>;
+  dct:description "Emittenti radiofoniche gestite da soggetti privati e finanziate principalmente tramite pubblicità o altre forme di ricavo commerciale"@it,
+    "Radio broadcasters operated by private entities and funded primarily through advertising or other commercial revenue streams"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:politica_interna a skos:Concept;
+  skos:prefLabel "Politica interna"@it, "Domestic politics"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=54311>;
+  skos:broader ams:politica;
+  skos:related ams:politica, ams:elezioni, ams:politica_interna;
+  skos:closeMatch <http://publications.europa.eu/resource/authority/eurovoc/2508>;
+  dct:description "Insieme delle attività, delle strategie e delle decisioni con cui uno Stato gestisce i propri affari interni, le istituzioni e le questioni sociali, economiche e amministrative che riguardano la comunità nazionale"@it,
+    "he set of activities, strategies, and decisions through which a State manages its internal affairs, institutions, and the social, economic, and administrative issues concerning the national community"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:politica_internazionale a skos:Concept;
+  skos:prefLabel "Politica internazionale"@it, "International politics"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=6652>;
+  skos:broader ams:politica;
+  skos:related ams:politica, ams:elezioni, ams:politica_interna, ams:politica_internazionale;
+  skos:altLabel "Politica estera"@it;
+  skos:closeMatch <http://eurovoc.europa.eu/2500>;
+  dct:description "Insieme delle attività, delle strategie e delle relazioni attraverso cui uno Stato gestisce i propri rapporti con altri Paesi e con organizzazioni sovranazionali"@it,
+    "The set of activities, strategies, and relations through which a State manages its interactions with other countries and supranational organization"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:giornali_radio a skos:Concept;
+  skos:prefLabel "Giornali radio"@it, "Radio news"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=49248>;
+  skos:broader ams:emittenti_radiofoniche;
+  skos:related ams:radio_pubbliche, ams:radio_private;
+  skos:altLabel "Radiogiornali"@it;
+  dct:description "Notiziari radiofonici che riportano e sintetizzano gli avvenimenti di attualità attraverso servizi, corrispondenze e lettura delle notizie"@it,
+    "Radio news bulletins that report and summarize current events through news reading, reports, and correspondents’ coverage"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:partiti a skos:Concept;
+  skos:prefLabel "Partiti"@it, "Political parties"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=5254>;
+  skos:broader ams:politica;
+  skos:related ams:politica, ams:elezioni, ams:politica_interna, ams:politica_internazionale;
+  skos:altLabel "Partiti politici"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q7278>, <http://id.loc.gov/authorities/subjects/sh85104371>;
+  dct:description "Organizzazione che mira a influenzare le politiche e le decisioni governative e a ottenere rappresentanza elettiva per partecipare direttamente al governo o all’attività legislativa"@it,
+    "An organization that seeks to influence government policy and decision‑making and to gain elected representation in order to take direct part in government or legislative activity"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:trasmissioni_radiofoniche_sportive a skos:Concept;
+  skos:prefLabel "Trasmissioni radiofoniche sportive"@it, "Sports radio broadcasts"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=27446>;
+  skos:broader ams:emittenti_radiofoniche;
+  skos:related ams:sport, ams:radio_pubbliche, ams:radio_private;
+  skos:altLabel "Radiotrasmissioni sportive"@it, "Radio broadcasting of sports"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85110460>;
+  dct:description "Programmi radiofonici dedicati alla cronaca, al commento e all’analisi di eventi e temi sportivi, spesso con aggiornamenti in diretta"@it,
+    "Radio broadcasts devoted to reporting, commenting on, and analysing sports events and topics, often with live updates"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:radio_pubbliche a skos:Concept;
+  skos:prefLabel "Radio pubbliche"@it, "Public radio broadcasters"@en;
+  skos:broader ams:emittenti_radiofoniche;
+  skos:related ams:trasmissioni_radiofoniche_sportive, ams:radio_private;
+  skos:altLabel "Public radio"@en, "Non-commercial radio"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85108748>;
+  dct:description "Emittenti radiofoniche gestite da enti pubblici e finanziate principalmente tramite fondi statali o canone, con finalità di servizio pubblico"@it,
+    "Radio broadcasters operated by public institutions and funded primarily through state resources or licence fees, with a public‑service mission"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:ufo a skos:Concept;
+  skos:prefLabel "Oggetti volanti non identificati"@it, "Unidentified flying objects"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=24861>;
+  skos:altLabel "Dischi volanti"@it, "UFO"@it, "UFO"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q421>, <http://id.loc.gov/authorities/subjects/sh85139676>;
+  dct:description "Oggetto o fenomeno aereo che presenta caratteristiche insolite e non immediatamente identificabili"@it,
+    "An aerial object or phenomenon displaying unusual features and not readily identifiable"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:censura a skos:Concept;
+  skos:prefLabel "Censura"@it, "Censorship"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=1651>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q543>, <http://id.loc.gov/authorities/subjects/sh85021828>;
+  dct:description "Controllo, limitazione o soppressione di contenuti destinati alla diffusione pubblica da parte di autorità politiche, istituzionali o altri soggetti, per motivi morali, politici o di sicurezza"@it,
+    "The control, restriction, or suppression of content intended for public dissemination by political, institutional, or other authorities, for moral, political, or security-related reasons"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ascolti_tv a skos:Concept;
+  skos:prefLabel "Ascolti TV"@it, "TV ratings"@en;
+  skos:broader ams:televisioni;
+  skos:related ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:televisioni_pubbliche, ams:dibattiti_televisivi, ams:regia_televisiva;
+  skos:altLabel "Ascolti televisivi"@it, "audience measurement"@en, "Television program rating"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q847520>, <http://id.loc.gov/authorities/subjects/sh85133607>,
+    <https://publications.europa.eu/resource/authority/bkc/005.07.02.0050>;
+  dct:description "Misurazione del numero di persone che seguono un programma televisivo"@it,
+    "Measurement of the number of viewers watching a television programme, used to assess its success and audience impact"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:regia_televisiva a skos:Concept;
+  skos:prefLabel "Regia televisiva"@it, "Television directing"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=3220>;
+  skos:broader ams:televisioni;
+  skos:related ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:televisioni_pubbliche, ams:dibattiti_televisivi, ams:ascolti_tv;
+  skos:altLabel "tv direction"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3931801>, <http://id.loc.gov/authorities/subjects/sh85133468>;
+  dct:description "Insieme delle attività creative e tecniche con cui si pianifica, coordina e realizza la messa in scena di un programma televisivo"@it,
+    "The set of creative and technical activities involved in planning, coordinating, and executing the staging of a television programme"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:televisioni a skos:Concept;
+  skos:prefLabel "Televisioni"@it, "Television"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=34653>;
+  skos:broader ams:emittenti_radiotelevisive;
+  skos:altLabel "TV"@it, "Emittenti televisive"@it, "TV"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q289>, <http://id.loc.gov/authorities/subjects/sh85133456>,
+    <http://vocab.getty.edu/page/aat/300249920>;
+  dct:description "Le organizzazioni tecniche, amministrative, artistiche che provvedono all’esecuzione e alla diffusione dei varî programmi televisivi"@it,
+    "The technical, administrative, and artistic organizations responsible for producing and broadcasting the various television programs"@en;
+  skos:narrower ams:televisioni_private, ams:trasmissioni_televisive, <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>,
+    ams:televisioni_pubbliche, ams:informazione, ams:ascolti_tv, ams:regia_televisiva;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pubblicita a skos:Concept;
+  skos:prefLabel "Pubblicità"@it, "Advertising"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=1061>;
+  skos:altLabel "Ads"@en, "Advertisements"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q37038>, <http://id.loc.gov/authorities/subjects/sh85001086>,
+    <http://vocab.getty.edu/page/aat/300054347>;
+  dct:description "Presentazione pubblica, o messa in evidenza, di un prodotto, servizio, evento o idea, finanziata apertamente da un soggetto identificabile. I mezzi utilizzati per la pubblicità includono pubblicazioni a stampa e online, manifesti, televisione e altri media"@it,
+    "Public presentation of or calling attention to a product, service, event, or idea, that is openly paid for by an identified entity. Media for advertising include print and online publications, posters, television, and other media"@en;
+  skos:narrower <http://w3id.org/AMSHistorica/pubblicita_%20televisiva>;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:emittenti_radiotelevisive a skos:Concept;
+  skos:prefLabel "Emittenti radiotelevisive"@it, "Broadcasting"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=34582>;
+  skos:altLabel "Emittenti radio-televisive"@it, "radio and television broadcasters"@en,
+    "radio and television stations"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q15078788>, <http://id.loc.gov/authorities/subjects/sh85017004>,
+    <http://vocab.getty.edu/page/aat/300054351>;
+  dct:description "Complessi di mezzi e persone impiegati per le trasmissioni radiofoniche e/o televisive, fruibili in tempo reale da più persone"@it,
+    "Systems of equipment and personnel employed for radio and/or television broadcasts, accessible in real time to multiple users"@en;
+  skos:narrower ams:emittenti_radiofoniche, ams:televisioni;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:romeo_carlo a skos:Concept;
+  skos:prefLabel "Carlo Romeo"@it, "Carlo Romeo"@en;
+  skos:exactMatch <http://viaf.org/viaf/73932454>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3659797>;
+  dct:description "Giornalista, manager e scrittore italiano"@it, "Italian writer, manager and journalist"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:tortora_enzo a skos:Concept;
+  skos:prefLabel "Enzo Tortora"@it, "Enzo Tortora"@en;
+  skos:exactMatch <http://viaf.org/viaf/79441834>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3726658>;
+  dct:description "Conduttore televisivo, autore televisivo, conduttore radiofonico, attore, giornalista e politico italiano (1928-1988)"@it,
+    "Italian television host and writer, radio presenter, actor, journalist, and politician (1928–1988)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:pannella_marco a skos:Concept;
+  skos:prefLabel "Marco Pannella"@it, "Marco Pannella"@en;
+  skos:exactMatch <http://viaf.org/viaf/79428912>;
+  skos:altLabel "Giacinto Pannella"@it, "Giacinto Marco Pannella"@it, "Giacinto Pannella"@en,
+    "Giacinto Marco Pannella"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q47651>;
+  dct:description "Politico e attivista italiano (1930-2016)"@it, "Italian politician and activist (1930-2016)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:plastino_michele a skos:Concept;
+  skos:prefLabel "Michele Plastino"@it, "Michele Plastino"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3856761>;
+  dct:description "Giornalista televisivo e radiofonico italiano"@it, "Italian television and radio journalist"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:piombi_daniele a skos:Concept;
+  skos:prefLabel "Daniele Piombi"@it, "Daniele Piombi"@en;
+  skos:exactMatch <http://viaf.org/viaf/120525704>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3702053>;
+  dct:description "Conduttore televisivo italiano (1933-2017)"@it, "Italian television presenter (1933-2017)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:zevi_bruno a skos:Concept;
+  skos:prefLabel "Bruno Zevi"@it, "Bruno Zevi"@en;
+  skos:exactMatch <http://viaf.org/viaf/108404731>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q558155>;
+  dct:description "Architetto, urbanista e storico italiano (1918-2000)"@it, "Italian architect, historian, and professor (1918-2000)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:andenna_ettore a skos:Concept;
+  skos:prefLabel "Ettore Andenna"@it, "Ettore Andenna"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3733864>;
+  dct:description "Conduttore televisivo, giornalista e politico italiano"@it, "Italian television presenter, journalist and politician"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:grauso_nicola a skos:Concept;
+  skos:prefLabel "Nicola Grauso"@it, "Nicola Grauso"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3876241>;
+  skos:altLabel "Nichi Grauso"@it;
+  dct:description "Imprenditore, editore e politico italiano (1949-2025)"@it, "Italian entrepreneur, editor and politician (1949-2025)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:moreno_manuela a skos:Concept;
+  skos:prefLabel "Manuela Moreno"@it, "Manuela Moreno"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q3845101>;
+  dct:description "Giornalista e conduttrice televisiva italiana"@it, "Italian journalist and presenter"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:SSD_07H a skos:Collection;
+  skos:prefLabel "7/H - Medicina Veterinaria"@it, "7/H - Veterinary Medicine"@en;
+  skos:exactMatch <https://w3id.org/italia/controlled-vocabulary/classifications-for-universities/academic-disciplines/MSC-07-H>;
+  dct:description "Il macrosettore corsuale 7/H identifica il settore che studia la prevenzione, la diagnosi e la terapia delle malattie degli animali, insieme agli aspetti biologici, sanitari, etici e igienici legati al loro allevamento e al loro utilizzo a fini alimentari"@it,
+    "The macro-sector 7/H identifies the field that studies the prevention, diagnosis, and treatment of animal diseases, as well as the biological, health, ethical, and hygienic aspects related to their breeding and their use for food purposes"@en;
+  skos:member ams:editti_veterinaria;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:editti_veterinaria a skos:Collection;
+  skos:prefLabel "Editti di veterinaria"@it, "Veterinary edicts"@en;
+  dct:description "Collezione formata dalla ricca biblioteca del prof. Maestrini, frutto della sua passione per la storia della medicina veterinaria e della sua attività accademica presso la cattedra di Patologia Aviare dell’Università di Bologna. Il fondo comprende oltre settecento opere a stampa dal XVI al XX secolo e una preziosa raccolta di bandi ed editti sulla sanità pubblica"@it,
+    "Collection originating from the extensive library of Prof. Maestrini, shaped by his passion for the history of veterinary medicine and his academic work as Chair of Avian Pathology at the University of Bologna. The holdings include more than seven hundred printed works from the 16th to the 20th century, along with a valuable set of public health proclamations and edicts"@en;
+  skos:member ams:afta_epizootica, ams:agraria, ams:bestiame, ams:bovini, ams:cani,
+    ams:carrozze_a_cavalli, ams:caprini, ams:disinfestazione, ams:equini, ams:fiere_agricole,
+    ams:macelli, ams:mascalcia, ams:medici, ams:medicina_legale, ams:ovini, ams:pascoli,
+    ams:pascolo_abusivo, ams:pastorizia, ams:pelli, ams:pollame, ams:rabbia, ams:salasso,
+    ams:suini, ams:transumanza, ams:veterinaria, ams:bovidi, ams:coltelli, ams:funi, ams:strade,
+    ams:tasse, ams:universita, ams:sonetti, ams:ducato_di_venezia, ams:granducato_di_toscana,
+    ams:impero_austriaco, ams:regno_di_italia, ams:regno_di_sardegna, ams:stato_pontificio;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:afta_epizootica a skos:Concept;
+  skos:prefLabel "Afta epizootica"@it, "Foot-and-mouth disease"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=26335>;
+  skos:related ams:rabbia;
+  skos:altLabel "Afta contagiosa"@it, "Eczema epizootico"@it, "Aftosa fever"@en, "Epizootic stomatitis"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q152401>, <http://id.loc.gov/authorities/subjects/sh85050400>;
+  dct:description "Malattia virale infettiva e talvolta letale che colpisce gli animali con unghia fessa ed è causata da un apthovirus"@it,
+    "infectious and sometimes fatal viral disease that affects cloven-hoofed animals and caused by apthovirus"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:agraria a skos:Concept;
+  skos:prefLabel "Agraria"@it, "Agronomy"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4475>;
+  skos:related ams:fiere_agricole;
+  skos:altLabel "Agronomia"@it, "Scienze agrarie"@it, "Agricultural science"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3606845>, <http://id.loc.gov/authorities/subjects/sh91006254>,
+    <http://vocab.getty.edu/page/aat/300025604>;
+  dct:description "Complesso di scienze e di pratiche applicate alla coltivazione della terra"@it,
+    "The body of sciences and practices applied to soil cultivation and the production of agricultural resources"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:bestiame a skos:Concept;
+  skos:prefLabel "Bestiame"@it, "Livestock"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=14007>;
+  skos:altLabel "Farm animals"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q103459>, <http://id.loc.gov/authorities/subjects/sh85077784>;
+  dct:description "Insieme degli animali domestici allevati per la lavorazione dei fondi rustici o per la produzione alimentare, comprendente bovini, equini, ovini, caprini e suini"@it,
+    "The group of domesticated animals raised for farm work or food production, including cattle, horses, sheep, goats, and pigs"@en;
+  skos:narrower ams:bovini, ams:caprini, ams:equini, ams:ovini, ams:suini;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:bovini a skos:Concept;
+  skos:prefLabel "Bovini"@it, "Bovinae"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=8695>;
+  skos:broader ams:bestiame, ams:bovidi;
+  skos:related ams:caprini, ams:bestiame;
+  skos:altLabel "Bovinus"@it, "Bovinae"@it, "Bos"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q4979192>, <http://id.loc.gov/authorities/subjects/sh85015893>;
+  dct:description "Sottofamiglia di Bovidi"@it, "Subfamily of bovids"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:cani a skos:Concept;
+  skos:prefLabel "Cani"@it, "Dogs"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=285>;
+  skos:altLabel "Canis"@it, "Canis lupus familiaris"@it, "Canis domesticus"@en, "Dog"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q144>, <http://id.loc.gov/authorities/subjects/sh85038796>,
+    <http://vocab.getty.edu/page/aat/300250130>;
+  dct:description "Specie addomesticata di Canidi"@it, "Domesticated species of Canis"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:carrozze_a_cavalli a skos:Concept;
+  skos:prefLabel "Carrozze a cavalli"@it, "Horse-drawn vehicles"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=16566>;
+  skos:altLabel "Carrozze"@it, "Horse-powered vehicles"@en, "Carriage"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q235356>, <http://id.loc.gov/authorities/subjects/sh89000505>,
+    <http://vocab.getty.edu/page/aat/300185335>;
+  dct:description "Veicoli a ruote trainati da cavalli, progettati principalmente per trasportare persone"@it,
+    "Horse‑drawn wheeled vehicles designed primarily to convey people"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:caprini a skos:Concept;
+  skos:prefLabel "Caprini"@it, "Caprinae"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=12727>;
+  skos:broader ams:bestiame, ams:bovidi;
+  skos:related ams:bovini;
+  skos:altLabel "Caprinae"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q189804>;
+  dct:description "Sottofamiglia della famiglia dei Bovidi"@it, "Subfamily of the Bovidae family"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:disinfestazione a skos:Concept;
+  skos:prefLabel "Disinfestazione"@it, "Pest control"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=34082>;
+  skos:altLabel "Extermination"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q2306047>, <http://id.loc.gov/authorities/subjects/sh85100295>,
+    <http://vocab.getty.edu/page/aat/300224969>;
+  dct:description "Qualsiasi operazione volta alla distruzione o al controllo di piccoli animali infestanti"@it,
+    "Any operation aimed at eliminating or controlling pest animals"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:equini a skos:Concept;
+  skos:prefLabel "Equini"@it, "Equus"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=10550>;
+  skos:broader ams:bestiame;
+  skos:related ams:caprini, ams:bovini;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q27022>, <http://vocab.getty.edu/page/aat/300265977>;
+  dct:description "Termine privo di valore tassonomico utilizzato per indicare gli equidi limitatamente all’insieme di cavalli, asini, muli e bardotti"@it,
+    "Non‑taxonomic term used to refer to equids restricted to horses, donkeys, mules, and hinnies"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:fiere_agricole a skos:Concept;
+  skos:prefLabel "Fiere agricole"@it, "Agricultural exhibitions"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=16237>;
+  skos:related ams:agraria;
+  skos:altLabel "Agricultural fairs"@en, "County fairs"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85002317>;
+  dct:description "Eventi espositivi dedicati al settore agricolo, in cui vengono presentati prodotti, attrezzature, tecnologie, bestiame e innovazioni legate alla coltivazione e all’allevamento"@it,
+    "Exhibitions focused on the agricultural sector, showcasing products, equipment, technologies, livestock, and innovations related to farming and animal husbandry"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:macelli a skos:Concept;
+  skos:prefLabel "Macelli"@it, "Slaughterhouse"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=32204>;
+  skos:related ams:pelli;
+  skos:altLabel "Mattatoi"@it, "Slaughterhouses"@en, "Slaughter"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q385557>, <http://id.loc.gov/authorities/subjects/sh85123301>,
+    <http://vocab.getty.edu/page/aat/300006354>;
+  dct:description "Struttura in cui gli animali vengono abbattuti per essere destinati al consumo alimentare"@it,
+    "Facility where animals are killed for consumption as food products"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:mascalcia a skos:Concept;
+  skos:prefLabel "Mascalcia"@it, "Horseshoeing"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=17126>;
+  skos:altLabel "Ferratura"@it, "Farriery"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85062187>;
+  dct:description "L'arte del maniscalco, cioè l'arte della ferratura dello zoccolo di equini e bovini"@it,
+    "The craft of the farrier, comprising the techniques for shoeing and caring for the hooves of equines and bovines"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:medici a skos:Concept;
+  skos:prefLabel "Medici"@it, "Physician"@en;
+  skos:exactMatch <http://thes.bncf.firenze.sbn.it/termine.php?id=3903>;
+  skos:related ams:veterinaria, ams:medicina_legale;
+  skos:altLabel "Doctors"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39631>, <http://id.loc.gov/authorities/subjects/sh85101610>;
+  dct:description "Professionista che esercita la medicina"@it, "Professional who practices medicine"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:medicina_legale a skos:Concept;
+  skos:prefLabel "Medicina legale"@it, "Medical jurisprudence"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=4607>;
+  skos:altLabel "Medicina forense"@it, "Legal medicine"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q454812>, <http://id.loc.gov/authorities/subjects/sh85082955>;
+  dct:description "Disciplina medica che applica conoscenze cliniche e scientifiche all’ambito giuridico, occupandosi di accertamenti medico‑legali, valutazioni forensi e supporto alle attività giudiziarie"@it,
+    "Medical discipline that applies clinical and scientific knowledge to the legal field, dealing with forensic assessments, medico‑legal evaluations, and support to judicial activities"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ovini a skos:Concept;
+  skos:prefLabel "Ovini"@it, "Ovis"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=12726>;
+  skos:broader ams:bestiame, ams:bovidi;
+  skos:related ams:bovini, ams:bestiame;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q22724>, <http://id.loc.gov/authorities/subjects/sh87020509>;
+  dct:description "Sottofamiglia dei Bovidi"@it, "Subfamily of bovids"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pascoli a skos:Concept;
+  skos:prefLabel "Pascoli"@it, "Pastures"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=24511>;
+  skos:related ams:transumanza;
+  skos:altLabel "Grazing area"@en, "Grazing land"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q30121>, <http://id.loc.gov/authorities/subjects/sh85098618>;
+  dct:description "Terreni a vegetazione erbacea, per lo più spontanea, non falciati ma utilizzati come aree di pascolo diretto per il bestiame"@it,
+    "Grass‑covered land, mostly with spontaneous vegetation, not mown but used as grazing areas for livestock"@en;
+  skos:narrower ams:pascolo_abusivo;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:pascolo_abusivo a skos:Concept;
+  skos:prefLabel "Pascolo abusivo"@it, "Unauthorized pastures"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=46850>;
+  skos:broader ams:pascoli;
+  dct:description "Utilizzo non autorizzato di terreni per il pascolo del bestiame, effettuato senza il consenso del proprietario o in violazione delle norme vigenti"@it,
+    "Unauthorized grazing of livestock on land without the owner’s consent or in violation of applicable regulations"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:pastorizia a skos:Concept;
+  skos:prefLabel "Pastorizia"@it, "Pastoralism"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=36466>;
+  skos:related ams:transumanza;
+  skos:altLabel "Sheep farming"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q9056738>, <http://id.loc.gov/authorities/subjects/sh2012001522>;
+  dct:description "Attività tradizionale di allevamento e gestione di greggi, praticata prevalentemente su pascoli naturali e basata sullo spostamento o la custodia degli animali"@it,
+    "Traditional activity of raising and managing flocks, typically practiced on natural grazing lands and based on the movement or tending of animals"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:pelli a skos:Concept;
+  skos:prefLabel "Pelli"@it, "Hides and skins"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=295>;
+  skos:related ams:macelli;
+  skos:altLabel "Pellami"@it, "Pelts"@en, "Skins"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85060632>;
+  dct:description "Pelli di animali conciate e lavorate"@it, "Animal hides that have been tanned and processed"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:pollame a skos:Concept;
+  skos:prefLabel "Pollame"@it, "Poultry"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=16786>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q178559>, <http://id.loc.gov/authorities/subjects/sh85105892>;
+  dct:description "Uccelli domestici allevati dall’uomo per le loro uova, carne o piume"@it,
+    "Domesticated birds kept by humans for their eggs, meat, or feathers"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:rabbia a skos:Concept;
+  skos:prefLabel "Rabbia"@it, "Rabies"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=38723>;
+  skos:related ams:afta_epizootica;
+  skos:altLabel "Idrofobia"@it, "Lissa"@it, "Hydrophobia"@en, "Lyssa"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q39222>, <http://id.loc.gov/authorities/subjects/sh85110217>;
+  dct:description "Malattia infettiva virale acuta che colpisce i mammiferi, specialmente i carnivori"@it,
+    "Acute viral infectious disease affecting mammals, especially carnivores"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:salasso a skos:Concept;
+  skos:prefLabel "Salasso"@it, "Phlebotomy"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=40685>;
+  skos:altLabel "Flebotomia"@it, "Bleeding (Therapy)"@en, "Bloodletting"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q356405>, <http://id.loc.gov/authorities/subjects/sh85015033>;
+  dct:description "Nel linguaggio medico, sottrazione, a scopo terapeutico o preventivo, di una cospicua quantità di sangue da una vena periferica per ridurne la massa in circolazione"@it,
+    "In medicine, the removal of a substantial amount of blood from a peripheral vein for therapeutic or preventive purposes, in order to reduce the circulating blood volume"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:suini a skos:Concept;
+  skos:prefLabel "Suini"@it, "Swine"@en;
+  skos:exactMatch <https://id.loc.gov/authorities/subjects/sh85131235.html>;
+  skos:broader ams:bestiame;
+  skos:related ams:bovini, ams:caprini, ams:bestiame;
+  skos:altLabel "Maiali"@it, "Porci"@it, "Pig"@en, "Sus scrofa domestica"@en;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85131235>;
+  dct:description "Sottofamiglia dei Suidi alla quale appartengono anche le razze allevate"@it,
+    "Subfamily of the Suidae to which the domesticated breeds also belong"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/> .
+
+ams:transumanza a skos:Concept;
+  skos:prefLabel "Transumanza"@it, "Transhumance"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=34218>;
+  skos:related ams:pascoli, ams:pastorizia;
+  skos:altLabel "Allevamento transumante"@it, "Pastoral systems"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q4657754>, <http://id.loc.gov/authorities/subjects/sh85136922>;
+  dct:description "Migrazione periodica del bestiame tra pascoli invernali ed estivi"@it,
+    "Periodic migration of livestock between winter and summer pastures"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:veterinaria a skos:Concept;
+  skos:prefLabel "Veterinaria"@it, "Veterinary medicine"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=834>;
+  skos:altLabel "Medicina veterinaria"@it, "Zooiatria"@it, "Veterinary science"@en,
+    "Veterinary studies"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q170201>, <http://id.loc.gov/authorities/subjects/sh85143046>;
+  dct:description "La scienza che ha per oggetto lo studio e la terapia delle malattie degli animali e, inoltre, i problemi biologici, sanitari, etici e igienici connessi con il loro allevamento e il loro utilizzo a fini alimentari"@it,
+    "The science that studies and treats animal diseases and also addresses the biological, health, ethical, and hygienic issues related to their breeding and their use for food purposes"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:bovidi a skos:Concept;
+  skos:prefLabel "Bovidi"@it, "Bovidae"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=8696>;
+  skos:altLabel "Bovidae"@it;
+  skos:closeMatch <http://id.loc.gov/authorities/subjects/sh85016139>;
+  dct:description "Famiglia di mammiferi ruminanti che comprende bovini, ovini, caprini e altre specie affini"@it,
+    "Family of ruminant mammals that includes cattle, sheep, goats, and related species"@en;
+  skos:narrower ams:bovini, ams:caprini, ams:ovini;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:coltelli a skos:Concept;
+  skos:prefLabel "Coltelli"@it, "Knife"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=22480>;
+  skos:altLabel "Knives"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q32489>, <http://id.loc.gov/authorities/subjects/sh85072715>;
+  dct:description "Strumenti da taglio, usati come utensili, ma anche come armi, formati da una lama innestata in un manico"@it,
+    "Cutting tools, used both as implements and as weapons, consisting of a blade fitted into a handle."@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:funi a skos:Concept;
+  skos:prefLabel "Funi"@it, "Rope"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=18512>;
+  skos:altLabel "Corde"@it, "Ropes"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q552034>, <http://id.loc.gov/authorities/subjects/sh85115383>;
+  dct:description "Organi flessibili, costituiti da più fili vegetali o metallici attorcigliati, riuniti fra loro in modi diversi"@it,
+    "Flexible elements made of multiple vegetal or metal strands twisted together and combined in various ways"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:strade a skos:Concept;
+  skos:prefLabel "Strade"@it, "Roads"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=2836>;
+  skos:altLabel "Reti stradali"@it, "Vie"@it, "Roadways"@en, "Route"@en;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q34442>, <http://id.loc.gov/authorities/subjects/sh85114487>;
+  dct:description "Tratti di terreno di varia natura e tipologia che permettono la comunicazione fra più luoghi"@it,
+    "Stretches of land of various types and characteristics that enable communication between multiple places"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:tasse a skos:Concept;
+  skos:prefLabel "Tasse"@it, "Fee"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=9832>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q11765>, <http://vocab.getty.edu/page/aat/300055680>;
+  dct:description "Tributi dovuti allo Stato o ad altro ente pubblico come controprestazione di un servizio specifico"@it,
+    "Taxes owed to the State or another public authority as consideration for a specific service"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:universita a skos:Concept;
+  skos:prefLabel "Università"@it, "University"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=7811>;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q3918>, <http://id.loc.gov/authorities/subjects/sh85141086>;
+  dct:description "Istituzione accademica per l’istruzione superiore"@it, "Academic institution for further education"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:sonetti a skos:Concept;
+  skos:prefLabel "Sonetti"@it, "Sonnets"@en;
+  skos:exactMatch <https://thes.bncf.firenze.sbn.it/termine.php?id=20000>;
+  skos:altLabel "Sonetto"@it;
+  skos:closeMatch <https://www.wikidata.org/wiki/Q80056>, <http://id.loc.gov/authorities/subjects/sh85125233>;
+  dct:description "Composizioni di carattere prevalentemente lirico, composte di 14 versi, con rime disposte secondo precisi schemi"@it,
+    "Poetic compositions of predominantly lyrical character, consisting of 14 lines, with rhymes organized according to specific patterns"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:ducato_di_venezia a skos:Concept;
+  skos:prefLabel "Repubblica di Venezia"@it, "Republic of Venice"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q4948>;
+  skos:altLabel "La Serenissima"@it, "Ducato di Venezia"@it, "Venezia Republic"@en,
+    "Republic of Venezia"@en;
+  dct:description "Antico Stato (697–1797) che controllò, in periodi diversi, parti dell’Italia nord‑orientale, dei Balcani e alcune isole del Mediterraneo."@it,
+    "Former state (697–1797) controlling, at various times, parts of northeastern Italy, the Balkans, and Mediterranean islands"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:granducato_di_toscana a skos:Concept;
+  skos:prefLabel "Granducato di Toscana"@it, "Grand Duchy of Tuscany"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q154849>;
+  skos:altLabel "Ducato di Toscana"@it, "Gran ducato di Toscana"@it, "Granducato di Toscana"@en;
+  dct:description "Antico Stato italiano (1569-1801, 1814-1860)"@it, "Former Italian state (1569–1801; 1815–1859)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:impero_austriaco a skos:Concept;
+  skos:prefLabel "Impero Austriaco"@it, "Austrian Empire"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q131964>;
+  skos:altLabel "Impero d'Austria"@it, "Impero asburgico"@it;
+  dct:description "Monarchia in Europa centrale (1804-1867)"@it, "Central European multinational Empire from 1804 to 1867"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:regno_di_italia a skos:Concept;
+  skos:prefLabel "Regno di Italia"@it, "Kingdom of Italy"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q2643575>;
+  dct:description "Denominazione assunta da varie monarchie che hanno regnato su parti o sulla totalità della regione geografica italiana"@it,
+    "Name of several monarchies which existed in Italy"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:regno_di_sardegna a skos:Concept;
+  skos:prefLabel "Regno di Sardegna"@it, "Kingdom of Sardinia"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q55599391>;
+  dct:description "Stato sovrano dell’Europa occidentale, formato dal territorio sardo e, dal Settecento, anche da domini continentali"@it,
+    "A sovereign state in Western Europe, originally centered on Sardinia and later expanded to mainland territories"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
+
+ams:stato_pontificio a skos:Concept;
+  skos:prefLabel "Stato Pontificio"@it, "Papal States"@en;
+  skos:exactMatch <https://www.wikidata.org/wiki/Q170174>;
+  skos:altLabel "Stato della Chiesa"@it, "Stato Ecclesiastico"@it, "Papal State"@en,
+    "Church State"@en;
+  dct:description "Antica entità statuale su cui la Santa Sede esercitò il proprio potere temporale (756-1870)"@it,
+    "Ancient state entity over which the Holy See exercised its temporal power (756–1870)"@en;
+  skos:inScheme <http://w3id.org/AMSHistorica/>;
+  skos:topConceptOf <http://w3id.org/AMSHistorica/> .
