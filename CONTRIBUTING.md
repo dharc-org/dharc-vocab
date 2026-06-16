@@ -50,6 +50,8 @@ All artefacts should ideally be made available in both English and Italian, as t
 
 You can refer to the [KNOT Taxonomy](https://raw.githubusercontent.com/icdp-digital-library/KNOT/refs/heads/main/data_model/controlled_vocabularies/1.5/ktx.ttl) as a SKOS-formatted controlled vocabulary that displays and interacts correctly withing /DH.arc Vocabularies. 
 
+We recommend that any artefact added to the repository have a valid URI that makes use of a redirection system. If you wish for the URI to redirect to the concept pages in the repository we recommend using w3id as this is the service we implement for our vocabularies and you can simply replicate the existing .htaccess file. See the current [redirect implementation](https://github.com/laurentfintoni/w3id.org/tree/master/knot) for the KNOT vocabularies for a template of how to format your .htaccess file. 
+
 Our recommended process for preparing your semantic artefact for inclusion into the repository is as follows (this process also applies to artefacts sent directly to /DH.arc for inclusion where the author(s) are not able to prepare it beforehand):</br>  
 
 1️⃣ Prepare and/or update the artefact</br>  
