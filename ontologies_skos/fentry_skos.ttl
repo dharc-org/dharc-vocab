@@ -35,6 +35,7 @@ fentry:photograph a owl:Class, skos:Concept ;
     skos:topConceptOf <http://www.essepuntato.it/2014/03/fentry/> ;
     rdfs:label "Photograph"@en, "Fotografia"@it ;
     skos:prefLabel "Photograph"@en, "Fotografia"@it ;
+    skos:note "In its original OWL version, this class makes use of owl:Restriction to define its super-classes, which cannot be meaningfully represented in SKOS and has therefore been simplified to only show the super-class that does not contain restrictions. Please refer to the original OWL-formatted ontology for more information. "@en, "Nella sua versione originale in OWL, questa classe fa uso di owl:Restriction per definire le sue super-classi, che non possono essere rappresentate in modo significativo in SKOS e sono quindi state semplificate per mostrare solo le super-classi che non hanno restrizioni. Si prega di fare riferimento all'ontologia originale in formato OWL per ulteriori informazioni. "@it ;
     rdfs:comment "It is a static, visual representation of some concrete object (or part of it) or a group of different objects."@en, "È una rappresentazione visiva statica di un oggetto concreto (o di una sua parte) o di un gruppo di oggetti diversi."@it ;
     rdfs:subClassOf fabio:StillImage .
 
@@ -51,6 +52,7 @@ fentry:shot a owl:Class, skos:Concept ;
     skos:topConceptOf <http://www.essepuntato.it/2014/03/fentry/> ;
     rdfs:label "Shot"@en, "Scatto Fotografico"@it ;
     skos:prefLabel "Shot"@en, "Scatto Fotografico"@it ;
+    skos:note "In its original OWL version, this class makes use of owl:Restriction to define its super-classes, which cannot be meaningfully represented in SKOS and has therefore been simplified to only show the super-class that does not contain restrictions. Please refer to the original OWL-formatted ontology for more information. "@en, "Nella sua versione originale in OWL, questa classe fa uso di owl:Restriction per definire le sue super-classi, che non possono essere rappresentate in modo significativo in SKOS e sono quindi state semplificate per mostrare solo le super-classi che non hanno restrizioni. Si prega di fare riferimento all'ontologia originale in formato OWL per ulteriori informazioni. "@it ;
     rdfs:comment "The realisation of a photograph - it is strictly related with the act of taking the picture by someone."@en, "La realizzazione di una fotografia, è strettamente correlata all'atto di scattare la foto da parte di qualcuno."@it ;
     rdfs:subClassOf frbr:Expression . 
 
@@ -58,6 +60,7 @@ fentry:describes a owl:ObjectProperty, skos:Concept ;
     skos:inScheme <http://www.essepuntato.it/2014/03/fentry/> ;
     rdfs:label "describes"@en, "descrive"@it ;
     skos:prefLabel "describes"@en, "descrive"@it ;
+    skos:note "In its original OWL version, this property makes use of owl:Restriction to define its range, which cannot be meaningfully represented in SKOS and has therefore been simplified to only show the range that does not contain restrictions. Please refer to the original OWL-formatted ontology for more information. "@en, "Nella sua versione originale in OWL, questa proprieta fa uso di owl:Restriction per definire il suo range, che non possono essere rappresentate in modo significativo in SKOS e sono quindi state semplificate per mostrare solo il range che non ha restrizioni. Si prega di fare riferimento all'ontologia originale in formato OWL per ulteriori informazioni. "@it ;
     rdfs:comment "It allows one to link a Scheda F to the photograph and the portrayed object the Scheda F describes."@en, "Permette di associare una Scheda F alla fotografia e all'oggetto ritratto che la Scheda F descrive."@it ;
     rdfs:domain fentry:FEntry ;
     rdfs:range fentry:shot, fentry:photograph ;

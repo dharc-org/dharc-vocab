@@ -212,7 +212,7 @@
     dc:description "WRITE Ontology"@en, "Ontologia Scheda F"@it;
     skosmos:shortName "write";
     dc:subject :cat_write ;
-    void:uriSpace "https://w3id.org/write/ontology/#";
+    void:uriSpace "https://w3id.org/write/ontology/";
     skosmos:language "en", "it";
     skosmos:defaultLanguage "en" ;
     skosmos:propertyLabelOverride [skosmos:property <http://www.w3.org/2004/02/skos/core#altLabel>; rdfs:label "Alternative Terms"@en] ;
