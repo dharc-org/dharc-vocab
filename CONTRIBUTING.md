@@ -12,7 +12,17 @@ As of 2026 this repository is overseen and maintained by:
 - Laurent Fintoni (laurent.fintoni2@unibo.it), primary point of contact for preparation and creation of vocabularies, ontology conversion, and interface updates as well as troubleshooting for local installations.
 - Tommaso Vitale (tommaso.vitale@unibo.it), primary point of contact for updates and additions to the live site.
 
-## Preparing a new semantic artefact for inclusion ✍🏻
+Quick Topic Links (click to jump to a section):</br>
+[Prepating a new semantic artefact for inclusion](#1)</br>
+[Adding a new semantic artefact to the repository](#2)</br>
+[Hosting the artefact and updates](#3)</br>
+[Updating the Skosmos config file](#4)</br>
+[Updating the load script](#5)</br>
+[Installing a local instance of Skosmos (dev/testing)](#6)</br>
+[Converting OWL ontologies to SKOS](#7)</br>
+[Repository structure](#8)</br>
+
+## <a id="1"></a>Preparing a new semantic artefact for inclusion ✍🏻
 
 The repository runs on [Skosmos](https://skosmos.org/), a web based open-source ontology browser developed and released by the team at the National Library of Finland, which uses SKOS as the underlying data model. As such any semantic artefact intended for inclusion in the repository must be formatted in [SKOS](https://www.w3.org/TR/skos-reference/). The easiest, and likely common, example is that of a controlled vocabulary such as a taxonomy or thesaurus. 
 
@@ -48,7 +58,7 @@ Our recommended process for preparing your semantic artefact for inclusion into 
 ➡️ 4️⃣ The artefact is ready to be added to the repository</br>  
 ✅ 
 
-## Adding a new semantic artefact to the repository ✅
+## <a id="2"></a>Adding a new semantic artefact to the repository ✅
 
 Adding a new semantic artefact to /DH.arc Vocabularies should be done via a testing stage (detailed below). If you are unable to test yourself you can contact Laurent Fintoni who will handle the testing. 
 
@@ -66,7 +76,7 @@ Below is visual summary of the publishing workflow. This includes the creation/c
 In addition to the publishing process, this next diagram gives a summary of the development/testing and production setups, full details for which are included in the following sections.
 ![/DH.arc Vocabularies dev and prod diagram](images/prod_workflow.png)
 
-### Hosting of the artefact (and subsequent updates)
+### <a id="3"></a>Hosting of the artefact (and subsequent updates) 🛜
 
 Hosting of the semantic artefact should be done via your own preferred/existing system. The most common situation is that your artefact already exists elsewhere and is accessible via a direct URL, for example within a GitHub repository (in which case the direct access URL begins with raw.githubusercontent.com). If you cannot host your own artefact, we can host it on our GitHub. Please contact Laurent Fintoni first in this case. 
 
@@ -74,7 +84,7 @@ To add the artefact we will download a local copy for back-up and then POST it i
 
 Currently, OWL ontologies converted to SKOS are hosted by DH.arc by default (in the ontologies_skos folder of this repository) while all other artefacts in the repository are hosted elsewhere by default.  
 
-### Updating the Skosmos config file
+### <a id="4"></a>Updating the Skosmos config file 📡
 
 To ensure that the new artefact displays correctly on the repository an update to dockerfiles/config/config-docker-compose.ttl is required. This file contains the main configurations for the Skosmos implementation that DH.arc Vocabularies runs on. For more details on what is, and can be included in this file, see [the relevant official documentation page](https://github.com/NatLibFi/Skosmos/wiki/Configuration). 
 
@@ -112,7 +122,7 @@ For further details of which properties are available see the above linked docum
 
 Again here the existing Skosmos documentation as well as the existing config file should provide the necessary references to cover most situations.
 
-### Updating the load file 
+### <a id="5"></a>Updating the load script ⬆️
 
 Lastly, the shell script used to load the vocabularies into the triple store needs to be updated with the necessary command to add the new artefact to the repository and call the relevant source file. 
 
@@ -133,7 +143,7 @@ When adding a new artefact do the following:
 - Add the command for it below 
 - Save the .sh file 
 
-## Installing a local instance of Skosmos (for testing or core file updates) 🖥️
+## <a id="6"></a>Installing a local instance of Skosmos (for testing or core file updates) 🖥️
 
 A local instance of the /DH.arc Vocabularies repository can be installed on your machine in order to test the artefacts you wish to add or make updates to Skosmos' core files such as the CSS, php files, or twig templates. For more information on the [Skosmos architecture](https://github.com/NatLibFi/Skosmos/wiki/Backend-architecture) please see their documentation. Currently the /DH.arc Vocabularies repository runs Skosmos 2.18.1 and has been lightly modified with changes to the CSS and twig templates primarily. Updates to the core files should be managed with Laurent Fintoni. 
 
@@ -153,10 +163,29 @@ Below is an example workflow for a MacOS machine running on an M1 chip, please n
 
 3️⃣ Any changes to the config file requires a docker reload which can be done by simply running docker compose down followed by docker compose up -d (if you are also editing core files, such as php or css you will need to add the --rmi all flag to the compose down command to also remove the images and rebuild them). Once everything is working as intended locally you can send your changes to the GitHub repository via pull request. This PR will be reviewed and if accepted merged before the prod version is updated.  
 
-## Converting OWl-formatted ontologies to SKOS
+## <a id="7"></a>Converting OWl-formatted ontologies to SKOS 🔮
 
-Coming soon. In the meantime if you have any questions please contact Laurent Fintoni. 
+Skosmos can only display semantic artefacts formatted in SKOS, however /DH.arc members often produce ontologies formatted in OWL (Web Ontology Language) which we also want to be able to include the repository. While existing research into the combined use of SKOS and OWL is sparse, and contained during the years before and after the release of the data model in 2009, some work points clearly to the usefulness of combining the two in order to provide a navigational/browsing structure or interface for an OWL ontology that exists for a specific domain (Jupp, Bechhofer, and Stevens, 2008; Abdul Manaf, 2014). Furthermore, [this](https://www.w3.org/2006/07/SWD/SKOS/skos-and-owl/master.html) W3C document from 2008 proposes two primary design patterns for going from OWL to SKOS by either overlaying the two or transforming the former into the latter.  
 
-## A note about repository structure 
+As such, during development of /DH.arc Vocabularies we tested these patterns and settled on the overlay approach as this allowed us to make our ontologies viewable in the Skosmos browser while ensuring that the formal semantics they offer are still understandable to both humans and machines. As noted by the aforementioned W3C document, this approach implies two key points: the resulting version of these ontologies are necessarily OWL Full (while transformation would make them compatible with OWL DL and likely require the use of punning) and <code>skos:Concept</code> and <code>owl:Class</code> cannot be disjoint. This approach lets us provide taxonomy- or thesaurus-like representations of OWL ontologies for the specific application of enabling browsing and improving the FAIR-ness of these artefacts who are often hard to find and reuse. 
 
-Coming soon. 
+Should you wish to make an OWL-formatted ontology available via /DH.arc Vocabularies we recommend the following. You can also look at the ontologies we have already overlaid with SKOS (located at ontologies_skos within this repository) for further reference.
+
+1️⃣ You can use the Skosify Python library to convert an OWL-formatted artefact to SKOS into a Turtle-formatted document that combines overlaying and transforming approaches. This document is a useful baseline from which to work and can significantly speed up the process. </br>  
+2️⃣ The ontology instance should be given the following new/additional triples/elements: the <code>skos:ConceptScheme</code> class in addition to <code>owl:Ontology</code>; the <code>skos:hasTopConcept</code> property, which should point to all classes in the ontology that could be considered to be at the top of the hierarchy (as these are now also instances of <code>skos:Concept</code>); and where needed or appropriate generic properties should be added such as <code>dc:license</code>, <code>foaf:homepage</code>, and <code>dcat:downloadURL</code> as noted above in order to provide meaningful information to the end user (see existing converted ontologies for reference, we recommend that at the very least downloadURL be included to help point users to the OWL version of the ontology). </br>  
+3️⃣ Each class and property in the original ontology should be given the following new/additional triples/elements: <code>skos:Concept</code> class, <code>skos:prefLabel</code> (a duplicate of <code>rdfs:label</code>) and <code>skos:inScheme</code> properties to correctly reflect the structure of the ontology as a concept scheme as well as correctly enable full usage of the Skosmos browsing capabilities. </br>  
+4️⃣ Definitions of OWL-specific properties, such as <code>rdfs:domain</code> and <code>rdfs:range</code>, should be added in order for them to be displayed on the front-end. The same applies for any non-SKOS properties or classes you wish to make evident in the browser. We recommend making these additions once you've overlaid all the necessary SKOS elements/triples onto your ontology and adding them at the end of the file with a clear comment marking them as different from the ontology. Keeping <code>rdfs:domain</code> and <code>rdfs:range</code> instead of using <code>skos:related</code> helps not to diminish the semantic implications of the ontology. </br>  
+5️⃣ The <code>rdfs:subClassOf</code> property should also be kept and defined and used in place of SKOS semantic relation properties (<code>skos:broader</code> and <code>skos:narrower</code>) so as to not confuse any potential subclass structure within the ontology with a more rigid, hierarchical KOS structure. </br>  
+6️⃣ OWL class and property expressions and restrictions cannot be meaningfully ported to SKOS, as the move implies a loss of formal semantics. Our recommendation in this case is to make use of the <code>skos:note</code> property to indicate OWL-specific semantics that are not visible. When both classes and restrictions are included in the domain or range of a property (or when they are used to indicate super-classes or sub-classes) we recommend keeping the classes visible in the browser by including them as the object of <code>rdfs:domain</code> or <code>rdfs:range</code> (so the user can browse to them) but moving the restrictions to a note. Note that if you use Skosify to convert an OWL ontology that includes expressions or restrictions to SKOS, the resulting file will include a correct representation in the Turtle syntax however this will not be displayed on the browser and instead create an error.  </br>  
+7️⃣ External ontology declarations and OWL imports should also kept to be displayed on the concept scheme page as well as to provide Skosmos with the necessary URI structure to point the concept pages to their equivalent (if a redirection already exists), in line with Semantic Web best practices and essential for ontologies that reuse concepts and properties. </br>  
+
+References:</br>  
+Adbul Manaf, Nor Azlinayati. 2014. “TRANSFORMING ONTOLOGIES IN THE WEB ONTOLOGY LANGUAGE (OWL) TO VOCABULARIES IN THE SIMPLE KNOWLEDGE ORGANIZATION SYSTEM (SKOS).” Master of Philosophy. https://research.manchester.ac.uk/en/studentTheses/transforming-ontologies-in-the-web-ontology-language-owl-to-vocab/.</br>  
+Jupp, Simon, Sean Bechhofer, and Robert Stevens. 2008. SKOS with OWL: Don’t Be Full-Ish! 2008. https://ceur-ws.org/Vol-432/owled2008eu_submission_22.pdf</br>  
+
+## <a id="7"></a>A note about repository structure 📄
+
+The repository follows the baseline Skosmos structure with the following updates:
+- the vocab_files folder is used to download local copies of the semantic artefacts and the shell script file for their loading (the original setup does it in the root folder)
+- the ontologies_skos folder hosts the SKOS versions of the converted OWL ontologies. 
+- a new folder (likely dharc_hosted or something similar) can be created to host any artefact that should be added but is not hosted elsewhere. Depending on how many of these artefacts end up being added we could create a separate repository specifically for hosting artefacts. 

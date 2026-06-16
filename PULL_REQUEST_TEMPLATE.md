@@ -1,16 +1,23 @@
 ## Reasons for creating this PR
 
-## Link to relevant issue(s), if any
+This should almost always be the addition of a new artefact to the repository.
 
-- Closes #
+## Link to or details of relevant issue(s), if any
+
+Use this if your PR is specifically about the underlying code (php, css, js etc).
 
 ## Description of the changes in this PR
 
+Explain what you changed. 
+
 ## Known problems or uncertainties in this PR
+
+If needed. 
 
 ## Checklist
 
-- [ ] phpUnit tests pass locally with my changes
+- [ ] The PR adds a new semantic artefact to the repository
+- [ ] I have tested this update on locally using Docker Compose and it worked (provide the specs of your local machine in the description)
 - [ ] I have added tests that show that the new code works, or tests are not relevant for this PR (e.g. only HTML/CSS changes)
-- [ ] The PR doesn't reduce accessibility of the front-end code (e.g. tab focus, scaling to different resolutions, use of `.sr-only` class, color contrast)
-- [ ] The PR doesn't introduce unintended code changes (e.g. empty lines or useless reindentation)
+- [ ] The PR doesn't reduce accessibility of the front-end code  
+- [ ] The PR doesn't introduce unintended code changes 

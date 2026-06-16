@@ -25,22 +25,22 @@ sleep 0.5
 curl -L -o writeThesaurus_v.1.0.ttl https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl
 curl -X POST -H Content-Type:text/turtle --data-binary "@writeThesaurus_v.1.0.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/WenDAng-project/thesaurus/refs/heads/main/writeThesaurus_v.1.0.ttl"
 
-curl -L -o write-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@write-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl"
+curl -L -o write-skos.ttl https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/write-skos.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@write-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/write-skos.ttl"
 
 # load ontologies
 sleep 0.5
 
-curl -L -o fentry_skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@fentry_skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl"
+curl -L -o fentry_skos.ttl https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/fentry_skos.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@fentry_skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/fentry_skos.ttl"
 
 
-curl -L -o odi-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@odi-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl"
+curl -L -o odi-skos.ttl https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/odi-skos.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@odi-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/odi-skos.ttl"
 
 
-curl -L -o hico-skos.ttl https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl
-curl -X POST -H Content-Type:text/turtle --data-binary "@hico-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl"
+curl -L -o hico-skos.ttl https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/hico-skos.ttl
+curl -X POST -H Content-Type:text/turtle --data-binary "@hico-skos.ttl" "http://localhost:9030/skosmos/data?graph=https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/hico-skos.ttl"
 
 # load ATLAS vocabs
 sleep 0.5
