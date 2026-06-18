@@ -172,8 +172,8 @@
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl>;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/fentry_skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/fentry_skos.ttl>;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/fentry_skos.ttl> .
 
 :odi a skosmos:Vocabulary, void:Dataset ;
     dc:title "Ontologia dei Destini incrociati di Italo Calvino"@it, "Ontology of Italo Calvino's Destini Incrociati"@en;
@@ -188,8 +188,8 @@
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/odi-skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/odi-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/odi-skos.ttl> .
 
 :hico a skosmos:Vocabulary, void:Dataset ;
     dc:title "The Historical Context Ontology (HiCO)"@en, "Ontologia per il Contesto Storico (HiCO)"@it ;
@@ -204,8 +204,8 @@
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/hico-skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/hico-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/hico-skos.ttl> .
 
 :write a skosmos:Vocabulary, void:Dataset ;
     dc:title "WRITE Ontology"@en, "Ontologia WRITE"@it;
@@ -220,8 +220,8 @@
     skosmos:showTopConcepts false ;
     skosmos:conceptSchemesInHierarchy false ;
     void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
-    void:dataDump <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> ;
-    skosmos:sparqlGraph <https://raw.githubusercontent.com/laurentfintoni/dharc-skosmos/refs/heads/main/ontologies_skos/write-skos.ttl> .
+    void:dataDump <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/write-skos.ttl> ;
+    skosmos:sparqlGraph <https://raw.githubusercontent.com/dharc-org/dharc-vocab/refs/heads/main/ontologies_skos/write-skos.ttl> .
 
 :wt a skosmos:Vocabulary, void:Dataset ;
     dc:title "WRITE Thesaurus"@en, "WRITE Thesaurus"@it;
